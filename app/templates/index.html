@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center">
+<div class="col-lg-6"><div class="glass-card mb-4">
+<h4 class="mb-4">Secure Encryption</h4>
+<p class="text-muted small mb-4">Encrypt files directly and download them safely wrapped in AES-256-GCM.</p>
+<form action="/encrypt" method="POST" enctype="multipart/form-data">
+<div class="mb-3"><label class="form-label small text-muted">Select Plaintext File</label><input type="file" name="file" class="form-control" required></div>
+<div class="mb-4"><label class="form-label small text-muted">Encryption Password</label><input type="password" name="encryption_password" class="form-control" placeholder="Strong Passphrase" required><div class="form-text small opacity-50">Required for decryption. We do not store it.</div></div>
+<button type="submit" class="btn btn-primary w-100">Encrypt &amp; Download .enc</button></form>
+</div>
+<div class="text-center"><a href="/decrypt" class="btn btn-outline-secondary">Go to Decryption Vault</a></div>
+</div>
+</div>
+{% endblock %}

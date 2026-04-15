@@ -1,0 +1,70 @@
+﻿[
+  {
+    "assignmentType": "System",
+    "definitionVersion": "1.*.*",
+    "displayName": "Allowed resource deployment regions",
+    "enforcementMode": "Default",
+    "id": "/subscriptions/32cfe244-c541-4455-830a-3b973667df4c/providers/Microsoft.Authorization/policyAssignments/sys.regionrestriction",
+    "metadata": {
+      "createdBy": "6b8fa187-3644-41cf-8944-23981e378ac8",
+      "createdOn": "2026-03-17T12:49:19.8791413Z",
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "name": "sys.regionrestriction",
+    "nonComplianceMessages": [
+      {
+        "message": "This policy maintains a set of best available regions where your subscription can deploy resources. The objective of this policy is to ensure that your subscription has full access to Azure services with optimal performance. Should you need additional or different regions, contact support."
+      }
+    ],
+    "parameters": {
+      "listOfAllowedLocations": {
+        "value": [
+          "uaenorth",
+          "centralindia",
+          "malaysiawest",
+          "koreacentral",
+          "austriaeast"
+        ]
+      }
+    },
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b86dabb9-b578-4d7b-b842-3b45e95769a1",
+    "scope": "/subscriptions/32cfe244-c541-4455-830a-3b973667df4c",
+    "systemData": {
+      "createdAt": "2026-03-17T12:49:19.8152916Z",
+      "createdBy": "5da7367f-09c8-493e-8fd4-638089cddec3",
+      "createdByType": "Application",
+      "lastModifiedAt": "2026-03-17T12:49:19.8152916Z",
+      "lastModifiedBy": "5da7367f-09c8-493e-8fd4-638089cddec3",
+      "lastModifiedByType": "Application"
+    },
+    "type": "Microsoft.Authorization/policyAssignments"
+  },
+  {
+    "definitionVersion": "57.*.*",
+    "description": "This is the default set of policies monitored by Azure Security Center. It was automatically assigned as part of onboarding to Security Center. The default assignment contains only audit policies. For more information please visit https://aka.ms/ascpolicies",
+    "displayName": "ASC Default (subscription: 32cfe244-c541-4455-830a-3b973667df4c)",
+    "enforcementMode": "Default",
+    "id": "/subscriptions/32cfe244-c541-4455-830a-3b973667df4c/providers/Microsoft.Authorization/policyAssignments/SecurityCenterBuiltIn",
+    "metadata": {
+      "assignedBy": "Security Center",
+      "createdBy": "e6335ddb-02d6-4b71-9ed4-5c6be3739c0e",
+      "createdOn": "2026-03-17T14:11:43.4926496Z",
+      "updatedBy": null,
+      "updatedOn": null
+    },
+    "name": "SecurityCenterBuiltIn",
+    "parameters": {},
+    "policyDefinitionId": "/providers/Microsoft.Authorization/policySetDefinitions/1f3afdf9-d0c9-4c3d-847f-89da613e70a8",
+    "scope": "/subscriptions/32cfe244-c541-4455-830a-3b973667df4c",
+    "systemData": {
+      "createdAt": "2026-03-17T14:11:42.5243285Z",
+      "createdBy": "8edd93e1-2103-40b4-bd70-6e34e586362d",
+      "createdByType": "Application",
+      "lastModifiedAt": "2026-03-17T14:11:42.5243285Z",
+      "lastModifiedBy": "8edd93e1-2103-40b4-bd70-6e34e586362d",
+      "lastModifiedByType": "Application"
+    },
+    "type": "Microsoft.Authorization/policyAssignments"
+  }
+]

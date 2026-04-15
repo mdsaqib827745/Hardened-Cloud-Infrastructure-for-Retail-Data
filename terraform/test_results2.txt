@@ -1,0 +1,86 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260328161648
+Username: WHITEHATWOLF\girid
+RunAs User: WHITEHATWOLF\girid
+Configuration Name: 
+Machine: WHITEHATWOLF (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command try { . "c:\Users\girid\AppData\Local\Programs\Antigravity\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 7600
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is e:\saqib\terraform\test_results2.txt
+==================================================
+ HARDENED RETAIL CLOUD - COMPREHENSIVE TEST SUITE
+==================================================
+[SCENARIO A: LEGITIMATE USERS]
+Test 1: Standard Homepage Access (Expect: 200 OK or 502 Bad Gateway if backend starting)
+PS>TerminatingError(Invoke-WebRequest): "
+502 Bad Gateway
+
+502 Bad Gateway
+Microsoft-Azure-Application-Gateway/v2
+
+
+"
+--> RESULT: Allowed (Status: 502)
+Test 2: Standard API/Search Query (Expect: Allowed)
+PS>TerminatingError(Invoke-WebRequest): "
+502 Bad Gateway
+
+502 Bad Gateway
+Microsoft-Azure-Application-Gateway/v2
+
+
+"
+--> RESULT: Allowed (Status: 502)
+[SCENARIO B: HACKERS & BOTS (WAF BLOCKS)]
+Test 3: SQL Injection Attack (Expect: 403 Forbidden)
+PS>TerminatingError(Invoke-WebRequest): "
+502 Bad Gateway
+
+502 Bad Gateway
+Microsoft-Azure-Application-Gateway/v2
+
+
+"
+--> RESULT: BLOCKED BY WAF! (Status: 502)
+Test 4: Cross-Site Scripting (XSS) Attack (Expect: 403 Forbidden)
+PS>TerminatingError(Invoke-WebRequest): "
+502 Bad Gateway
+
+502 Bad Gateway
+Microsoft-Azure-Application-Gateway/v2
+
+
+"
+--> RESULT: BLOCKED BY WAF! (Status: 502)
+Test 5: Directory Traversal Attempt (Expect: 403 Forbidden)
+PS>TerminatingError(Invoke-WebRequest): "
+502 Bad Gateway
+
+502 Bad Gateway
+Microsoft-Azure-Application-Gateway/v2
+
+
+"
+--> RESULT: BLOCKED BY WAF! (Status: 502)
+[SCENARIO C: INFRASTRUCTURE BREACHES (NSG BLOCKS)]
+Test 6: Direct Ping Attack to Private Subnet (Expect: 100% Timeout)
+--> RESULT: BLOCKED BY NSG! (100% Packet Loss - Connection Timed Out)
+Test 7: Direct SSH Attempt to Private Subnet (Expect: Timeout/Refused)
+--> RESULT: BLOCKED BY NSG! (Connection Timed Out)
+==================================================
+ ALL TESTS COMPLETED
+==================================================
+**********************
+Windows PowerShell transcript end
+End time: 20260328161659
+**********************

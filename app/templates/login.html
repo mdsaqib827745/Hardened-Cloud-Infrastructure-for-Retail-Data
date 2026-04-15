@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center align-items-center" style="min-height: 60vh;">
+    <div class="col-md-5">
+        <div class="glass-card text-center">
+            <h2 class="mb-4">{% if register %}Create Account{% else %}Welcome Back{% endif %}</h2>
+            <p class="text-muted mb-4">{% if register %}Secure your retail data with enterprise encryption.{% else %}Access your encrypted storage vault.{% endif %}</p>
+            
+            <form action="{% if register %}/register{% else %}/login{% endif %}" method="POST">
+                <div class="mb-3">
+                    <input type="text" name="username" class="form-control" placeholder="Username" required>
+                </div>
+                <div class="mb-4">
+                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mb-3">
+                    {% if register %}Sign Up{% else %}Unlock Vault{% endif %}
+                </button>
+            </form>
+            
+            <div class="mt-4 pt-3 border-top border-secondary opacity-50">
+                {% if register %}
+                    <p class="mb-0 small">Already have an account? <a href="/login" class="text-primary">Login here</a></p>
+                {% else %}
+                    <p class="mb-0 small">New to RetailVault? <a href="/register" class="text-primary">Register account</a></p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

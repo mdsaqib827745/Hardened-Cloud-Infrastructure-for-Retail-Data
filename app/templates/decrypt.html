@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+        <div class="glass-card">
+            <div class="text-center mb-5">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-primary mb-3">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+                <h3 class="mb-2">Secure Decryption</h3>
+                <p class="text-muted small">Recover original content from an encrypted .enc file.</p>
+            </div>
+            
+            <form action="/decrypt" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label small text-muted">Upload Encrypted File</label>
+                    <input type="file" name="file" class="form-control" accept=".enc" required>
+                    <div class="form-text small opacity-50">Supported formats: *.enc (AES-256 protected).</div>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label small text-muted">Decryption Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Original Passphrase" required>
+                    <div class="form-text small opacity-50">This password was chosen during encryption.</div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                    Verify & Decrypt
+                </button>
+            </form>
+            
+            <div class="mt-4 pt-3 border-top border-secondary opacity-25 text-center">
+                <a href="/" class="btn btn-sm btn-link text-muted text-decoration-none">← Back to Dashboard</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

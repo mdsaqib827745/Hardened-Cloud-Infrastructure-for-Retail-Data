@@ -1,0 +1,67 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260329151219
+Username: WHITEHATWOLF\girid
+RunAs User: WHITEHATWOLF\girid
+Configuration Name: 
+Machine: WHITEHATWOLF (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command try { . "c:\Users\girid\AppData\Local\Programs\Antigravity\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 7312
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is e:\saqib\terraform\final_test_results.txt
+==================================================================
+   HARDENED RETAIL CLOUD - CATEGORY 1: SECURITY FUNCTIONALITY
+==================================================================
+[1.1 WEB APPLICATION FIREWALL (WAF) TESTS]
+Test 1: SQL Injection Block (Hacker Attempt)
+PS>TerminatingError(Invoke-WebRequest): "
+502 Bad Gateway
+
+502 Bad Gateway
+Microsoft-Azure-Application-Gateway/v2
+
+
+"
+--> [INFO] Received Status: 502. Check WAF Propagation.
+Test 2: XSS Block (Hacker Attempt)
+PS>TerminatingError(Invoke-WebRequest): "
+502 Bad Gateway
+
+502 Bad Gateway
+Microsoft-Azure-Application-Gateway/v2
+
+
+"
+--> [INFO] Received Status: 502. Check WAF Propagation.
+
+[1.2 NETWORK ISOLATION & NSG TESTS]
+Test 3: External SSH Block (NSG Check)
+--> [PASS] SSH is BLOCKED from the internet (Timed Out).
+Test 4: Pure Backend Ping Isolation
+--> [PASS] Private VM is ISOLATED (Ping Timed Out).
+
+[1.3 DATABASE ISOLATION TESTS]
+Test 5: Direct SQL Access Block
+--> [WARNING] SQL Port 1433 is reachable. Ensure Firewall denies IPs.
+
+[1.4 CLOUD CONFIGURATION & ENCRYPTION]
+Test 6: SQL transparent Data Encryption (TDE)
+--> [FAIL] SQL Data Encryption status:
+Test 7: VM OS Disk Encryption
+--> [PASS] OS Disk is ENCRYPTED (EncryptionAtRestWithPlatformKey).
+
+==================================================================
+   ALL CATEGORY 1 TESTS COMPLETED SUCCESSFULLY
+==================================================================
+**********************
+Windows PowerShell transcript end
+End time: 20260329151238
+**********************
