@@ -1,0 +1,4509 @@
+﻿az : DEBUG: 
+cli.knack.cli: Command 
+arguments: ['sql', 
+'server', 'create', 
+'--name', 
+'sql-retail-mal-test', 
+'--resource-group', 'rg
+-retail-hardened-prod',
+ '--location', 
+'malaysiawest', 
+'--admin-user', 
+'sqladmin', 
+'--admin-password', 
+'P@ssw0rd123456!', 
+'--debug']
+At line:1 char:72
++ ... CLI2\wbin"; az 
+sql server create 
+--name 
+"sql-retail-mal-test" 
+--resou ...
++                 ~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (DEBUG: cli.kn   
+ ac...6!', '--debug    
+']:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+DEBUG: cli.knack.cli: 
+__init__ debug log:
+Cannot enable color.
+DEBUG: cli.knack.cli: 
+Event: Cli.PreExecute 
+[]
+DEBUG: cli.knack.cli: 
+Event: CommandParser.On
+GlobalArgumentsCreate 
+[<function CLILogging.o
+n_global_arguments at 
+0x01B26BB8>, <function 
+OutputProducer.on_globa
+l_arguments at 
+0x01E85848>, <function 
+CLIQuery.on_global_argu
+ments at 0x01EAAA28>]
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nPreCommandTableCreate 
+[]
+DEBUG: 
+cli.azure.cli.core: 
+Modules found from 
+index for 'sql': ['azur
+e.cli.command_modules.s
+ql', 'azure.cli.command
+_modules.sqlvm']
+DEBUG: 
+cli.azure.cli.core: 
+Loading command 
+modules...
+DEBUG: 
+cli.azure.cli.core: 
+Loaded command modules 
+in parallel:
+DEBUG: 
+cli.azure.cli.core: 
+Name                  
+Load Time    Groups  
+Commands
+DEBUG: 
+cli.azure.cli.core: 
+sql                    
+   0.373        57     
+  222
+DEBUG: 
+cli.azure.cli.core: 
+sqlvm                  
+   0.400         4     
+   20
+DEBUG: 
+cli.azure.cli.core: 
+Total (2)              
+   0.401        61     
+  242
+DEBUG: 
+cli.azure.cli.core: 
+Loaded 60 groups, 242 
+commands.
+DEBUG: 
+cli.azure.cli.core: 
+Found a match in the 
+command table.
+DEBUG: 
+cli.azure.cli.core: 
+Raw command  : sql 
+server create
+DEBUG: 
+cli.azure.cli.core: 
+Command table: sql 
+server create
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nPreCommandTableTruncat
+e [<function AzCliLoggi
+ng.init_command_file_lo
+gging at 0x03C4C208>]
+DEBUG: cli.azure.cli.co
+re.azlogging: metadata 
+file logging enabled - 
+writing logs to 'C:\Use
+rs\girid\.azure\command
+s\2026-03-17.22-48-36.s
+ql_server_create.15212.
+log'.
+INFO: az_command_data_l
+ogger: command args: 
+sql server create 
+--name {} 
+--resource-group {} 
+--location {} 
+--admin-user {} 
+--admin-password {} 
+--debug
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nPreArgumentLoad 
+[<function register_glo
+bal_subscription_argume
+nt.<locals>.add_subscri
+ption_parameter at 
+0x03C85E88>]
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nPostArgumentLoad []
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nPostCommandTableCreate
+ [<function register_id
+s_argument.<locals>.add
+_ids_arguments at 
+0x03C94028>, <function 
+register_cache_argument
+s.<locals>.add_cache_ar
+guments at 
+0x03C9E348>, <function 
+register_upcoming_break
+ing_change_info.<locals
+>.update_breaking_chang
+e_info at 0x03C9E398>]
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nCommandTableLoaded []
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nPreParseArgs []
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nPostParseArgs 
+[<function OutputProduc
+er.handle_output_argume
+nt at 0x01E85898>, 
+<function CLIQuery.hand
+le_query_parameter at 
+0x01EAAA78>, <function 
+register_ids_argument.<
+locals>.parse_ids_argum
+ents at 0x03C9E2A8>]
+DEBUG: cli.azure.cli.co
+re.commands.client_fact
+ory: Getting 
+management service 
+client client_type=SqlM
+anagementClient
+DEBUG: cli.azure.cli.co
+re.auth.persistence: 
+build_persistence: loca
+tion='C:\\Users\\girid\
+\.azure\\msal_token_cac
+he.bin', encrypt=True
+DEBUG: cli.azure.cli.co
+re.auth.binary_cache: 
+load: C:\Users\girid\.a
+zure\msal_http_cache.bi
+n
+DEBUG: 
+urllib3.util.retry: 
+Converted retries 
+value: 1 -> 
+Retry(total=1, 
+connect=None, 
+read=None, 
+redirect=None, 
+status=None)
+DEBUG: msal.authority: 
+Initializing with 
+Entra authority: https:
+//login.microsoftonline
+.com/14b36f42-5039-4f4e
+-ab6a-7aeba0a33aae
+DEBUG: msal.authority: 
+openid_config("https://
+login.microsoftonline.c
+om/14b36f42-5039-4f4e-a
+b6a-7aeba0a33aae/v2.0/.
+well-known/openid-confi
+guration") = 
+{'token_endpoint': 'htt
+ps://login.microsoftonl
+ine.com/14b36f42-5039-4
+f4e-ab6a-7aeba0a33aae/o
+auth2/v2.0/token', 'tok
+en_endpoint_auth_method
+s_supported': 
+['client_secret_post', 
+'private_key_jwt', 
+'client_secret_basic', 
+'self_signed_tls_client
+_auth'], 'jwks_uri': 'h
+ttps://login.microsofto
+nline.com/14b36f42-5039
+-4f4e-ab6a-7aeba0a33aae
+/discovery/v2.0/keys', 
+'response_modes_support
+ed': ['query', 
+'fragment', 
+'form_post'], 'subject_
+types_supported': 
+['pairwise'], 'id_token
+_signing_alg_values_sup
+ported': ['RS256'], 're
+sponse_types_supported'
+: ['code', 'id_token', 
+'code id_token', 
+'id_token token'], 
+'scopes_supported': 
+['openid', 'profile', 
+'email', 
+'offline_access'], 'req
+uest_uri_parameter_supp
+orted': False, 
+'userinfo_endpoint': 'h
+ttps://graph.microsoft.
+com/oidc/userinfo', 'au
+thorization_endpoint': 
+'https://login.microsof
+tonline.com/14b36f42-50
+39-4f4e-ab6a-7aeba0a33a
+ae/oauth2/v2.0/authoriz
+e', 'device_authorizati
+on_endpoint': 'https://
+login.microsoftonline.c
+om/14b36f42-5039-4f4e-a
+b6a-7aeba0a33aae/oauth2
+/v2.0/devicecode', 'htt
+p_logout_supported': 
+True, 'frontchannel_log
+out_supported': True, '
+end_session_endpoint': 
+'https://login.microsof
+tonline.com/14b36f42-50
+39-4f4e-ab6a-7aeba0a33a
+ae/oauth2/v2.0/logout',
+ 'claims_supported': 
+['sub', 'iss', 
+'cloud_instance_name', 
+'cloud_instance_host_na
+me', 'cloud_graph_host_
+name', 'msgraph_host', 
+'aud', 'exp', 'iat', 
+'auth_time', 'acr', 
+'nonce', 
+'preferred_username', 
+'name', 'tid', 'ver', 
+'at_hash', 'c_hash', 
+'email'], 
+'kerberos_endpoint': 'h
+ttps://login.microsofto
+nline.com/14b36f42-5039
+-4f4e-ab6a-7aeba0a33aae
+/kerberos', 'mtls_endpo
+int_aliases': 
+{'token_endpoint': 'htt
+ps://mtlsauth.microsoft
+.com/14b36f42-5039-4f4e
+-ab6a-7aeba0a33aae/oaut
+h2/v2.0/token'}, 'tls_c
+lient_certificate_bound
+_access_tokens': True, 
+'tenant_region_scope': 
+'AS', 
+'cloud_instance_name': 
+'microsoftonline.com', 
+'cloud_graph_host_name'
+: 'graph.windows.net', 
+'msgraph_host': 
+'graph.microsoft.com', 
+'rbac_url': 'https://pa
+s.windows.net'}
+DEBUG: 
+msal.application: 
+Broker enabled? True
+DEBUG: cli.azure.cli.co
+re.auth.credential_adap
+tor: CredentialAdaptor.
+get_token_info: scopes=
+('https://management.co
+re.windows.net//.defaul
+t',), options={}
+DEBUG: cli.azure.cli.co
+re.auth.msal_credential
+s: UserCredential.acqui
+re_token: scopes=['http
+s://management.core.win
+dows.net//.default'], 
+claims_challenge=None, 
+kwargs={}
+DEBUG: 
+msal.application: 
+Cache hit an AT
+DEBUG: msal.telemetry: 
+Generate or reuse 
+correlation_id: 6c3dbe6
+5-ae4c-4bf9-ad6c-c1d08d
+1ee691
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request URL: 'https://m
+anagement.azure.com/sub
+scriptions/32cfe244-c54
+1-4455-830a-3b973667df4
+c/resourceGroups/rg-ret
+ail-hardened-prod/provi
+ders/Microsoft.Sql/serv
+ers/sql-retail-mal-test
+?api-version=2024-11-01
+-preview'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request method: 'PUT'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Type': 
+'application/json'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Length': '201'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Accept': 
+'application/json'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-client-request-id':
+ '552dbfda-2225-11f1-87
+91-bbcdfe580b81'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'CommandName': 'sql 
+server create'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'ParameterSetName': 
+'--name 
+--resource-group 
+--location 
+--admin-user 
+--admin-password 
+--debug'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'User-Agent': 
+'AZURECLI/2.84.0 (MSI) 
+azsdk-python-core/1.38.
+0 Python/3.13.11 (Windo
+ws-11-10.0.26200-SP0)'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Authorization': 
+'*****'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request body:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+{"location": 
+"malaysiawest", 
+"properties": 
+{"administratorLogin": 
+"sqladmin", "administra
+torLoginPassword": 
+"P@ssw0rd123456!", 
+"minimalTlsVersion": 
+"1.2", 
+"administrators": {}, 
+"createMode": 
+"Normal"}}
+DEBUG: urllib3.connecti
+onpool: Starting new 
+HTTPS connection (1): m
+anagement.azure.com:443
+DEBUG: urllib3.connecti
+onpool: https://managem
+ent.azure.com:443 "PUT 
+/subscriptions/32cfe244
+-c541-4455-830a-3b97366
+7df4c/resourceGroups/rg
+-retail-hardened-prod/p
+roviders/Microsoft.Sql/
+servers/sql-retail-mal-
+test?api-version=2024-1
+1-01-preview HTTP/1.1" 
+202 73
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response status: 202
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Cache-Control': 
+'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Pragma': 'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Length': '73'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Type': 
+'application/json; 
+charset=utf-8'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Expires': '-1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Location': 'https://ma
+nagement.azure.com/subs
+criptions/32cfe244-c541
+-4455-830a-3b973667df4c
+/resourceGroups/rg-reta
+il-hardened-prod/provid
+ers/Microsoft.Sql/locat
+ions/malaysiawest/serve
+rOperationResults/b183a
+bb3-3417-4165-bfeb-339e
+7f9f0d64?api-version=20
+24-11-01-preview&t=6390
+93647213280086&c=MIIHlT
+CCBn2gAwIBAgIRAIksbexKL
+H3Q1KNWYXNraz0wDQYJKoZI
+hvcNAQELBQAwNjE0MDIGA1U
+EAxMrQ0NNRSBHMSBUTFMgUl
+NBIDIwNDggU0hBMjU2IDIwN
+DkgV1VTMiBDQSAwMTAeFw0y
+NjAzMDMxNDU5MjFaFw0yNjA
+4MjkyMDU5MjFaMEAxPjA8Bg
+NVBAMTNWFzeW5jb3BlcmF0a
+W9uc2lnbmluZ2NlcnRpZmlj
+YXRlLm1hbmFnZW1lbnQuYXp
+1cmUuY29tMIIBIjANBgkqhk
+iG9w0BAQEFAAOCAQ8AMIIBC
+gKCAQEApqQwzTSmoHDbyxAx
+-Zw4A2mXw3jb-XQ3oNdAils
+DsJGu04GhVJavgmKa7mtAVE
+iUzERCPcx0ATNqgm9DEobX0
+NLBAkwTM1aqip92n-Wqxpcm
+zVMXrcBAYtUGFPp7qO1NWWN
+SptWPlsBIpSAS6QIkMC19X2
+cjGIpR1ZCAGz7CstqGli-iA
+mTdHED9kxJ1f__M0VLlklnx
+zAabNUEwy-9QQ1yTVkIAE6_
+52yV_yBHLlRoZIyRzQoWUZB
+NrmPBa2NpenB5OtvO5vdZqg
+Zxwcdh3ad5EoLEruyXfSlc2
+tGVWlZWOWXmrBl8ILt4gM_P
+NC35JnJezYO3zFlWNm-1Ipi
+gdxQIDAQABo4IEkjCCBI4wg
+Z0GA1UdIASBlTCBkjAMBgor
+BgEEAYI3ewEBMGYGCisGAQQ
+Bgjd7AgIwWDBWBggrBgEFBQ
+cCAjBKHkgAMwAzAGUAMAAxA
+DkAMgAxAC0ANABkADYANAAt
+ADQAZgA4AGMALQBhADAANQA
+1AC0ANQBiAGQAYQBmAGYAZA
+A1AGUAMwAzAGQwDAYKKwYBB
+AGCN3sDAjAMBgorBgEEAYI3
+ewQCMAwGA1UdEwEB_wQCMAA
+wHQYDVR0lBBYwFAYIKwYBBQ
+UHAwEGCCsGAQUFBwMCMA4GA
+1UdDwEB_wQEAwIFoDAdBgNV
+HQ4EFgQUQv41vVZdnpjDnq9
+p_Cn_gv8APxkwHwYDVR0jBB
+gwFoAUrONy-gOyc549lcjvh
+1uu3Ruh7WgwggGyBgNVHR8E
+ggGpMIIBpTBpoGegZYZjaHR
+0cDovL3ByaW1hcnktY2RuLn
+BraS5jb3JlLndpbmRvd3Mub
+mV0L3dlc3R1czIvY3Jscy9j
+Y21ld2VzdHVzMnBraS9jY21
+ld2VzdHVzMmljYTAxLzM5L2
+N1cnJlbnQuY3JsMGugaaBnh
+mVodHRwOi8vc2Vjb25kYXJ5
+LWNkbi5wa2kuY29yZS53aW5
+kb3dzLm5ldC93ZXN0dXMyL2
+NybHMvY2NtZXdlc3R1czJwa
+2kvY2NtZXdlc3R1czJpY2Ew
+MS8zOS9jdXJyZW50LmNybDB
+aoFigVoZUaHR0cDovL2NybC
+5taWNyb3NvZnQuY29tL3dlc
+3R1czIvY3Jscy9jY21ld2Vz
+dHVzMnBraS9jY21ld2VzdHV
+zMmljYTAxLzM5L2N1cnJlbn
+QuY3JsMG-gbaBrhmlodHRwO
+i8vY2NtZXdlc3R1czJwa2ku
+d2VzdHVzMi5wa2kuY29yZS5
+3aW5kb3dzLm5ldC9jZXJ0aW
+ZpY2F0ZUF1dGhvcml0aWVzL
+2NjbWV3ZXN0dXMyaWNhMDEv
+MzkvY3VycmVudC5jcmwwggG
+3BggrBgEFBQcBAQSCAakwgg
+GlMGwGCCsGAQUFBzAChmBod
+HRwOi8vcHJpbWFyeS1jZG4u
+cGtpLmNvcmUud2luZG93cy5
+uZXQvd2VzdHVzMi9jYWNlcn
+RzL2NjbWV3ZXN0dXMycGtpL
+2NjbWV3ZXN0dXMyaWNhMDEv
+Y2VydC5jZXIwbgYIKwYBBQU
+HMAKGYmh0dHA6Ly9zZWNvbm
+RhcnktY2RuLnBraS5jb3JlL
+ndpbmRvd3MubmV0L3dlc3R1
+czIvY2FjZXJ0cy9jY21ld2V
+zdHVzMnBraS9jY21ld2VzdH
+VzMmljYTAxL2NlcnQuY2VyM
+F0GCCsGAQUFBzAChlFodHRw
+Oi8vY3JsLm1pY3Jvc29mdC5
+jb20vd2VzdHVzMi9jYWNlcn
+RzL2NjbWV3ZXN0dXMycGtpL
+2NjbWV3ZXN0dXMyaWNhMDEv
+Y2VydC5jZXIwZgYIKwYBBQU
+HMAKGWmh0dHA6Ly9jY21ld2
+VzdHVzMnBraS53ZXN0dXMyL
+nBraS5jb3JlLndpbmRvd3Mu
+bmV0L2NlcnRpZmljYXRlQXV
+0aG9yaXRpZXMvY2NtZXdlc3
+R1czJpY2EwMTANBgkqhkiG9
+w0BAQsFAAOCAQEAOuzTJFpR
+3WYO5ykP8IRboImMGOkMGaY
+YkF6bejhcrjx4ZAE6QNx5pB
+1S4EsxodLnGdvl5hkCsA-_E
+N5U8rwtr8OHyXDu5XGBdqLI
+fDHHWrYp9K8x_M35dAE6g8z
+wfVAJzcn4U52nFXKFEsgFAw
+wGBZtL0y11vRXrSv5hRpAz6
+jXKuJE5W8YWOXOh2FjAi1di
+l640o3NY0enXg3PC9H3D8mg
+99xgSixb-xsSrMyy3PjLjEv
+RF9sx4rRrvzf4kCMmCgpkbB
+c5QAfPiseHxoE9wjG2BUOvU
+nNRn1oVm4Mt97VlANycjpxt
+KXd78ISjWpqX6ULDnXyoBjx
+OS2eRpsDP8cg&s=Dvkv7Y5m
+GYxGLRsTaiFtdDhhRSOhVnA
+P4ergArpsI89sgiGWJZUMjz
+oX9m7_HXRYNAMqPXM2Hb4-a
+FKoqjddp4N0VyG-GBIHYIpA
+ewMu-wZd1kBCL8nJ7WaHgw-
+VtXJ6NGxLCeVBKIQnaoMmJT
+DEDbCK5EY5nMEEm8PDbOl_b
+2Iy5bnT07pZOwm6JWFv7UfQ
+AJ9im1tL98F9dWsYIjISlbb
+NH7FS1vqKDTPbhFENfVGc4U
+JnguHe4eKyjLyaI_ywedMr0
+CbDdeafWJUDKVdRIROrSnWf
+h7956Fad9bc3gh-SR3txrE8
+lKeSPV_dSaiB_wRjjPMjSnl
+ZmGNmcobFYSw&h=yB8m83D0
+PjyT-ngBpp-EBPXTarnm06b
+YQx-Thm7qCr4'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Retry-After': '1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'A
+zure-AsyncOperation': '
+https://management.azur
+e.com/subscriptions/32c
+fe244-c541-4455-830a-3b
+973667df4c/resourceGrou
+ps/rg-retail-hardened-p
+rod/providers/Microsoft
+.Sql/locations/malaysia
+west/serverAzureAsyncOp
+eration/b183abb3-3417-4
+165-bfeb-339e7f9f0d64?a
+pi-version=2024-11-01-p
+review&t=63909364721312
+3332&c=MIIHlTCCBn2gAwIB
+AgIRAIksbexKLH3Q1KNWYXN
+raz0wDQYJKoZIhvcNAQELBQ
+AwNjE0MDIGA1UEAxMrQ0NNR
+SBHMSBUTFMgUlNBIDIwNDgg
+U0hBMjU2IDIwNDkgV1VTMiB
+DQSAwMTAeFw0yNjAzMDMxND
+U5MjFaFw0yNjA4MjkyMDU5M
+jFaMEAxPjA8BgNVBAMTNWFz
+eW5jb3BlcmF0aW9uc2lnbml
+uZ2NlcnRpZmljYXRlLm1hbm
+FnZW1lbnQuYXp1cmUuY29tM
+IIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEApqQ
+wzTSmoHDbyxAx-Zw4A2mXw3
+jb-XQ3oNdAilsDsJGu04GhV
+JavgmKa7mtAVEiUzERCPcx0
+ATNqgm9DEobX0NLBAkwTM1a
+qip92n-WqxpcmzVMXrcBAYt
+UGFPp7qO1NWWNSptWPlsBIp
+SAS6QIkMC19X2cjGIpR1ZCA
+Gz7CstqGli-iAmTdHED9kxJ
+1f__M0VLlklnxzAabNUEwy-
+9QQ1yTVkIAE6_52yV_yBHLl
+RoZIyRzQoWUZBNrmPBa2Npe
+nB5OtvO5vdZqgZxwcdh3ad5
+EoLEruyXfSlc2tGVWlZWOWX
+mrBl8ILt4gM_PNC35JnJezY
+O3zFlWNm-1IpigdxQIDAQAB
+o4IEkjCCBI4wgZ0GA1UdIAS
+BlTCBkjAMBgorBgEEAYI3ew
+EBMGYGCisGAQQBgjd7AgIwW
+DBWBggrBgEFBQcCAjBKHkgA
+MwAzAGUAMAAxADkAMgAxAC0
+ANABkADYANAAtADQAZgA4AG
+MALQBhADAANQA1AC0ANQBiA
+GQAYQBmAGYAZAA1AGUAMwAz
+AGQwDAYKKwYBBAGCN3sDAjA
+MBgorBgEEAYI3ewQCMAwGA1
+UdEwEB_wQCMAAwHQYDVR0lB
+BYwFAYIKwYBBQUHAwEGCCsG
+AQUFBwMCMA4GA1UdDwEB_wQ
+EAwIFoDAdBgNVHQ4EFgQUQv
+41vVZdnpjDnq9p_Cn_gv8AP
+xkwHwYDVR0jBBgwFoAUrONy
+-gOyc549lcjvh1uu3Ruh7Wg
+wggGyBgNVHR8EggGpMIIBpT
+BpoGegZYZjaHR0cDovL3Bya
+W1hcnktY2RuLnBraS5jb3Jl
+LndpbmRvd3MubmV0L3dlc3R
+1czIvY3Jscy9jY21ld2VzdH
+VzMnBraS9jY21ld2VzdHVzM
+mljYTAxLzM5L2N1cnJlbnQu
+Y3JsMGugaaBnhmVodHRwOi8
+vc2Vjb25kYXJ5LWNkbi5wa2
+kuY29yZS53aW5kb3dzLm5ld
+C93ZXN0dXMyL2NybHMvY2Nt
+ZXdlc3R1czJwa2kvY2NtZXd
+lc3R1czJpY2EwMS8zOS9jdX
+JyZW50LmNybDBaoFigVoZUa
+HR0cDovL2NybC5taWNyb3Nv
+ZnQuY29tL3dlc3R1czIvY3J
+scy9jY21ld2VzdHVzMnBraS
+9jY21ld2VzdHVzMmljYTAxL
+zM5L2N1cnJlbnQuY3JsMG-g
+baBrhmlodHRwOi8vY2NtZXd
+lc3R1czJwa2kud2VzdHVzMi
+5wa2kuY29yZS53aW5kb3dzL
+m5ldC9jZXJ0aWZpY2F0ZUF1
+dGhvcml0aWVzL2NjbWV3ZXN
+0dXMyaWNhMDEvMzkvY3Vycm
+VudC5jcmwwggG3BggrBgEFB
+QcBAQSCAakwggGlMGwGCCsG
+AQUFBzAChmBodHRwOi8vcHJ
+pbWFyeS1jZG4ucGtpLmNvcm
+Uud2luZG93cy5uZXQvd2Vzd
+HVzMi9jYWNlcnRzL2NjbWV3
+ZXN0dXMycGtpL2NjbWV3ZXN
+0dXMyaWNhMDEvY2VydC5jZX
+IwbgYIKwYBBQUHMAKGYmh0d
+HA6Ly9zZWNvbmRhcnktY2Ru
+LnBraS5jb3JlLndpbmRvd3M
+ubmV0L3dlc3R1czIvY2FjZX
+J0cy9jY21ld2VzdHVzMnBra
+S9jY21ld2VzdHVzMmljYTAx
+L2NlcnQuY2VyMF0GCCsGAQU
+FBzAChlFodHRwOi8vY3JsLm
+1pY3Jvc29mdC5jb20vd2Vzd
+HVzMi9jYWNlcnRzL2NjbWV3
+ZXN0dXMycGtpL2NjbWV3ZXN
+0dXMyaWNhMDEvY2VydC5jZX
+IwZgYIKwYBBQUHMAKGWmh0d
+HA6Ly9jY21ld2VzdHVzMnBr
+aS53ZXN0dXMyLnBraS5jb3J
+lLndpbmRvd3MubmV0L2Nlcn
+RpZmljYXRlQXV0aG9yaXRpZ
+XMvY2NtZXdlc3R1czJpY2Ew
+MTANBgkqhkiG9w0BAQsFAAO
+CAQEAOuzTJFpR3WYO5ykP8I
+RboImMGOkMGaYYkF6bejhcr
+jx4ZAE6QNx5pB1S4EsxodLn
+Gdvl5hkCsA-_EN5U8rwtr8O
+HyXDu5XGBdqLIfDHHWrYp9K
+8x_M35dAE6g8zwfVAJzcn4U
+52nFXKFEsgFAwwGBZtL0y11
+vRXrSv5hRpAz6jXKuJE5W8Y
+WOXOh2FjAi1dil640o3NY0e
+nXg3PC9H3D8mg99xgSixb-x
+sSrMyy3PjLjEvRF9sx4rRrv
+zf4kCMmCgpkbBc5QAfPiseH
+xoE9wjG2BUOvUnNRn1oVm4M
+t97VlANycjpxtKXd78ISjWp
+qX6ULDnXyoBjxOS2eRpsDP8
+cg&s=RNzeGslUGSkVmHSckP
+vCmtG2na-dz3x9EXHGJwB1i
+X8uND9olHXlhHzAMHnzd3cc
+BNUggm-cevApAxt1mRxcfhi
+Q18J1kQX4czhit0SH1S0NhY
+9k2_NwTu5DN2p23uyRjfIDw
+evoy5dKbi1_w0FZ-ThgCwMn
+J8IkPREZ3V98U-9nUGlofqO
+hKtMtyzuFo5u0opAVJTGqnK
+n5cr7eWweSZE53uZ8mf3PnT
+uSvsniYpfWPAUONGZMV_da9
+INjJ4CABkk6cGDCOH-AI72a
+Or3KE7iaQaOcqJ5EmJwz9TJ
+_MDPGV9ptOV0wHqUkpZ2cCO
+tNSciX8h8WxvjaXr5EnOpp8
+jw&h=VTjaA6Df_5finiaKfH
+_u-K6pCxaQFQuY5nf0sAUKp
+-U'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'x-ms-request-id': 'b18
+3abb3-3417-4165-bfeb-33
+9e7f9f0d64'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-operation-identifie
+r': 'tenantId=14b36f42-
+5039-4f4e-ab6a-7aeba0a3
+3aae,objectId=32a1a722-
+274b-4644-a582-5d936858
+14b2/uaenorth/b6dfae8a-
+3a33-454d-a785-cccd579a
+f69b'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-writes': 
+'199'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-global-wr
+ites': '2999'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-correlation-request
+-id': '5792ac46-af9b-47
+b5-9922-a577ce9e7a61'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-routing-request-id'
+: 'UAENORTH:20260317T17
+1841Z:5792ac46-af9b-47b
+5-9922-a577ce9e7a61'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'S
+trict-Transport-Securit
+y': 'max-age=31536000; 
+includeSubDomains'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'X
+-Content-Type-Options':
+ 'nosniff'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-Cache': 
+'CONFIG_NOCACHE'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-MSEdge-Ref': 'Ref 
+A: 1C7C7DF8A9BC44119339
+5CA825F4F729 Ref B: 
+MAA211070116036 Ref C: 
+2026-03-17T17:18:37Z'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Date': 'Tue, 17 Mar 
+2026 17:18:41 GMT'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response content:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: Body 
+is streamable
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request URL: 'https://m
+anagement.azure.com/sub
+scriptions/32cfe244-c54
+1-4455-830a-3b973667df4
+c/resourceGroups/rg-ret
+ail-hardened-prod/provi
+ders/Microsoft.Sql/loca
+tions/malaysiawest/serv
+erAzureAsyncOperation/b
+183abb3-3417-4165-bfeb-
+339e7f9f0d64?api-versio
+n=2024-11-01-preview&t=
+639093647213123332&c=MI
+IHlTCCBn2gAwIBAgIRAIksb
+exKLH3Q1KNWYXNraz0wDQYJ
+KoZIhvcNAQELBQAwNjE0MDI
+GA1UEAxMrQ0NNRSBHMSBUTF
+MgUlNBIDIwNDggU0hBMjU2I
+DIwNDkgV1VTMiBDQSAwMTAe
+Fw0yNjAzMDMxNDU5MjFaFw0
+yNjA4MjkyMDU5MjFaMEAxPj
+A8BgNVBAMTNWFzeW5jb3Blc
+mF0aW9uc2lnbmluZ2NlcnRp
+ZmljYXRlLm1hbmFnZW1lbnQ
+uYXp1cmUuY29tMIIBIjANBg
+kqhkiG9w0BAQEFAAOCAQ8AM
+IIBCgKCAQEApqQwzTSmoHDb
+yxAx-Zw4A2mXw3jb-XQ3oNd
+AilsDsJGu04GhVJavgmKa7m
+tAVEiUzERCPcx0ATNqgm9DE
+obX0NLBAkwTM1aqip92n-Wq
+xpcmzVMXrcBAYtUGFPp7qO1
+NWWNSptWPlsBIpSAS6QIkMC
+19X2cjGIpR1ZCAGz7CstqGl
+i-iAmTdHED9kxJ1f__M0VLl
+klnxzAabNUEwy-9QQ1yTVkI
+AE6_52yV_yBHLlRoZIyRzQo
+WUZBNrmPBa2NpenB5OtvO5v
+dZqgZxwcdh3ad5EoLEruyXf
+Slc2tGVWlZWOWXmrBl8ILt4
+gM_PNC35JnJezYO3zFlWNm-
+1IpigdxQIDAQABo4IEkjCCB
+I4wgZ0GA1UdIASBlTCBkjAM
+BgorBgEEAYI3ewEBMGYGCis
+GAQQBgjd7AgIwWDBWBggrBg
+EFBQcCAjBKHkgAMwAzAGUAM
+AAxADkAMgAxAC0ANABkADYA
+NAAtADQAZgA4AGMALQBhADA
+ANQA1AC0ANQBiAGQAYQBmAG
+YAZAA1AGUAMwAzAGQwDAYKK
+wYBBAGCN3sDAjAMBgorBgEE
+AYI3ewQCMAwGA1UdEwEB_wQ
+CMAAwHQYDVR0lBBYwFAYIKw
+YBBQUHAwEGCCsGAQUFBwMCM
+A4GA1UdDwEB_wQEAwIFoDAd
+BgNVHQ4EFgQUQv41vVZdnpj
+Dnq9p_Cn_gv8APxkwHwYDVR
+0jBBgwFoAUrONy-gOyc549l
+cjvh1uu3Ruh7WgwggGyBgNV
+HR8EggGpMIIBpTBpoGegZYZ
+jaHR0cDovL3ByaW1hcnktY2
+RuLnBraS5jb3JlLndpbmRvd
+3MubmV0L3dlc3R1czIvY3Js
+cy9jY21ld2VzdHVzMnBraS9
+jY21ld2VzdHVzMmljYTAxLz
+M5L2N1cnJlbnQuY3JsMGuga
+aBnhmVodHRwOi8vc2Vjb25k
+YXJ5LWNkbi5wa2kuY29yZS5
+3aW5kb3dzLm5ldC93ZXN0dX
+MyL2NybHMvY2NtZXdlc3R1c
+zJwa2kvY2NtZXdlc3R1czJp
+Y2EwMS8zOS9jdXJyZW50LmN
+ybDBaoFigVoZUaHR0cDovL2
+NybC5taWNyb3NvZnQuY29tL
+3dlc3R1czIvY3Jscy9jY21l
+d2VzdHVzMnBraS9jY21ld2V
+zdHVzMmljYTAxLzM5L2N1cn
+JlbnQuY3JsMG-gbaBrhmlod
+HRwOi8vY2NtZXdlc3R1czJw
+a2kud2VzdHVzMi5wa2kuY29
+yZS53aW5kb3dzLm5ldC9jZX
+J0aWZpY2F0ZUF1dGhvcml0a
+WVzL2NjbWV3ZXN0dXMyaWNh
+MDEvMzkvY3VycmVudC5jcmw
+wggG3BggrBgEFBQcBAQSCAa
+kwggGlMGwGCCsGAQUFBzACh
+mBodHRwOi8vcHJpbWFyeS1j
+ZG4ucGtpLmNvcmUud2luZG9
+3cy5uZXQvd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwbgYIKwY
+BBQUHMAKGYmh0dHA6Ly9zZW
+NvbmRhcnktY2RuLnBraS5jb
+3JlLndpbmRvd3MubmV0L3dl
+c3R1czIvY2FjZXJ0cy9jY21
+ld2VzdHVzMnBraS9jY21ld2
+VzdHVzMmljYTAxL2NlcnQuY
+2VyMF0GCCsGAQUFBzAChlFo
+dHRwOi8vY3JsLm1pY3Jvc29
+mdC5jb20vd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwZgYIKwY
+BBQUHMAKGWmh0dHA6Ly9jY2
+1ld2VzdHVzMnBraS53ZXN0d
+XMyLnBraS5jb3JlLndpbmRv
+d3MubmV0L2NlcnRpZmljYXR
+lQXV0aG9yaXRpZXMvY2NtZX
+dlc3R1czJpY2EwMTANBgkqh
+kiG9w0BAQsFAAOCAQEAOuzT
+JFpR3WYO5ykP8IRboImMGOk
+MGaYYkF6bejhcrjx4ZAE6QN
+x5pB1S4EsxodLnGdvl5hkCs
+A-_EN5U8rwtr8OHyXDu5XGB
+dqLIfDHHWrYp9K8x_M35dAE
+6g8zwfVAJzcn4U52nFXKFEs
+gFAwwGBZtL0y11vRXrSv5hR
+pAz6jXKuJE5W8YWOXOh2FjA
+i1dil640o3NY0enXg3PC9H3
+D8mg99xgSixb-xsSrMyy3Pj
+LjEvRF9sx4rRrvzf4kCMmCg
+pkbBc5QAfPiseHxoE9wjG2B
+UOvUnNRn1oVm4Mt97VlANyc
+jpxtKXd78ISjWpqX6ULDnXy
+oBjxOS2eRpsDP8cg&s=RNze
+GslUGSkVmHSckPvCmtG2na-
+dz3x9EXHGJwB1iX8uND9olH
+XlhHzAMHnzd3ccBNUggm-ce
+vApAxt1mRxcfhiQ18J1kQX4
+czhit0SH1S0NhY9k2_NwTu5
+DN2p23uyRjfIDwevoy5dKbi
+1_w0FZ-ThgCwMnJ8IkPREZ3
+V98U-9nUGlofqOhKtMtyzuF
+o5u0opAVJTGqnKn5cr7eWwe
+SZE53uZ8mf3PnTuSvsniYpf
+WPAUONGZMV_da9INjJ4CABk
+k6cGDCOH-AI72aOr3KE7iaQ
+aOcqJ5EmJwz9TJ_MDPGV9pt
+OV0wHqUkpZ2cCOtNSciX8h8
+WxvjaXr5EnOpp8jw&h=VTja
+A6Df_5finiaKfH_u-K6pCxa
+QFQuY5nf0sAUKp-U'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request method: 'GET'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-client-request-id':
+ '552dbfda-2225-11f1-87
+91-bbcdfe580b81'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'CommandName': 'sql 
+server create'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'ParameterSetName': 
+'--name 
+--resource-group 
+--location 
+--admin-user 
+--admin-password 
+--debug'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'User-Agent': 
+'AZURECLI/2.84.0 (MSI) 
+azsdk-python-core/1.38.
+0 Python/3.13.11 (Windo
+ws-11-10.0.26200-SP0)'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Authorization': 
+'*****'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request body:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: This 
+request has no body
+DEBUG: urllib3.connecti
+onpool: https://managem
+ent.azure.com:443 "GET 
+/subscriptions/32cfe244
+-c541-4455-830a-3b97366
+7df4c/resourceGroups/rg
+-retail-hardened-prod/p
+roviders/Microsoft.Sql/
+locations/malaysiawest/
+serverAzureAsyncOperati
+on/b183abb3-3417-4165-b
+feb-339e7f9f0d64?api-ve
+rsion=2024-11-01-previe
+w&t=639093647213123332&
+c=MIIHlTCCBn2gAwIBAgIRA
+IksbexKLH3Q1KNWYXNraz0w
+DQYJKoZIhvcNAQELBQAwNjE
+0MDIGA1UEAxMrQ0NNRSBHMS
+BUTFMgUlNBIDIwNDggU0hBM
+jU2IDIwNDkgV1VTMiBDQSAw
+MTAeFw0yNjAzMDMxNDU5MjF
+aFw0yNjA4MjkyMDU5MjFaME
+AxPjA8BgNVBAMTNWFzeW5jb
+3BlcmF0aW9uc2lnbmluZ2Nl
+cnRpZmljYXRlLm1hbmFnZW1
+lbnQuYXp1cmUuY29tMIIBIj
+ANBgkqhkiG9w0BAQEFAAOCA
+Q8AMIIBCgKCAQEApqQwzTSm
+oHDbyxAx-Zw4A2mXw3jb-XQ
+3oNdAilsDsJGu04GhVJavgm
+Ka7mtAVEiUzERCPcx0ATNqg
+m9DEobX0NLBAkwTM1aqip92
+n-WqxpcmzVMXrcBAYtUGFPp
+7qO1NWWNSptWPlsBIpSAS6Q
+IkMC19X2cjGIpR1ZCAGz7Cs
+tqGli-iAmTdHED9kxJ1f__M
+0VLlklnxzAabNUEwy-9QQ1y
+TVkIAE6_52yV_yBHLlRoZIy
+RzQoWUZBNrmPBa2NpenB5Ot
+vO5vdZqgZxwcdh3ad5EoLEr
+uyXfSlc2tGVWlZWOWXmrBl8
+ILt4gM_PNC35JnJezYO3zFl
+WNm-1IpigdxQIDAQABo4IEk
+jCCBI4wgZ0GA1UdIASBlTCB
+kjAMBgorBgEEAYI3ewEBMGY
+GCisGAQQBgjd7AgIwWDBWBg
+grBgEFBQcCAjBKHkgAMwAzA
+GUAMAAxADkAMgAxAC0ANABk
+ADYANAAtADQAZgA4AGMALQB
+hADAANQA1AC0ANQBiAGQAYQ
+BmAGYAZAA1AGUAMwAzAGQwD
+AYKKwYBBAGCN3sDAjAMBgor
+BgEEAYI3ewQCMAwGA1UdEwE
+B_wQCMAAwHQYDVR0lBBYwFA
+YIKwYBBQUHAwEGCCsGAQUFB
+wMCMA4GA1UdDwEB_wQEAwIF
+oDAdBgNVHQ4EFgQUQv41vVZ
+dnpjDnq9p_Cn_gv8APxkwHw
+YDVR0jBBgwFoAUrONy-gOyc
+549lcjvh1uu3Ruh7WgwggGy
+BgNVHR8EggGpMIIBpTBpoGe
+gZYZjaHR0cDovL3ByaW1hcn
+ktY2RuLnBraS5jb3JlLndpb
+mRvd3MubmV0L3dlc3R1czIv
+Y3Jscy9jY21ld2VzdHVzMnB
+raS9jY21ld2VzdHVzMmljYT
+AxLzM5L2N1cnJlbnQuY3JsM
+GugaaBnhmVodHRwOi8vc2Vj
+b25kYXJ5LWNkbi5wa2kuY29
+yZS53aW5kb3dzLm5ldC93ZX
+N0dXMyL2NybHMvY2NtZXdlc
+3R1czJwa2kvY2NtZXdlc3R1
+czJpY2EwMS8zOS9jdXJyZW5
+0LmNybDBaoFigVoZUaHR0cD
+ovL2NybC5taWNyb3NvZnQuY
+29tL3dlc3R1czIvY3Jscy9j
+Y21ld2VzdHVzMnBraS9jY21
+ld2VzdHVzMmljYTAxLzM5L2
+N1cnJlbnQuY3JsMG-gbaBrh
+mlodHRwOi8vY2NtZXdlc3R1
+czJwa2kud2VzdHVzMi5wa2k
+uY29yZS53aW5kb3dzLm5ldC
+9jZXJ0aWZpY2F0ZUF1dGhvc
+ml0aWVzL2NjbWV3ZXN0dXMy
+aWNhMDEvMzkvY3VycmVudC5
+jcmwwggG3BggrBgEFBQcBAQ
+SCAakwggGlMGwGCCsGAQUFB
+zAChmBodHRwOi8vcHJpbWFy
+eS1jZG4ucGtpLmNvcmUud2l
+uZG93cy5uZXQvd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwbgY
+IKwYBBQUHMAKGYmh0dHA6Ly
+9zZWNvbmRhcnktY2RuLnBra
+S5jb3JlLndpbmRvd3MubmV0
+L3dlc3R1czIvY2FjZXJ0cy9
+jY21ld2VzdHVzMnBraS9jY2
+1ld2VzdHVzMmljYTAxL2Nlc
+nQuY2VyMF0GCCsGAQUFBzAC
+hlFodHRwOi8vY3JsLm1pY3J
+vc29mdC5jb20vd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwZgY
+IKwYBBQUHMAKGWmh0dHA6Ly
+9jY21ld2VzdHVzMnBraS53Z
+XN0dXMyLnBraS5jb3JlLndp
+bmRvd3MubmV0L2NlcnRpZml
+jYXRlQXV0aG9yaXRpZXMvY2
+NtZXdlc3R1czJpY2EwMTANB
+gkqhkiG9w0BAQsFAAOCAQEA
+OuzTJFpR3WYO5ykP8IRboIm
+MGOkMGaYYkF6bejhcrjx4ZA
+E6QNx5pB1S4EsxodLnGdvl5
+hkCsA-_EN5U8rwtr8OHyXDu
+5XGBdqLIfDHHWrYp9K8x_M3
+5dAE6g8zwfVAJzcn4U52nFX
+KFEsgFAwwGBZtL0y11vRXrS
+v5hRpAz6jXKuJE5W8YWOXOh
+2FjAi1dil640o3NY0enXg3P
+C9H3D8mg99xgSixb-xsSrMy
+y3PjLjEvRF9sx4rRrvzf4kC
+MmCgpkbBc5QAfPiseHxoE9w
+jG2BUOvUnNRn1oVm4Mt97Vl
+ANycjpxtKXd78ISjWpqX6UL
+DnXyoBjxOS2eRpsDP8cg&s=
+RNzeGslUGSkVmHSckPvCmtG
+2na-dz3x9EXHGJwB1iX8uND
+9olHXlhHzAMHnzd3ccBNUgg
+m-cevApAxt1mRxcfhiQ18J1
+kQX4czhit0SH1S0NhY9k2_N
+wTu5DN2p23uyRjfIDwevoy5
+dKbi1_w0FZ-ThgCwMnJ8IkP
+REZ3V98U-9nUGlofqOhKtMt
+yzuFo5u0opAVJTGqnKn5cr7
+eWweSZE53uZ8mf3PnTuSvsn
+iYpfWPAUONGZMV_da9INjJ4
+CABkk6cGDCOH-AI72aOr3KE
+7iaQaOcqJ5EmJwz9TJ_MDPG
+V9ptOV0wHqUkpZ2cCOtNSci
+X8h8WxvjaXr5EnOpp8jw&h=
+VTjaA6Df_5finiaKfH_u-K6
+pCxaQFQuY5nf0sAUKp-U 
+HTTP/1.1" 200 107
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response status: 200
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Cache-Control': 
+'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Pragma': 'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Length': '107'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Type': 
+'application/json; 
+charset=utf-8'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Expires': '-1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Retry-After': '1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'x-ms-request-id': '333
+3d3bd-8398-4653-b40a-a0
+a7a54c01ab'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-operation-identifie
+r': 'tenantId=14b36f42-
+5039-4f4e-ab6a-7aeba0a3
+3aae,objectId=32a1a722-
+274b-4644-a582-5d936858
+14b2/malaysiawest/8b0eb
+8c6-a64a-48f4-a36a-9d19
+2fa57f70'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-reads': 
+'249'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-global-re
+ads': '3749'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-correlation-request
+-id': '16af6050-a43a-4f
+9a-abf8-7694af85955a'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-routing-request-id'
+: 'MALAYSIAWEST:2026031
+7T171841Z:16af6050-a43a
+-4f9a-abf8-7694af85955a
+'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'S
+trict-Transport-Securit
+y': 'max-age=31536000; 
+includeSubDomains'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'X
+-Content-Type-Options':
+ 'nosniff'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-Cache': 
+'CONFIG_NOCACHE'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-MSEdge-Ref': 'Ref 
+A: 90EFA49328394EEFB8C3
+C9D6EA02A03F Ref B: 
+MAA211070116036 Ref C: 
+2026-03-17T17:18:41Z'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Date': 'Tue, 17 Mar 
+2026 17:18:41 GMT'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response content:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: {"name
+":"b183abb3-3417-4165-b
+feb-339e7f9f0d64","stat
+us":"InProgress","start
+Time":"2026-03-17T17:18
+:40.83Z"}
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request URL: 'https://m
+anagement.azure.com/sub
+scriptions/32cfe244-c54
+1-4455-830a-3b973667df4
+c/resourceGroups/rg-ret
+ail-hardened-prod/provi
+ders/Microsoft.Sql/loca
+tions/malaysiawest/serv
+erAzureAsyncOperation/b
+183abb3-3417-4165-bfeb-
+339e7f9f0d64?api-versio
+n=2024-11-01-preview&t=
+639093647213123332&c=MI
+IHlTCCBn2gAwIBAgIRAIksb
+exKLH3Q1KNWYXNraz0wDQYJ
+KoZIhvcNAQELBQAwNjE0MDI
+GA1UEAxMrQ0NNRSBHMSBUTF
+MgUlNBIDIwNDggU0hBMjU2I
+DIwNDkgV1VTMiBDQSAwMTAe
+Fw0yNjAzMDMxNDU5MjFaFw0
+yNjA4MjkyMDU5MjFaMEAxPj
+A8BgNVBAMTNWFzeW5jb3Blc
+mF0aW9uc2lnbmluZ2NlcnRp
+ZmljYXRlLm1hbmFnZW1lbnQ
+uYXp1cmUuY29tMIIBIjANBg
+kqhkiG9w0BAQEFAAOCAQ8AM
+IIBCgKCAQEApqQwzTSmoHDb
+yxAx-Zw4A2mXw3jb-XQ3oNd
+AilsDsJGu04GhVJavgmKa7m
+tAVEiUzERCPcx0ATNqgm9DE
+obX0NLBAkwTM1aqip92n-Wq
+xpcmzVMXrcBAYtUGFPp7qO1
+NWWNSptWPlsBIpSAS6QIkMC
+19X2cjGIpR1ZCAGz7CstqGl
+i-iAmTdHED9kxJ1f__M0VLl
+klnxzAabNUEwy-9QQ1yTVkI
+AE6_52yV_yBHLlRoZIyRzQo
+WUZBNrmPBa2NpenB5OtvO5v
+dZqgZxwcdh3ad5EoLEruyXf
+Slc2tGVWlZWOWXmrBl8ILt4
+gM_PNC35JnJezYO3zFlWNm-
+1IpigdxQIDAQABo4IEkjCCB
+I4wgZ0GA1UdIASBlTCBkjAM
+BgorBgEEAYI3ewEBMGYGCis
+GAQQBgjd7AgIwWDBWBggrBg
+EFBQcCAjBKHkgAMwAzAGUAM
+AAxADkAMgAxAC0ANABkADYA
+NAAtADQAZgA4AGMALQBhADA
+ANQA1AC0ANQBiAGQAYQBmAG
+YAZAA1AGUAMwAzAGQwDAYKK
+wYBBAGCN3sDAjAMBgorBgEE
+AYI3ewQCMAwGA1UdEwEB_wQ
+CMAAwHQYDVR0lBBYwFAYIKw
+YBBQUHAwEGCCsGAQUFBwMCM
+A4GA1UdDwEB_wQEAwIFoDAd
+BgNVHQ4EFgQUQv41vVZdnpj
+Dnq9p_Cn_gv8APxkwHwYDVR
+0jBBgwFoAUrONy-gOyc549l
+cjvh1uu3Ruh7WgwggGyBgNV
+HR8EggGpMIIBpTBpoGegZYZ
+jaHR0cDovL3ByaW1hcnktY2
+RuLnBraS5jb3JlLndpbmRvd
+3MubmV0L3dlc3R1czIvY3Js
+cy9jY21ld2VzdHVzMnBraS9
+jY21ld2VzdHVzMmljYTAxLz
+M5L2N1cnJlbnQuY3JsMGuga
+aBnhmVodHRwOi8vc2Vjb25k
+YXJ5LWNkbi5wa2kuY29yZS5
+3aW5kb3dzLm5ldC93ZXN0dX
+MyL2NybHMvY2NtZXdlc3R1c
+zJwa2kvY2NtZXdlc3R1czJp
+Y2EwMS8zOS9jdXJyZW50LmN
+ybDBaoFigVoZUaHR0cDovL2
+NybC5taWNyb3NvZnQuY29tL
+3dlc3R1czIvY3Jscy9jY21l
+d2VzdHVzMnBraS9jY21ld2V
+zdHVzMmljYTAxLzM5L2N1cn
+JlbnQuY3JsMG-gbaBrhmlod
+HRwOi8vY2NtZXdlc3R1czJw
+a2kud2VzdHVzMi5wa2kuY29
+yZS53aW5kb3dzLm5ldC9jZX
+J0aWZpY2F0ZUF1dGhvcml0a
+WVzL2NjbWV3ZXN0dXMyaWNh
+MDEvMzkvY3VycmVudC5jcmw
+wggG3BggrBgEFBQcBAQSCAa
+kwggGlMGwGCCsGAQUFBzACh
+mBodHRwOi8vcHJpbWFyeS1j
+ZG4ucGtpLmNvcmUud2luZG9
+3cy5uZXQvd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwbgYIKwY
+BBQUHMAKGYmh0dHA6Ly9zZW
+NvbmRhcnktY2RuLnBraS5jb
+3JlLndpbmRvd3MubmV0L3dl
+c3R1czIvY2FjZXJ0cy9jY21
+ld2VzdHVzMnBraS9jY21ld2
+VzdHVzMmljYTAxL2NlcnQuY
+2VyMF0GCCsGAQUFBzAChlFo
+dHRwOi8vY3JsLm1pY3Jvc29
+mdC5jb20vd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwZgYIKwY
+BBQUHMAKGWmh0dHA6Ly9jY2
+1ld2VzdHVzMnBraS53ZXN0d
+XMyLnBraS5jb3JlLndpbmRv
+d3MubmV0L2NlcnRpZmljYXR
+lQXV0aG9yaXRpZXMvY2NtZX
+dlc3R1czJpY2EwMTANBgkqh
+kiG9w0BAQsFAAOCAQEAOuzT
+JFpR3WYO5ykP8IRboImMGOk
+MGaYYkF6bejhcrjx4ZAE6QN
+x5pB1S4EsxodLnGdvl5hkCs
+A-_EN5U8rwtr8OHyXDu5XGB
+dqLIfDHHWrYp9K8x_M35dAE
+6g8zwfVAJzcn4U52nFXKFEs
+gFAwwGBZtL0y11vRXrSv5hR
+pAz6jXKuJE5W8YWOXOh2FjA
+i1dil640o3NY0enXg3PC9H3
+D8mg99xgSixb-xsSrMyy3Pj
+LjEvRF9sx4rRrvzf4kCMmCg
+pkbBc5QAfPiseHxoE9wjG2B
+UOvUnNRn1oVm4Mt97VlANyc
+jpxtKXd78ISjWpqX6ULDnXy
+oBjxOS2eRpsDP8cg&s=RNze
+GslUGSkVmHSckPvCmtG2na-
+dz3x9EXHGJwB1iX8uND9olH
+XlhHzAMHnzd3ccBNUggm-ce
+vApAxt1mRxcfhiQ18J1kQX4
+czhit0SH1S0NhY9k2_NwTu5
+DN2p23uyRjfIDwevoy5dKbi
+1_w0FZ-ThgCwMnJ8IkPREZ3
+V98U-9nUGlofqOhKtMtyzuF
+o5u0opAVJTGqnKn5cr7eWwe
+SZE53uZ8mf3PnTuSvsniYpf
+WPAUONGZMV_da9INjJ4CABk
+k6cGDCOH-AI72aOr3KE7iaQ
+aOcqJ5EmJwz9TJ_MDPGV9pt
+OV0wHqUkpZ2cCOtNSciX8h8
+WxvjaXr5EnOpp8jw&h=VTja
+A6Df_5finiaKfH_u-K6pCxa
+QFQuY5nf0sAUKp-U'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request method: 'GET'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-client-request-id':
+ '552dbfda-2225-11f1-87
+91-bbcdfe580b81'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'CommandName': 'sql 
+server create'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'ParameterSetName': 
+'--name 
+--resource-group 
+--location 
+--admin-user 
+--admin-password 
+--debug'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'User-Agent': 
+'AZURECLI/2.84.0 (MSI) 
+azsdk-python-core/1.38.
+0 Python/3.13.11 (Windo
+ws-11-10.0.26200-SP0)'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Authorization': 
+'*****'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request body:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: This 
+request has no body
+DEBUG: urllib3.connecti
+onpool: https://managem
+ent.azure.com:443 "GET 
+/subscriptions/32cfe244
+-c541-4455-830a-3b97366
+7df4c/resourceGroups/rg
+-retail-hardened-prod/p
+roviders/Microsoft.Sql/
+locations/malaysiawest/
+serverAzureAsyncOperati
+on/b183abb3-3417-4165-b
+feb-339e7f9f0d64?api-ve
+rsion=2024-11-01-previe
+w&t=639093647213123332&
+c=MIIHlTCCBn2gAwIBAgIRA
+IksbexKLH3Q1KNWYXNraz0w
+DQYJKoZIhvcNAQELBQAwNjE
+0MDIGA1UEAxMrQ0NNRSBHMS
+BUTFMgUlNBIDIwNDggU0hBM
+jU2IDIwNDkgV1VTMiBDQSAw
+MTAeFw0yNjAzMDMxNDU5MjF
+aFw0yNjA4MjkyMDU5MjFaME
+AxPjA8BgNVBAMTNWFzeW5jb
+3BlcmF0aW9uc2lnbmluZ2Nl
+cnRpZmljYXRlLm1hbmFnZW1
+lbnQuYXp1cmUuY29tMIIBIj
+ANBgkqhkiG9w0BAQEFAAOCA
+Q8AMIIBCgKCAQEApqQwzTSm
+oHDbyxAx-Zw4A2mXw3jb-XQ
+3oNdAilsDsJGu04GhVJavgm
+Ka7mtAVEiUzERCPcx0ATNqg
+m9DEobX0NLBAkwTM1aqip92
+n-WqxpcmzVMXrcBAYtUGFPp
+7qO1NWWNSptWPlsBIpSAS6Q
+IkMC19X2cjGIpR1ZCAGz7Cs
+tqGli-iAmTdHED9kxJ1f__M
+0VLlklnxzAabNUEwy-9QQ1y
+TVkIAE6_52yV_yBHLlRoZIy
+RzQoWUZBNrmPBa2NpenB5Ot
+vO5vdZqgZxwcdh3ad5EoLEr
+uyXfSlc2tGVWlZWOWXmrBl8
+ILt4gM_PNC35JnJezYO3zFl
+WNm-1IpigdxQIDAQABo4IEk
+jCCBI4wgZ0GA1UdIASBlTCB
+kjAMBgorBgEEAYI3ewEBMGY
+GCisGAQQBgjd7AgIwWDBWBg
+grBgEFBQcCAjBKHkgAMwAzA
+GUAMAAxADkAMgAxAC0ANABk
+ADYANAAtADQAZgA4AGMALQB
+hADAANQA1AC0ANQBiAGQAYQ
+BmAGYAZAA1AGUAMwAzAGQwD
+AYKKwYBBAGCN3sDAjAMBgor
+BgEEAYI3ewQCMAwGA1UdEwE
+B_wQCMAAwHQYDVR0lBBYwFA
+YIKwYBBQUHAwEGCCsGAQUFB
+wMCMA4GA1UdDwEB_wQEAwIF
+oDAdBgNVHQ4EFgQUQv41vVZ
+dnpjDnq9p_Cn_gv8APxkwHw
+YDVR0jBBgwFoAUrONy-gOyc
+549lcjvh1uu3Ruh7WgwggGy
+BgNVHR8EggGpMIIBpTBpoGe
+gZYZjaHR0cDovL3ByaW1hcn
+ktY2RuLnBraS5jb3JlLndpb
+mRvd3MubmV0L3dlc3R1czIv
+Y3Jscy9jY21ld2VzdHVzMnB
+raS9jY21ld2VzdHVzMmljYT
+AxLzM5L2N1cnJlbnQuY3JsM
+GugaaBnhmVodHRwOi8vc2Vj
+b25kYXJ5LWNkbi5wa2kuY29
+yZS53aW5kb3dzLm5ldC93ZX
+N0dXMyL2NybHMvY2NtZXdlc
+3R1czJwa2kvY2NtZXdlc3R1
+czJpY2EwMS8zOS9jdXJyZW5
+0LmNybDBaoFigVoZUaHR0cD
+ovL2NybC5taWNyb3NvZnQuY
+29tL3dlc3R1czIvY3Jscy9j
+Y21ld2VzdHVzMnBraS9jY21
+ld2VzdHVzMmljYTAxLzM5L2
+N1cnJlbnQuY3JsMG-gbaBrh
+mlodHRwOi8vY2NtZXdlc3R1
+czJwa2kud2VzdHVzMi5wa2k
+uY29yZS53aW5kb3dzLm5ldC
+9jZXJ0aWZpY2F0ZUF1dGhvc
+ml0aWVzL2NjbWV3ZXN0dXMy
+aWNhMDEvMzkvY3VycmVudC5
+jcmwwggG3BggrBgEFBQcBAQ
+SCAakwggGlMGwGCCsGAQUFB
+zAChmBodHRwOi8vcHJpbWFy
+eS1jZG4ucGtpLmNvcmUud2l
+uZG93cy5uZXQvd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwbgY
+IKwYBBQUHMAKGYmh0dHA6Ly
+9zZWNvbmRhcnktY2RuLnBra
+S5jb3JlLndpbmRvd3MubmV0
+L3dlc3R1czIvY2FjZXJ0cy9
+jY21ld2VzdHVzMnBraS9jY2
+1ld2VzdHVzMmljYTAxL2Nlc
+nQuY2VyMF0GCCsGAQUFBzAC
+hlFodHRwOi8vY3JsLm1pY3J
+vc29mdC5jb20vd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwZgY
+IKwYBBQUHMAKGWmh0dHA6Ly
+9jY21ld2VzdHVzMnBraS53Z
+XN0dXMyLnBraS5jb3JlLndp
+bmRvd3MubmV0L2NlcnRpZml
+jYXRlQXV0aG9yaXRpZXMvY2
+NtZXdlc3R1czJpY2EwMTANB
+gkqhkiG9w0BAQsFAAOCAQEA
+OuzTJFpR3WYO5ykP8IRboIm
+MGOkMGaYYkF6bejhcrjx4ZA
+E6QNx5pB1S4EsxodLnGdvl5
+hkCsA-_EN5U8rwtr8OHyXDu
+5XGBdqLIfDHHWrYp9K8x_M3
+5dAE6g8zwfVAJzcn4U52nFX
+KFEsgFAwwGBZtL0y11vRXrS
+v5hRpAz6jXKuJE5W8YWOXOh
+2FjAi1dil640o3NY0enXg3P
+C9H3D8mg99xgSixb-xsSrMy
+y3PjLjEvRF9sx4rRrvzf4kC
+MmCgpkbBc5QAfPiseHxoE9w
+jG2BUOvUnNRn1oVm4Mt97Vl
+ANycjpxtKXd78ISjWpqX6UL
+DnXyoBjxOS2eRpsDP8cg&s=
+RNzeGslUGSkVmHSckPvCmtG
+2na-dz3x9EXHGJwB1iX8uND
+9olHXlhHzAMHnzd3ccBNUgg
+m-cevApAxt1mRxcfhiQ18J1
+kQX4czhit0SH1S0NhY9k2_N
+wTu5DN2p23uyRjfIDwevoy5
+dKbi1_w0FZ-ThgCwMnJ8IkP
+REZ3V98U-9nUGlofqOhKtMt
+yzuFo5u0opAVJTGqnKn5cr7
+eWweSZE53uZ8mf3PnTuSvsn
+iYpfWPAUONGZMV_da9INjJ4
+CABkk6cGDCOH-AI72aOr3KE
+7iaQaOcqJ5EmJwz9TJ_MDPG
+V9ptOV0wHqUkpZ2cCOtNSci
+X8h8WxvjaXr5EnOpp8jw&h=
+VTjaA6Df_5finiaKfH_u-K6
+pCxaQFQuY5nf0sAUKp-U 
+HTTP/1.1" 200 107
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response status: 200
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Cache-Control': 
+'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Pragma': 'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Length': '107'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Type': 
+'application/json; 
+charset=utf-8'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Expires': '-1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Retry-After': '1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'x-ms-request-id': 'ff3
+4a856-7d67-4b70-a9b8-58
+fbc1544f93'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-operation-identifie
+r': 'tenantId=14b36f42-
+5039-4f4e-ab6a-7aeba0a3
+3aae,objectId=32a1a722-
+274b-4644-a582-5d936858
+14b2/malaysiawest/86f7b
+398-b5ee-4fa5-81e2-5e11
+2b9ead30'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-reads': 
+'248'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-global-re
+ads': '3748'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-correlation-request
+-id': '382b56d2-f72a-43
+51-b90a-bb90f75d6ca5'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-routing-request-id'
+: 'MALAYSIAWEST:2026031
+7T171842Z:382b56d2-f72a
+-4351-b90a-bb90f75d6ca5
+'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'S
+trict-Transport-Securit
+y': 'max-age=31536000; 
+includeSubDomains'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'X
+-Content-Type-Options':
+ 'nosniff'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-Cache': 
+'CONFIG_NOCACHE'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-MSEdge-Ref': 'Ref 
+A: 662006ADB7E145AB8BC6
+D6F6F046B4BF Ref B: 
+MAA211070116036 Ref C: 
+2026-03-17T17:18:42Z'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Date': 'Tue, 17 Mar 
+2026 17:18:42 GMT'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response content:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: {"name
+":"b183abb3-3417-4165-b
+feb-339e7f9f0d64","stat
+us":"InProgress","start
+Time":"2026-03-17T17:18
+:40.83Z"}
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request URL: 'https://m
+anagement.azure.com/sub
+scriptions/32cfe244-c54
+1-4455-830a-3b973667df4
+c/resourceGroups/rg-ret
+ail-hardened-prod/provi
+ders/Microsoft.Sql/loca
+tions/malaysiawest/serv
+erAzureAsyncOperation/b
+183abb3-3417-4165-bfeb-
+339e7f9f0d64?api-versio
+n=2024-11-01-preview&t=
+639093647213123332&c=MI
+IHlTCCBn2gAwIBAgIRAIksb
+exKLH3Q1KNWYXNraz0wDQYJ
+KoZIhvcNAQELBQAwNjE0MDI
+GA1UEAxMrQ0NNRSBHMSBUTF
+MgUlNBIDIwNDggU0hBMjU2I
+DIwNDkgV1VTMiBDQSAwMTAe
+Fw0yNjAzMDMxNDU5MjFaFw0
+yNjA4MjkyMDU5MjFaMEAxPj
+A8BgNVBAMTNWFzeW5jb3Blc
+mF0aW9uc2lnbmluZ2NlcnRp
+ZmljYXRlLm1hbmFnZW1lbnQ
+uYXp1cmUuY29tMIIBIjANBg
+kqhkiG9w0BAQEFAAOCAQ8AM
+IIBCgKCAQEApqQwzTSmoHDb
+yxAx-Zw4A2mXw3jb-XQ3oNd
+AilsDsJGu04GhVJavgmKa7m
+tAVEiUzERCPcx0ATNqgm9DE
+obX0NLBAkwTM1aqip92n-Wq
+xpcmzVMXrcBAYtUGFPp7qO1
+NWWNSptWPlsBIpSAS6QIkMC
+19X2cjGIpR1ZCAGz7CstqGl
+i-iAmTdHED9kxJ1f__M0VLl
+klnxzAabNUEwy-9QQ1yTVkI
+AE6_52yV_yBHLlRoZIyRzQo
+WUZBNrmPBa2NpenB5OtvO5v
+dZqgZxwcdh3ad5EoLEruyXf
+Slc2tGVWlZWOWXmrBl8ILt4
+gM_PNC35JnJezYO3zFlWNm-
+1IpigdxQIDAQABo4IEkjCCB
+I4wgZ0GA1UdIASBlTCBkjAM
+BgorBgEEAYI3ewEBMGYGCis
+GAQQBgjd7AgIwWDBWBggrBg
+EFBQcCAjBKHkgAMwAzAGUAM
+AAxADkAMgAxAC0ANABkADYA
+NAAtADQAZgA4AGMALQBhADA
+ANQA1AC0ANQBiAGQAYQBmAG
+YAZAA1AGUAMwAzAGQwDAYKK
+wYBBAGCN3sDAjAMBgorBgEE
+AYI3ewQCMAwGA1UdEwEB_wQ
+CMAAwHQYDVR0lBBYwFAYIKw
+YBBQUHAwEGCCsGAQUFBwMCM
+A4GA1UdDwEB_wQEAwIFoDAd
+BgNVHQ4EFgQUQv41vVZdnpj
+Dnq9p_Cn_gv8APxkwHwYDVR
+0jBBgwFoAUrONy-gOyc549l
+cjvh1uu3Ruh7WgwggGyBgNV
+HR8EggGpMIIBpTBpoGegZYZ
+jaHR0cDovL3ByaW1hcnktY2
+RuLnBraS5jb3JlLndpbmRvd
+3MubmV0L3dlc3R1czIvY3Js
+cy9jY21ld2VzdHVzMnBraS9
+jY21ld2VzdHVzMmljYTAxLz
+M5L2N1cnJlbnQuY3JsMGuga
+aBnhmVodHRwOi8vc2Vjb25k
+YXJ5LWNkbi5wa2kuY29yZS5
+3aW5kb3dzLm5ldC93ZXN0dX
+MyL2NybHMvY2NtZXdlc3R1c
+zJwa2kvY2NtZXdlc3R1czJp
+Y2EwMS8zOS9jdXJyZW50LmN
+ybDBaoFigVoZUaHR0cDovL2
+NybC5taWNyb3NvZnQuY29tL
+3dlc3R1czIvY3Jscy9jY21l
+d2VzdHVzMnBraS9jY21ld2V
+zdHVzMmljYTAxLzM5L2N1cn
+JlbnQuY3JsMG-gbaBrhmlod
+HRwOi8vY2NtZXdlc3R1czJw
+a2kud2VzdHVzMi5wa2kuY29
+yZS53aW5kb3dzLm5ldC9jZX
+J0aWZpY2F0ZUF1dGhvcml0a
+WVzL2NjbWV3ZXN0dXMyaWNh
+MDEvMzkvY3VycmVudC5jcmw
+wggG3BggrBgEFBQcBAQSCAa
+kwggGlMGwGCCsGAQUFBzACh
+mBodHRwOi8vcHJpbWFyeS1j
+ZG4ucGtpLmNvcmUud2luZG9
+3cy5uZXQvd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwbgYIKwY
+BBQUHMAKGYmh0dHA6Ly9zZW
+NvbmRhcnktY2RuLnBraS5jb
+3JlLndpbmRvd3MubmV0L3dl
+c3R1czIvY2FjZXJ0cy9jY21
+ld2VzdHVzMnBraS9jY21ld2
+VzdHVzMmljYTAxL2NlcnQuY
+2VyMF0GCCsGAQUFBzAChlFo
+dHRwOi8vY3JsLm1pY3Jvc29
+mdC5jb20vd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwZgYIKwY
+BBQUHMAKGWmh0dHA6Ly9jY2
+1ld2VzdHVzMnBraS53ZXN0d
+XMyLnBraS5jb3JlLndpbmRv
+d3MubmV0L2NlcnRpZmljYXR
+lQXV0aG9yaXRpZXMvY2NtZX
+dlc3R1czJpY2EwMTANBgkqh
+kiG9w0BAQsFAAOCAQEAOuzT
+JFpR3WYO5ykP8IRboImMGOk
+MGaYYkF6bejhcrjx4ZAE6QN
+x5pB1S4EsxodLnGdvl5hkCs
+A-_EN5U8rwtr8OHyXDu5XGB
+dqLIfDHHWrYp9K8x_M35dAE
+6g8zwfVAJzcn4U52nFXKFEs
+gFAwwGBZtL0y11vRXrSv5hR
+pAz6jXKuJE5W8YWOXOh2FjA
+i1dil640o3NY0enXg3PC9H3
+D8mg99xgSixb-xsSrMyy3Pj
+LjEvRF9sx4rRrvzf4kCMmCg
+pkbBc5QAfPiseHxoE9wjG2B
+UOvUnNRn1oVm4Mt97VlANyc
+jpxtKXd78ISjWpqX6ULDnXy
+oBjxOS2eRpsDP8cg&s=RNze
+GslUGSkVmHSckPvCmtG2na-
+dz3x9EXHGJwB1iX8uND9olH
+XlhHzAMHnzd3ccBNUggm-ce
+vApAxt1mRxcfhiQ18J1kQX4
+czhit0SH1S0NhY9k2_NwTu5
+DN2p23uyRjfIDwevoy5dKbi
+1_w0FZ-ThgCwMnJ8IkPREZ3
+V98U-9nUGlofqOhKtMtyzuF
+o5u0opAVJTGqnKn5cr7eWwe
+SZE53uZ8mf3PnTuSvsniYpf
+WPAUONGZMV_da9INjJ4CABk
+k6cGDCOH-AI72aOr3KE7iaQ
+aOcqJ5EmJwz9TJ_MDPGV9pt
+OV0wHqUkpZ2cCOtNSciX8h8
+WxvjaXr5EnOpp8jw&h=VTja
+A6Df_5finiaKfH_u-K6pCxa
+QFQuY5nf0sAUKp-U'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request method: 'GET'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-client-request-id':
+ '552dbfda-2225-11f1-87
+91-bbcdfe580b81'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'CommandName': 'sql 
+server create'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'ParameterSetName': 
+'--name 
+--resource-group 
+--location 
+--admin-user 
+--admin-password 
+--debug'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'User-Agent': 
+'AZURECLI/2.84.0 (MSI) 
+azsdk-python-core/1.38.
+0 Python/3.13.11 (Windo
+ws-11-10.0.26200-SP0)'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Authorization': 
+'*****'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request body:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: This 
+request has no body
+DEBUG: urllib3.connecti
+onpool: https://managem
+ent.azure.com:443 "GET 
+/subscriptions/32cfe244
+-c541-4455-830a-3b97366
+7df4c/resourceGroups/rg
+-retail-hardened-prod/p
+roviders/Microsoft.Sql/
+locations/malaysiawest/
+serverAzureAsyncOperati
+on/b183abb3-3417-4165-b
+feb-339e7f9f0d64?api-ve
+rsion=2024-11-01-previe
+w&t=639093647213123332&
+c=MIIHlTCCBn2gAwIBAgIRA
+IksbexKLH3Q1KNWYXNraz0w
+DQYJKoZIhvcNAQELBQAwNjE
+0MDIGA1UEAxMrQ0NNRSBHMS
+BUTFMgUlNBIDIwNDggU0hBM
+jU2IDIwNDkgV1VTMiBDQSAw
+MTAeFw0yNjAzMDMxNDU5MjF
+aFw0yNjA4MjkyMDU5MjFaME
+AxPjA8BgNVBAMTNWFzeW5jb
+3BlcmF0aW9uc2lnbmluZ2Nl
+cnRpZmljYXRlLm1hbmFnZW1
+lbnQuYXp1cmUuY29tMIIBIj
+ANBgkqhkiG9w0BAQEFAAOCA
+Q8AMIIBCgKCAQEApqQwzTSm
+oHDbyxAx-Zw4A2mXw3jb-XQ
+3oNdAilsDsJGu04GhVJavgm
+Ka7mtAVEiUzERCPcx0ATNqg
+m9DEobX0NLBAkwTM1aqip92
+n-WqxpcmzVMXrcBAYtUGFPp
+7qO1NWWNSptWPlsBIpSAS6Q
+IkMC19X2cjGIpR1ZCAGz7Cs
+tqGli-iAmTdHED9kxJ1f__M
+0VLlklnxzAabNUEwy-9QQ1y
+TVkIAE6_52yV_yBHLlRoZIy
+RzQoWUZBNrmPBa2NpenB5Ot
+vO5vdZqgZxwcdh3ad5EoLEr
+uyXfSlc2tGVWlZWOWXmrBl8
+ILt4gM_PNC35JnJezYO3zFl
+WNm-1IpigdxQIDAQABo4IEk
+jCCBI4wgZ0GA1UdIASBlTCB
+kjAMBgorBgEEAYI3ewEBMGY
+GCisGAQQBgjd7AgIwWDBWBg
+grBgEFBQcCAjBKHkgAMwAzA
+GUAMAAxADkAMgAxAC0ANABk
+ADYANAAtADQAZgA4AGMALQB
+hADAANQA1AC0ANQBiAGQAYQ
+BmAGYAZAA1AGUAMwAzAGQwD
+AYKKwYBBAGCN3sDAjAMBgor
+BgEEAYI3ewQCMAwGA1UdEwE
+B_wQCMAAwHQYDVR0lBBYwFA
+YIKwYBBQUHAwEGCCsGAQUFB
+wMCMA4GA1UdDwEB_wQEAwIF
+oDAdBgNVHQ4EFgQUQv41vVZ
+dnpjDnq9p_Cn_gv8APxkwHw
+YDVR0jBBgwFoAUrONy-gOyc
+549lcjvh1uu3Ruh7WgwggGy
+BgNVHR8EggGpMIIBpTBpoGe
+gZYZjaHR0cDovL3ByaW1hcn
+ktY2RuLnBraS5jb3JlLndpb
+mRvd3MubmV0L3dlc3R1czIv
+Y3Jscy9jY21ld2VzdHVzMnB
+raS9jY21ld2VzdHVzMmljYT
+AxLzM5L2N1cnJlbnQuY3JsM
+GugaaBnhmVodHRwOi8vc2Vj
+b25kYXJ5LWNkbi5wa2kuY29
+yZS53aW5kb3dzLm5ldC93ZX
+N0dXMyL2NybHMvY2NtZXdlc
+3R1czJwa2kvY2NtZXdlc3R1
+czJpY2EwMS8zOS9jdXJyZW5
+0LmNybDBaoFigVoZUaHR0cD
+ovL2NybC5taWNyb3NvZnQuY
+29tL3dlc3R1czIvY3Jscy9j
+Y21ld2VzdHVzMnBraS9jY21
+ld2VzdHVzMmljYTAxLzM5L2
+N1cnJlbnQuY3JsMG-gbaBrh
+mlodHRwOi8vY2NtZXdlc3R1
+czJwa2kud2VzdHVzMi5wa2k
+uY29yZS53aW5kb3dzLm5ldC
+9jZXJ0aWZpY2F0ZUF1dGhvc
+ml0aWVzL2NjbWV3ZXN0dXMy
+aWNhMDEvMzkvY3VycmVudC5
+jcmwwggG3BggrBgEFBQcBAQ
+SCAakwggGlMGwGCCsGAQUFB
+zAChmBodHRwOi8vcHJpbWFy
+eS1jZG4ucGtpLmNvcmUud2l
+uZG93cy5uZXQvd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwbgY
+IKwYBBQUHMAKGYmh0dHA6Ly
+9zZWNvbmRhcnktY2RuLnBra
+S5jb3JlLndpbmRvd3MubmV0
+L3dlc3R1czIvY2FjZXJ0cy9
+jY21ld2VzdHVzMnBraS9jY2
+1ld2VzdHVzMmljYTAxL2Nlc
+nQuY2VyMF0GCCsGAQUFBzAC
+hlFodHRwOi8vY3JsLm1pY3J
+vc29mdC5jb20vd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwZgY
+IKwYBBQUHMAKGWmh0dHA6Ly
+9jY21ld2VzdHVzMnBraS53Z
+XN0dXMyLnBraS5jb3JlLndp
+bmRvd3MubmV0L2NlcnRpZml
+jYXRlQXV0aG9yaXRpZXMvY2
+NtZXdlc3R1czJpY2EwMTANB
+gkqhkiG9w0BAQsFAAOCAQEA
+OuzTJFpR3WYO5ykP8IRboIm
+MGOkMGaYYkF6bejhcrjx4ZA
+E6QNx5pB1S4EsxodLnGdvl5
+hkCsA-_EN5U8rwtr8OHyXDu
+5XGBdqLIfDHHWrYp9K8x_M3
+5dAE6g8zwfVAJzcn4U52nFX
+KFEsgFAwwGBZtL0y11vRXrS
+v5hRpAz6jXKuJE5W8YWOXOh
+2FjAi1dil640o3NY0enXg3P
+C9H3D8mg99xgSixb-xsSrMy
+y3PjLjEvRF9sx4rRrvzf4kC
+MmCgpkbBc5QAfPiseHxoE9w
+jG2BUOvUnNRn1oVm4Mt97Vl
+ANycjpxtKXd78ISjWpqX6UL
+DnXyoBjxOS2eRpsDP8cg&s=
+RNzeGslUGSkVmHSckPvCmtG
+2na-dz3x9EXHGJwB1iX8uND
+9olHXlhHzAMHnzd3ccBNUgg
+m-cevApAxt1mRxcfhiQ18J1
+kQX4czhit0SH1S0NhY9k2_N
+wTu5DN2p23uyRjfIDwevoy5
+dKbi1_w0FZ-ThgCwMnJ8IkP
+REZ3V98U-9nUGlofqOhKtMt
+yzuFo5u0opAVJTGqnKn5cr7
+eWweSZE53uZ8mf3PnTuSvsn
+iYpfWPAUONGZMV_da9INjJ4
+CABkk6cGDCOH-AI72aOr3KE
+7iaQaOcqJ5EmJwz9TJ_MDPG
+V9ptOV0wHqUkpZ2cCOtNSci
+X8h8WxvjaXr5EnOpp8jw&h=
+VTjaA6Df_5finiaKfH_u-K6
+pCxaQFQuY5nf0sAUKp-U 
+HTTP/1.1" 200 107
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response status: 200
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Cache-Control': 
+'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Pragma': 'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Length': '107'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Type': 
+'application/json; 
+charset=utf-8'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Expires': '-1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Retry-After': '1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'x-ms-request-id': '258
+ba75d-3b67-4a5a-baff-76
+26b50e821b'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-operation-identifie
+r': 'tenantId=14b36f42-
+5039-4f4e-ab6a-7aeba0a3
+3aae,objectId=32a1a722-
+274b-4644-a582-5d936858
+14b2/malaysiawest/4aaea
+43d-fdb5-489a-971c-aba0
+6cf93932'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-reads': 
+'247'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-global-re
+ads': '3747'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-correlation-request
+-id': '773ef0fb-9180-4b
+b8-8ada-b19d9ca3d0a3'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-routing-request-id'
+: 'MALAYSIAWEST:2026031
+7T171843Z:773ef0fb-9180
+-4bb8-8ada-b19d9ca3d0a3
+'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'S
+trict-Transport-Securit
+y': 'max-age=31536000; 
+includeSubDomains'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'X
+-Content-Type-Options':
+ 'nosniff'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-Cache': 
+'CONFIG_NOCACHE'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-MSEdge-Ref': 'Ref 
+A: 7E38D9DC28C5490FBDC3
+6ABE976F7746 Ref B: 
+MAA211070116036 Ref C: 
+2026-03-17T17:18:43Z'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Date': 'Tue, 17 Mar 
+2026 17:18:43 GMT'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response content:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: {"name
+":"b183abb3-3417-4165-b
+feb-339e7f9f0d64","stat
+us":"InProgress","start
+Time":"2026-03-17T17:18
+:40.83Z"}
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request URL: 'https://m
+anagement.azure.com/sub
+scriptions/32cfe244-c54
+1-4455-830a-3b973667df4
+c/resourceGroups/rg-ret
+ail-hardened-prod/provi
+ders/Microsoft.Sql/loca
+tions/malaysiawest/serv
+erAzureAsyncOperation/b
+183abb3-3417-4165-bfeb-
+339e7f9f0d64?api-versio
+n=2024-11-01-preview&t=
+639093647213123332&c=MI
+IHlTCCBn2gAwIBAgIRAIksb
+exKLH3Q1KNWYXNraz0wDQYJ
+KoZIhvcNAQELBQAwNjE0MDI
+GA1UEAxMrQ0NNRSBHMSBUTF
+MgUlNBIDIwNDggU0hBMjU2I
+DIwNDkgV1VTMiBDQSAwMTAe
+Fw0yNjAzMDMxNDU5MjFaFw0
+yNjA4MjkyMDU5MjFaMEAxPj
+A8BgNVBAMTNWFzeW5jb3Blc
+mF0aW9uc2lnbmluZ2NlcnRp
+ZmljYXRlLm1hbmFnZW1lbnQ
+uYXp1cmUuY29tMIIBIjANBg
+kqhkiG9w0BAQEFAAOCAQ8AM
+IIBCgKCAQEApqQwzTSmoHDb
+yxAx-Zw4A2mXw3jb-XQ3oNd
+AilsDsJGu04GhVJavgmKa7m
+tAVEiUzERCPcx0ATNqgm9DE
+obX0NLBAkwTM1aqip92n-Wq
+xpcmzVMXrcBAYtUGFPp7qO1
+NWWNSptWPlsBIpSAS6QIkMC
+19X2cjGIpR1ZCAGz7CstqGl
+i-iAmTdHED9kxJ1f__M0VLl
+klnxzAabNUEwy-9QQ1yTVkI
+AE6_52yV_yBHLlRoZIyRzQo
+WUZBNrmPBa2NpenB5OtvO5v
+dZqgZxwcdh3ad5EoLEruyXf
+Slc2tGVWlZWOWXmrBl8ILt4
+gM_PNC35JnJezYO3zFlWNm-
+1IpigdxQIDAQABo4IEkjCCB
+I4wgZ0GA1UdIASBlTCBkjAM
+BgorBgEEAYI3ewEBMGYGCis
+GAQQBgjd7AgIwWDBWBggrBg
+EFBQcCAjBKHkgAMwAzAGUAM
+AAxADkAMgAxAC0ANABkADYA
+NAAtADQAZgA4AGMALQBhADA
+ANQA1AC0ANQBiAGQAYQBmAG
+YAZAA1AGUAMwAzAGQwDAYKK
+wYBBAGCN3sDAjAMBgorBgEE
+AYI3ewQCMAwGA1UdEwEB_wQ
+CMAAwHQYDVR0lBBYwFAYIKw
+YBBQUHAwEGCCsGAQUFBwMCM
+A4GA1UdDwEB_wQEAwIFoDAd
+BgNVHQ4EFgQUQv41vVZdnpj
+Dnq9p_Cn_gv8APxkwHwYDVR
+0jBBgwFoAUrONy-gOyc549l
+cjvh1uu3Ruh7WgwggGyBgNV
+HR8EggGpMIIBpTBpoGegZYZ
+jaHR0cDovL3ByaW1hcnktY2
+RuLnBraS5jb3JlLndpbmRvd
+3MubmV0L3dlc3R1czIvY3Js
+cy9jY21ld2VzdHVzMnBraS9
+jY21ld2VzdHVzMmljYTAxLz
+M5L2N1cnJlbnQuY3JsMGuga
+aBnhmVodHRwOi8vc2Vjb25k
+YXJ5LWNkbi5wa2kuY29yZS5
+3aW5kb3dzLm5ldC93ZXN0dX
+MyL2NybHMvY2NtZXdlc3R1c
+zJwa2kvY2NtZXdlc3R1czJp
+Y2EwMS8zOS9jdXJyZW50LmN
+ybDBaoFigVoZUaHR0cDovL2
+NybC5taWNyb3NvZnQuY29tL
+3dlc3R1czIvY3Jscy9jY21l
+d2VzdHVzMnBraS9jY21ld2V
+zdHVzMmljYTAxLzM5L2N1cn
+JlbnQuY3JsMG-gbaBrhmlod
+HRwOi8vY2NtZXdlc3R1czJw
+a2kud2VzdHVzMi5wa2kuY29
+yZS53aW5kb3dzLm5ldC9jZX
+J0aWZpY2F0ZUF1dGhvcml0a
+WVzL2NjbWV3ZXN0dXMyaWNh
+MDEvMzkvY3VycmVudC5jcmw
+wggG3BggrBgEFBQcBAQSCAa
+kwggGlMGwGCCsGAQUFBzACh
+mBodHRwOi8vcHJpbWFyeS1j
+ZG4ucGtpLmNvcmUud2luZG9
+3cy5uZXQvd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwbgYIKwY
+BBQUHMAKGYmh0dHA6Ly9zZW
+NvbmRhcnktY2RuLnBraS5jb
+3JlLndpbmRvd3MubmV0L3dl
+c3R1czIvY2FjZXJ0cy9jY21
+ld2VzdHVzMnBraS9jY21ld2
+VzdHVzMmljYTAxL2NlcnQuY
+2VyMF0GCCsGAQUFBzAChlFo
+dHRwOi8vY3JsLm1pY3Jvc29
+mdC5jb20vd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwZgYIKwY
+BBQUHMAKGWmh0dHA6Ly9jY2
+1ld2VzdHVzMnBraS53ZXN0d
+XMyLnBraS5jb3JlLndpbmRv
+d3MubmV0L2NlcnRpZmljYXR
+lQXV0aG9yaXRpZXMvY2NtZX
+dlc3R1czJpY2EwMTANBgkqh
+kiG9w0BAQsFAAOCAQEAOuzT
+JFpR3WYO5ykP8IRboImMGOk
+MGaYYkF6bejhcrjx4ZAE6QN
+x5pB1S4EsxodLnGdvl5hkCs
+A-_EN5U8rwtr8OHyXDu5XGB
+dqLIfDHHWrYp9K8x_M35dAE
+6g8zwfVAJzcn4U52nFXKFEs
+gFAwwGBZtL0y11vRXrSv5hR
+pAz6jXKuJE5W8YWOXOh2FjA
+i1dil640o3NY0enXg3PC9H3
+D8mg99xgSixb-xsSrMyy3Pj
+LjEvRF9sx4rRrvzf4kCMmCg
+pkbBc5QAfPiseHxoE9wjG2B
+UOvUnNRn1oVm4Mt97VlANyc
+jpxtKXd78ISjWpqX6ULDnXy
+oBjxOS2eRpsDP8cg&s=RNze
+GslUGSkVmHSckPvCmtG2na-
+dz3x9EXHGJwB1iX8uND9olH
+XlhHzAMHnzd3ccBNUggm-ce
+vApAxt1mRxcfhiQ18J1kQX4
+czhit0SH1S0NhY9k2_NwTu5
+DN2p23uyRjfIDwevoy5dKbi
+1_w0FZ-ThgCwMnJ8IkPREZ3
+V98U-9nUGlofqOhKtMtyzuF
+o5u0opAVJTGqnKn5cr7eWwe
+SZE53uZ8mf3PnTuSvsniYpf
+WPAUONGZMV_da9INjJ4CABk
+k6cGDCOH-AI72aOr3KE7iaQ
+aOcqJ5EmJwz9TJ_MDPGV9pt
+OV0wHqUkpZ2cCOtNSciX8h8
+WxvjaXr5EnOpp8jw&h=VTja
+A6Df_5finiaKfH_u-K6pCxa
+QFQuY5nf0sAUKp-U'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request method: 'GET'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-client-request-id':
+ '552dbfda-2225-11f1-87
+91-bbcdfe580b81'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'CommandName': 'sql 
+server create'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'ParameterSetName': 
+'--name 
+--resource-group 
+--location 
+--admin-user 
+--admin-password 
+--debug'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'User-Agent': 
+'AZURECLI/2.84.0 (MSI) 
+azsdk-python-core/1.38.
+0 Python/3.13.11 (Windo
+ws-11-10.0.26200-SP0)'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Authorization': 
+'*****'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request body:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: This 
+request has no body
+DEBUG: urllib3.connecti
+onpool: https://managem
+ent.azure.com:443 "GET 
+/subscriptions/32cfe244
+-c541-4455-830a-3b97366
+7df4c/resourceGroups/rg
+-retail-hardened-prod/p
+roviders/Microsoft.Sql/
+locations/malaysiawest/
+serverAzureAsyncOperati
+on/b183abb3-3417-4165-b
+feb-339e7f9f0d64?api-ve
+rsion=2024-11-01-previe
+w&t=639093647213123332&
+c=MIIHlTCCBn2gAwIBAgIRA
+IksbexKLH3Q1KNWYXNraz0w
+DQYJKoZIhvcNAQELBQAwNjE
+0MDIGA1UEAxMrQ0NNRSBHMS
+BUTFMgUlNBIDIwNDggU0hBM
+jU2IDIwNDkgV1VTMiBDQSAw
+MTAeFw0yNjAzMDMxNDU5MjF
+aFw0yNjA4MjkyMDU5MjFaME
+AxPjA8BgNVBAMTNWFzeW5jb
+3BlcmF0aW9uc2lnbmluZ2Nl
+cnRpZmljYXRlLm1hbmFnZW1
+lbnQuYXp1cmUuY29tMIIBIj
+ANBgkqhkiG9w0BAQEFAAOCA
+Q8AMIIBCgKCAQEApqQwzTSm
+oHDbyxAx-Zw4A2mXw3jb-XQ
+3oNdAilsDsJGu04GhVJavgm
+Ka7mtAVEiUzERCPcx0ATNqg
+m9DEobX0NLBAkwTM1aqip92
+n-WqxpcmzVMXrcBAYtUGFPp
+7qO1NWWNSptWPlsBIpSAS6Q
+IkMC19X2cjGIpR1ZCAGz7Cs
+tqGli-iAmTdHED9kxJ1f__M
+0VLlklnxzAabNUEwy-9QQ1y
+TVkIAE6_52yV_yBHLlRoZIy
+RzQoWUZBNrmPBa2NpenB5Ot
+vO5vdZqgZxwcdh3ad5EoLEr
+uyXfSlc2tGVWlZWOWXmrBl8
+ILt4gM_PNC35JnJezYO3zFl
+WNm-1IpigdxQIDAQABo4IEk
+jCCBI4wgZ0GA1UdIASBlTCB
+kjAMBgorBgEEAYI3ewEBMGY
+GCisGAQQBgjd7AgIwWDBWBg
+grBgEFBQcCAjBKHkgAMwAzA
+GUAMAAxADkAMgAxAC0ANABk
+ADYANAAtADQAZgA4AGMALQB
+hADAANQA1AC0ANQBiAGQAYQ
+BmAGYAZAA1AGUAMwAzAGQwD
+AYKKwYBBAGCN3sDAjAMBgor
+BgEEAYI3ewQCMAwGA1UdEwE
+B_wQCMAAwHQYDVR0lBBYwFA
+YIKwYBBQUHAwEGCCsGAQUFB
+wMCMA4GA1UdDwEB_wQEAwIF
+oDAdBgNVHQ4EFgQUQv41vVZ
+dnpjDnq9p_Cn_gv8APxkwHw
+YDVR0jBBgwFoAUrONy-gOyc
+549lcjvh1uu3Ruh7WgwggGy
+BgNVHR8EggGpMIIBpTBpoGe
+gZYZjaHR0cDovL3ByaW1hcn
+ktY2RuLnBraS5jb3JlLndpb
+mRvd3MubmV0L3dlc3R1czIv
+Y3Jscy9jY21ld2VzdHVzMnB
+raS9jY21ld2VzdHVzMmljYT
+AxLzM5L2N1cnJlbnQuY3JsM
+GugaaBnhmVodHRwOi8vc2Vj
+b25kYXJ5LWNkbi5wa2kuY29
+yZS53aW5kb3dzLm5ldC93ZX
+N0dXMyL2NybHMvY2NtZXdlc
+3R1czJwa2kvY2NtZXdlc3R1
+czJpY2EwMS8zOS9jdXJyZW5
+0LmNybDBaoFigVoZUaHR0cD
+ovL2NybC5taWNyb3NvZnQuY
+29tL3dlc3R1czIvY3Jscy9j
+Y21ld2VzdHVzMnBraS9jY21
+ld2VzdHVzMmljYTAxLzM5L2
+N1cnJlbnQuY3JsMG-gbaBrh
+mlodHRwOi8vY2NtZXdlc3R1
+czJwa2kud2VzdHVzMi5wa2k
+uY29yZS53aW5kb3dzLm5ldC
+9jZXJ0aWZpY2F0ZUF1dGhvc
+ml0aWVzL2NjbWV3ZXN0dXMy
+aWNhMDEvMzkvY3VycmVudC5
+jcmwwggG3BggrBgEFBQcBAQ
+SCAakwggGlMGwGCCsGAQUFB
+zAChmBodHRwOi8vcHJpbWFy
+eS1jZG4ucGtpLmNvcmUud2l
+uZG93cy5uZXQvd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwbgY
+IKwYBBQUHMAKGYmh0dHA6Ly
+9zZWNvbmRhcnktY2RuLnBra
+S5jb3JlLndpbmRvd3MubmV0
+L3dlc3R1czIvY2FjZXJ0cy9
+jY21ld2VzdHVzMnBraS9jY2
+1ld2VzdHVzMmljYTAxL2Nlc
+nQuY2VyMF0GCCsGAQUFBzAC
+hlFodHRwOi8vY3JsLm1pY3J
+vc29mdC5jb20vd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwZgY
+IKwYBBQUHMAKGWmh0dHA6Ly
+9jY21ld2VzdHVzMnBraS53Z
+XN0dXMyLnBraS5jb3JlLndp
+bmRvd3MubmV0L2NlcnRpZml
+jYXRlQXV0aG9yaXRpZXMvY2
+NtZXdlc3R1czJpY2EwMTANB
+gkqhkiG9w0BAQsFAAOCAQEA
+OuzTJFpR3WYO5ykP8IRboIm
+MGOkMGaYYkF6bejhcrjx4ZA
+E6QNx5pB1S4EsxodLnGdvl5
+hkCsA-_EN5U8rwtr8OHyXDu
+5XGBdqLIfDHHWrYp9K8x_M3
+5dAE6g8zwfVAJzcn4U52nFX
+KFEsgFAwwGBZtL0y11vRXrS
+v5hRpAz6jXKuJE5W8YWOXOh
+2FjAi1dil640o3NY0enXg3P
+C9H3D8mg99xgSixb-xsSrMy
+y3PjLjEvRF9sx4rRrvzf4kC
+MmCgpkbBc5QAfPiseHxoE9w
+jG2BUOvUnNRn1oVm4Mt97Vl
+ANycjpxtKXd78ISjWpqX6UL
+DnXyoBjxOS2eRpsDP8cg&s=
+RNzeGslUGSkVmHSckPvCmtG
+2na-dz3x9EXHGJwB1iX8uND
+9olHXlhHzAMHnzd3ccBNUgg
+m-cevApAxt1mRxcfhiQ18J1
+kQX4czhit0SH1S0NhY9k2_N
+wTu5DN2p23uyRjfIDwevoy5
+dKbi1_w0FZ-ThgCwMnJ8IkP
+REZ3V98U-9nUGlofqOhKtMt
+yzuFo5u0opAVJTGqnKn5cr7
+eWweSZE53uZ8mf3PnTuSvsn
+iYpfWPAUONGZMV_da9INjJ4
+CABkk6cGDCOH-AI72aOr3KE
+7iaQaOcqJ5EmJwz9TJ_MDPG
+V9ptOV0wHqUkpZ2cCOtNSci
+X8h8WxvjaXr5EnOpp8jw&h=
+VTjaA6Df_5finiaKfH_u-K6
+pCxaQFQuY5nf0sAUKp-U 
+HTTP/1.1" 200 107
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response status: 200
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Cache-Control': 
+'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Pragma': 'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Length': '107'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Type': 
+'application/json; 
+charset=utf-8'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Expires': '-1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Retry-After': '1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'x-ms-request-id': '523
+3bef2-c618-471b-89f0-85
+e95b4a2ed4'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-operation-identifie
+r': 'tenantId=14b36f42-
+5039-4f4e-ab6a-7aeba0a3
+3aae,objectId=32a1a722-
+274b-4644-a582-5d936858
+14b2/malaysiawest/f020a
+d38-2b6d-4658-bdc6-4e23
+c3991fad'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-reads': 
+'246'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-global-re
+ads': '3746'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-correlation-request
+-id': 'acc7b0d4-be47-45
+29-b51b-af6e0d43b0e2'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-routing-request-id'
+: 'MALAYSIAWEST:2026031
+7T171845Z:acc7b0d4-be47
+-4529-b51b-af6e0d43b0e2
+'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'S
+trict-Transport-Securit
+y': 'max-age=31536000; 
+includeSubDomains'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'X
+-Content-Type-Options':
+ 'nosniff'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-Cache': 
+'CONFIG_NOCACHE'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-MSEdge-Ref': 'Ref 
+A: 65D7CFBE3EBA40FDB89B
+0C0226788F80 Ref B: 
+MAA211070116036 Ref C: 
+2026-03-17T17:18:45Z'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Date': 'Tue, 17 Mar 
+2026 17:18:44 GMT'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response content:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: {"name
+":"b183abb3-3417-4165-b
+feb-339e7f9f0d64","stat
+us":"InProgress","start
+Time":"2026-03-17T17:18
+:40.83Z"}
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request URL: 'https://m
+anagement.azure.com/sub
+scriptions/32cfe244-c54
+1-4455-830a-3b973667df4
+c/resourceGroups/rg-ret
+ail-hardened-prod/provi
+ders/Microsoft.Sql/loca
+tions/malaysiawest/serv
+erAzureAsyncOperation/b
+183abb3-3417-4165-bfeb-
+339e7f9f0d64?api-versio
+n=2024-11-01-preview&t=
+639093647213123332&c=MI
+IHlTCCBn2gAwIBAgIRAIksb
+exKLH3Q1KNWYXNraz0wDQYJ
+KoZIhvcNAQELBQAwNjE0MDI
+GA1UEAxMrQ0NNRSBHMSBUTF
+MgUlNBIDIwNDggU0hBMjU2I
+DIwNDkgV1VTMiBDQSAwMTAe
+Fw0yNjAzMDMxNDU5MjFaFw0
+yNjA4MjkyMDU5MjFaMEAxPj
+A8BgNVBAMTNWFzeW5jb3Blc
+mF0aW9uc2lnbmluZ2NlcnRp
+ZmljYXRlLm1hbmFnZW1lbnQ
+uYXp1cmUuY29tMIIBIjANBg
+kqhkiG9w0BAQEFAAOCAQ8AM
+IIBCgKCAQEApqQwzTSmoHDb
+yxAx-Zw4A2mXw3jb-XQ3oNd
+AilsDsJGu04GhVJavgmKa7m
+tAVEiUzERCPcx0ATNqgm9DE
+obX0NLBAkwTM1aqip92n-Wq
+xpcmzVMXrcBAYtUGFPp7qO1
+NWWNSptWPlsBIpSAS6QIkMC
+19X2cjGIpR1ZCAGz7CstqGl
+i-iAmTdHED9kxJ1f__M0VLl
+klnxzAabNUEwy-9QQ1yTVkI
+AE6_52yV_yBHLlRoZIyRzQo
+WUZBNrmPBa2NpenB5OtvO5v
+dZqgZxwcdh3ad5EoLEruyXf
+Slc2tGVWlZWOWXmrBl8ILt4
+gM_PNC35JnJezYO3zFlWNm-
+1IpigdxQIDAQABo4IEkjCCB
+I4wgZ0GA1UdIASBlTCBkjAM
+BgorBgEEAYI3ewEBMGYGCis
+GAQQBgjd7AgIwWDBWBggrBg
+EFBQcCAjBKHkgAMwAzAGUAM
+AAxADkAMgAxAC0ANABkADYA
+NAAtADQAZgA4AGMALQBhADA
+ANQA1AC0ANQBiAGQAYQBmAG
+YAZAA1AGUAMwAzAGQwDAYKK
+wYBBAGCN3sDAjAMBgorBgEE
+AYI3ewQCMAwGA1UdEwEB_wQ
+CMAAwHQYDVR0lBBYwFAYIKw
+YBBQUHAwEGCCsGAQUFBwMCM
+A4GA1UdDwEB_wQEAwIFoDAd
+BgNVHQ4EFgQUQv41vVZdnpj
+Dnq9p_Cn_gv8APxkwHwYDVR
+0jBBgwFoAUrONy-gOyc549l
+cjvh1uu3Ruh7WgwggGyBgNV
+HR8EggGpMIIBpTBpoGegZYZ
+jaHR0cDovL3ByaW1hcnktY2
+RuLnBraS5jb3JlLndpbmRvd
+3MubmV0L3dlc3R1czIvY3Js
+cy9jY21ld2VzdHVzMnBraS9
+jY21ld2VzdHVzMmljYTAxLz
+M5L2N1cnJlbnQuY3JsMGuga
+aBnhmVodHRwOi8vc2Vjb25k
+YXJ5LWNkbi5wa2kuY29yZS5
+3aW5kb3dzLm5ldC93ZXN0dX
+MyL2NybHMvY2NtZXdlc3R1c
+zJwa2kvY2NtZXdlc3R1czJp
+Y2EwMS8zOS9jdXJyZW50LmN
+ybDBaoFigVoZUaHR0cDovL2
+NybC5taWNyb3NvZnQuY29tL
+3dlc3R1czIvY3Jscy9jY21l
+d2VzdHVzMnBraS9jY21ld2V
+zdHVzMmljYTAxLzM5L2N1cn
+JlbnQuY3JsMG-gbaBrhmlod
+HRwOi8vY2NtZXdlc3R1czJw
+a2kud2VzdHVzMi5wa2kuY29
+yZS53aW5kb3dzLm5ldC9jZX
+J0aWZpY2F0ZUF1dGhvcml0a
+WVzL2NjbWV3ZXN0dXMyaWNh
+MDEvMzkvY3VycmVudC5jcmw
+wggG3BggrBgEFBQcBAQSCAa
+kwggGlMGwGCCsGAQUFBzACh
+mBodHRwOi8vcHJpbWFyeS1j
+ZG4ucGtpLmNvcmUud2luZG9
+3cy5uZXQvd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwbgYIKwY
+BBQUHMAKGYmh0dHA6Ly9zZW
+NvbmRhcnktY2RuLnBraS5jb
+3JlLndpbmRvd3MubmV0L3dl
+c3R1czIvY2FjZXJ0cy9jY21
+ld2VzdHVzMnBraS9jY21ld2
+VzdHVzMmljYTAxL2NlcnQuY
+2VyMF0GCCsGAQUFBzAChlFo
+dHRwOi8vY3JsLm1pY3Jvc29
+mdC5jb20vd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwZgYIKwY
+BBQUHMAKGWmh0dHA6Ly9jY2
+1ld2VzdHVzMnBraS53ZXN0d
+XMyLnBraS5jb3JlLndpbmRv
+d3MubmV0L2NlcnRpZmljYXR
+lQXV0aG9yaXRpZXMvY2NtZX
+dlc3R1czJpY2EwMTANBgkqh
+kiG9w0BAQsFAAOCAQEAOuzT
+JFpR3WYO5ykP8IRboImMGOk
+MGaYYkF6bejhcrjx4ZAE6QN
+x5pB1S4EsxodLnGdvl5hkCs
+A-_EN5U8rwtr8OHyXDu5XGB
+dqLIfDHHWrYp9K8x_M35dAE
+6g8zwfVAJzcn4U52nFXKFEs
+gFAwwGBZtL0y11vRXrSv5hR
+pAz6jXKuJE5W8YWOXOh2FjA
+i1dil640o3NY0enXg3PC9H3
+D8mg99xgSixb-xsSrMyy3Pj
+LjEvRF9sx4rRrvzf4kCMmCg
+pkbBc5QAfPiseHxoE9wjG2B
+UOvUnNRn1oVm4Mt97VlANyc
+jpxtKXd78ISjWpqX6ULDnXy
+oBjxOS2eRpsDP8cg&s=RNze
+GslUGSkVmHSckPvCmtG2na-
+dz3x9EXHGJwB1iX8uND9olH
+XlhHzAMHnzd3ccBNUggm-ce
+vApAxt1mRxcfhiQ18J1kQX4
+czhit0SH1S0NhY9k2_NwTu5
+DN2p23uyRjfIDwevoy5dKbi
+1_w0FZ-ThgCwMnJ8IkPREZ3
+V98U-9nUGlofqOhKtMtyzuF
+o5u0opAVJTGqnKn5cr7eWwe
+SZE53uZ8mf3PnTuSvsniYpf
+WPAUONGZMV_da9INjJ4CABk
+k6cGDCOH-AI72aOr3KE7iaQ
+aOcqJ5EmJwz9TJ_MDPGV9pt
+OV0wHqUkpZ2cCOtNSciX8h8
+WxvjaXr5EnOpp8jw&h=VTja
+A6Df_5finiaKfH_u-K6pCxa
+QFQuY5nf0sAUKp-U'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request method: 'GET'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-client-request-id':
+ '552dbfda-2225-11f1-87
+91-bbcdfe580b81'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'CommandName': 'sql 
+server create'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'ParameterSetName': 
+'--name 
+--resource-group 
+--location 
+--admin-user 
+--admin-password 
+--debug'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'User-Agent': 
+'AZURECLI/2.84.0 (MSI) 
+azsdk-python-core/1.38.
+0 Python/3.13.11 (Windo
+ws-11-10.0.26200-SP0)'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Authorization': 
+'*****'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request body:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: This 
+request has no body
+DEBUG: urllib3.connecti
+onpool: https://managem
+ent.azure.com:443 "GET 
+/subscriptions/32cfe244
+-c541-4455-830a-3b97366
+7df4c/resourceGroups/rg
+-retail-hardened-prod/p
+roviders/Microsoft.Sql/
+locations/malaysiawest/
+serverAzureAsyncOperati
+on/b183abb3-3417-4165-b
+feb-339e7f9f0d64?api-ve
+rsion=2024-11-01-previe
+w&t=639093647213123332&
+c=MIIHlTCCBn2gAwIBAgIRA
+IksbexKLH3Q1KNWYXNraz0w
+DQYJKoZIhvcNAQELBQAwNjE
+0MDIGA1UEAxMrQ0NNRSBHMS
+BUTFMgUlNBIDIwNDggU0hBM
+jU2IDIwNDkgV1VTMiBDQSAw
+MTAeFw0yNjAzMDMxNDU5MjF
+aFw0yNjA4MjkyMDU5MjFaME
+AxPjA8BgNVBAMTNWFzeW5jb
+3BlcmF0aW9uc2lnbmluZ2Nl
+cnRpZmljYXRlLm1hbmFnZW1
+lbnQuYXp1cmUuY29tMIIBIj
+ANBgkqhkiG9w0BAQEFAAOCA
+Q8AMIIBCgKCAQEApqQwzTSm
+oHDbyxAx-Zw4A2mXw3jb-XQ
+3oNdAilsDsJGu04GhVJavgm
+Ka7mtAVEiUzERCPcx0ATNqg
+m9DEobX0NLBAkwTM1aqip92
+n-WqxpcmzVMXrcBAYtUGFPp
+7qO1NWWNSptWPlsBIpSAS6Q
+IkMC19X2cjGIpR1ZCAGz7Cs
+tqGli-iAmTdHED9kxJ1f__M
+0VLlklnxzAabNUEwy-9QQ1y
+TVkIAE6_52yV_yBHLlRoZIy
+RzQoWUZBNrmPBa2NpenB5Ot
+vO5vdZqgZxwcdh3ad5EoLEr
+uyXfSlc2tGVWlZWOWXmrBl8
+ILt4gM_PNC35JnJezYO3zFl
+WNm-1IpigdxQIDAQABo4IEk
+jCCBI4wgZ0GA1UdIASBlTCB
+kjAMBgorBgEEAYI3ewEBMGY
+GCisGAQQBgjd7AgIwWDBWBg
+grBgEFBQcCAjBKHkgAMwAzA
+GUAMAAxADkAMgAxAC0ANABk
+ADYANAAtADQAZgA4AGMALQB
+hADAANQA1AC0ANQBiAGQAYQ
+BmAGYAZAA1AGUAMwAzAGQwD
+AYKKwYBBAGCN3sDAjAMBgor
+BgEEAYI3ewQCMAwGA1UdEwE
+B_wQCMAAwHQYDVR0lBBYwFA
+YIKwYBBQUHAwEGCCsGAQUFB
+wMCMA4GA1UdDwEB_wQEAwIF
+oDAdBgNVHQ4EFgQUQv41vVZ
+dnpjDnq9p_Cn_gv8APxkwHw
+YDVR0jBBgwFoAUrONy-gOyc
+549lcjvh1uu3Ruh7WgwggGy
+BgNVHR8EggGpMIIBpTBpoGe
+gZYZjaHR0cDovL3ByaW1hcn
+ktY2RuLnBraS5jb3JlLndpb
+mRvd3MubmV0L3dlc3R1czIv
+Y3Jscy9jY21ld2VzdHVzMnB
+raS9jY21ld2VzdHVzMmljYT
+AxLzM5L2N1cnJlbnQuY3JsM
+GugaaBnhmVodHRwOi8vc2Vj
+b25kYXJ5LWNkbi5wa2kuY29
+yZS53aW5kb3dzLm5ldC93ZX
+N0dXMyL2NybHMvY2NtZXdlc
+3R1czJwa2kvY2NtZXdlc3R1
+czJpY2EwMS8zOS9jdXJyZW5
+0LmNybDBaoFigVoZUaHR0cD
+ovL2NybC5taWNyb3NvZnQuY
+29tL3dlc3R1czIvY3Jscy9j
+Y21ld2VzdHVzMnBraS9jY21
+ld2VzdHVzMmljYTAxLzM5L2
+N1cnJlbnQuY3JsMG-gbaBrh
+mlodHRwOi8vY2NtZXdlc3R1
+czJwa2kud2VzdHVzMi5wa2k
+uY29yZS53aW5kb3dzLm5ldC
+9jZXJ0aWZpY2F0ZUF1dGhvc
+ml0aWVzL2NjbWV3ZXN0dXMy
+aWNhMDEvMzkvY3VycmVudC5
+jcmwwggG3BggrBgEFBQcBAQ
+SCAakwggGlMGwGCCsGAQUFB
+zAChmBodHRwOi8vcHJpbWFy
+eS1jZG4ucGtpLmNvcmUud2l
+uZG93cy5uZXQvd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwbgY
+IKwYBBQUHMAKGYmh0dHA6Ly
+9zZWNvbmRhcnktY2RuLnBra
+S5jb3JlLndpbmRvd3MubmV0
+L3dlc3R1czIvY2FjZXJ0cy9
+jY21ld2VzdHVzMnBraS9jY2
+1ld2VzdHVzMmljYTAxL2Nlc
+nQuY2VyMF0GCCsGAQUFBzAC
+hlFodHRwOi8vY3JsLm1pY3J
+vc29mdC5jb20vd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwZgY
+IKwYBBQUHMAKGWmh0dHA6Ly
+9jY21ld2VzdHVzMnBraS53Z
+XN0dXMyLnBraS5jb3JlLndp
+bmRvd3MubmV0L2NlcnRpZml
+jYXRlQXV0aG9yaXRpZXMvY2
+NtZXdlc3R1czJpY2EwMTANB
+gkqhkiG9w0BAQsFAAOCAQEA
+OuzTJFpR3WYO5ykP8IRboIm
+MGOkMGaYYkF6bejhcrjx4ZA
+E6QNx5pB1S4EsxodLnGdvl5
+hkCsA-_EN5U8rwtr8OHyXDu
+5XGBdqLIfDHHWrYp9K8x_M3
+5dAE6g8zwfVAJzcn4U52nFX
+KFEsgFAwwGBZtL0y11vRXrS
+v5hRpAz6jXKuJE5W8YWOXOh
+2FjAi1dil640o3NY0enXg3P
+C9H3D8mg99xgSixb-xsSrMy
+y3PjLjEvRF9sx4rRrvzf4kC
+MmCgpkbBc5QAfPiseHxoE9w
+jG2BUOvUnNRn1oVm4Mt97Vl
+ANycjpxtKXd78ISjWpqX6UL
+DnXyoBjxOS2eRpsDP8cg&s=
+RNzeGslUGSkVmHSckPvCmtG
+2na-dz3x9EXHGJwB1iX8uND
+9olHXlhHzAMHnzd3ccBNUgg
+m-cevApAxt1mRxcfhiQ18J1
+kQX4czhit0SH1S0NhY9k2_N
+wTu5DN2p23uyRjfIDwevoy5
+dKbi1_w0FZ-ThgCwMnJ8IkP
+REZ3V98U-9nUGlofqOhKtMt
+yzuFo5u0opAVJTGqnKn5cr7
+eWweSZE53uZ8mf3PnTuSvsn
+iYpfWPAUONGZMV_da9INjJ4
+CABkk6cGDCOH-AI72aOr3KE
+7iaQaOcqJ5EmJwz9TJ_MDPG
+V9ptOV0wHqUkpZ2cCOtNSci
+X8h8WxvjaXr5EnOpp8jw&h=
+VTjaA6Df_5finiaKfH_u-K6
+pCxaQFQuY5nf0sAUKp-U 
+HTTP/1.1" 200 107
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response status: 200
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Cache-Control': 
+'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Pragma': 'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Length': '107'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Type': 
+'application/json; 
+charset=utf-8'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Expires': '-1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Retry-After': '20'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'x-ms-request-id': 'd89
+5ea46-7581-455a-98c0-e2
+7add8507fd'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-operation-identifie
+r': 'tenantId=14b36f42-
+5039-4f4e-ab6a-7aeba0a3
+3aae,objectId=32a1a722-
+274b-4644-a582-5d936858
+14b2/malaysiawest/3a21c
+20d-8b2d-49af-9582-aaf6
+7973e82f'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-reads': 
+'245'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-global-re
+ads': '3745'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-correlation-request
+-id': '2be291dd-c580-42
+08-844e-cc99a56879f1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-routing-request-id'
+: 'MALAYSIAWEST:2026031
+7T171846Z:2be291dd-c580
+-4208-844e-cc99a56879f1
+'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'S
+trict-Transport-Securit
+y': 'max-age=31536000; 
+includeSubDomains'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'X
+-Content-Type-Options':
+ 'nosniff'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-Cache': 
+'CONFIG_NOCACHE'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-MSEdge-Ref': 'Ref 
+A: 7BFCBA2B27EA47C6BCB1
+637B5E6C644A Ref B: 
+MAA211070116036 Ref C: 
+2026-03-17T17:18:46Z'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Date': 'Tue, 17 Mar 
+2026 17:18:45 GMT'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response content:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: {"name
+":"b183abb3-3417-4165-b
+feb-339e7f9f0d64","stat
+us":"InProgress","start
+Time":"2026-03-17T17:18
+:40.83Z"}
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request URL: 'https://m
+anagement.azure.com/sub
+scriptions/32cfe244-c54
+1-4455-830a-3b973667df4
+c/resourceGroups/rg-ret
+ail-hardened-prod/provi
+ders/Microsoft.Sql/loca
+tions/malaysiawest/serv
+erAzureAsyncOperation/b
+183abb3-3417-4165-bfeb-
+339e7f9f0d64?api-versio
+n=2024-11-01-preview&t=
+639093647213123332&c=MI
+IHlTCCBn2gAwIBAgIRAIksb
+exKLH3Q1KNWYXNraz0wDQYJ
+KoZIhvcNAQELBQAwNjE0MDI
+GA1UEAxMrQ0NNRSBHMSBUTF
+MgUlNBIDIwNDggU0hBMjU2I
+DIwNDkgV1VTMiBDQSAwMTAe
+Fw0yNjAzMDMxNDU5MjFaFw0
+yNjA4MjkyMDU5MjFaMEAxPj
+A8BgNVBAMTNWFzeW5jb3Blc
+mF0aW9uc2lnbmluZ2NlcnRp
+ZmljYXRlLm1hbmFnZW1lbnQ
+uYXp1cmUuY29tMIIBIjANBg
+kqhkiG9w0BAQEFAAOCAQ8AM
+IIBCgKCAQEApqQwzTSmoHDb
+yxAx-Zw4A2mXw3jb-XQ3oNd
+AilsDsJGu04GhVJavgmKa7m
+tAVEiUzERCPcx0ATNqgm9DE
+obX0NLBAkwTM1aqip92n-Wq
+xpcmzVMXrcBAYtUGFPp7qO1
+NWWNSptWPlsBIpSAS6QIkMC
+19X2cjGIpR1ZCAGz7CstqGl
+i-iAmTdHED9kxJ1f__M0VLl
+klnxzAabNUEwy-9QQ1yTVkI
+AE6_52yV_yBHLlRoZIyRzQo
+WUZBNrmPBa2NpenB5OtvO5v
+dZqgZxwcdh3ad5EoLEruyXf
+Slc2tGVWlZWOWXmrBl8ILt4
+gM_PNC35JnJezYO3zFlWNm-
+1IpigdxQIDAQABo4IEkjCCB
+I4wgZ0GA1UdIASBlTCBkjAM
+BgorBgEEAYI3ewEBMGYGCis
+GAQQBgjd7AgIwWDBWBggrBg
+EFBQcCAjBKHkgAMwAzAGUAM
+AAxADkAMgAxAC0ANABkADYA
+NAAtADQAZgA4AGMALQBhADA
+ANQA1AC0ANQBiAGQAYQBmAG
+YAZAA1AGUAMwAzAGQwDAYKK
+wYBBAGCN3sDAjAMBgorBgEE
+AYI3ewQCMAwGA1UdEwEB_wQ
+CMAAwHQYDVR0lBBYwFAYIKw
+YBBQUHAwEGCCsGAQUFBwMCM
+A4GA1UdDwEB_wQEAwIFoDAd
+BgNVHQ4EFgQUQv41vVZdnpj
+Dnq9p_Cn_gv8APxkwHwYDVR
+0jBBgwFoAUrONy-gOyc549l
+cjvh1uu3Ruh7WgwggGyBgNV
+HR8EggGpMIIBpTBpoGegZYZ
+jaHR0cDovL3ByaW1hcnktY2
+RuLnBraS5jb3JlLndpbmRvd
+3MubmV0L3dlc3R1czIvY3Js
+cy9jY21ld2VzdHVzMnBraS9
+jY21ld2VzdHVzMmljYTAxLz
+M5L2N1cnJlbnQuY3JsMGuga
+aBnhmVodHRwOi8vc2Vjb25k
+YXJ5LWNkbi5wa2kuY29yZS5
+3aW5kb3dzLm5ldC93ZXN0dX
+MyL2NybHMvY2NtZXdlc3R1c
+zJwa2kvY2NtZXdlc3R1czJp
+Y2EwMS8zOS9jdXJyZW50LmN
+ybDBaoFigVoZUaHR0cDovL2
+NybC5taWNyb3NvZnQuY29tL
+3dlc3R1czIvY3Jscy9jY21l
+d2VzdHVzMnBraS9jY21ld2V
+zdHVzMmljYTAxLzM5L2N1cn
+JlbnQuY3JsMG-gbaBrhmlod
+HRwOi8vY2NtZXdlc3R1czJw
+a2kud2VzdHVzMi5wa2kuY29
+yZS53aW5kb3dzLm5ldC9jZX
+J0aWZpY2F0ZUF1dGhvcml0a
+WVzL2NjbWV3ZXN0dXMyaWNh
+MDEvMzkvY3VycmVudC5jcmw
+wggG3BggrBgEFBQcBAQSCAa
+kwggGlMGwGCCsGAQUFBzACh
+mBodHRwOi8vcHJpbWFyeS1j
+ZG4ucGtpLmNvcmUud2luZG9
+3cy5uZXQvd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwbgYIKwY
+BBQUHMAKGYmh0dHA6Ly9zZW
+NvbmRhcnktY2RuLnBraS5jb
+3JlLndpbmRvd3MubmV0L3dl
+c3R1czIvY2FjZXJ0cy9jY21
+ld2VzdHVzMnBraS9jY21ld2
+VzdHVzMmljYTAxL2NlcnQuY
+2VyMF0GCCsGAQUFBzAChlFo
+dHRwOi8vY3JsLm1pY3Jvc29
+mdC5jb20vd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwZgYIKwY
+BBQUHMAKGWmh0dHA6Ly9jY2
+1ld2VzdHVzMnBraS53ZXN0d
+XMyLnBraS5jb3JlLndpbmRv
+d3MubmV0L2NlcnRpZmljYXR
+lQXV0aG9yaXRpZXMvY2NtZX
+dlc3R1czJpY2EwMTANBgkqh
+kiG9w0BAQsFAAOCAQEAOuzT
+JFpR3WYO5ykP8IRboImMGOk
+MGaYYkF6bejhcrjx4ZAE6QN
+x5pB1S4EsxodLnGdvl5hkCs
+A-_EN5U8rwtr8OHyXDu5XGB
+dqLIfDHHWrYp9K8x_M35dAE
+6g8zwfVAJzcn4U52nFXKFEs
+gFAwwGBZtL0y11vRXrSv5hR
+pAz6jXKuJE5W8YWOXOh2FjA
+i1dil640o3NY0enXg3PC9H3
+D8mg99xgSixb-xsSrMyy3Pj
+LjEvRF9sx4rRrvzf4kCMmCg
+pkbBc5QAfPiseHxoE9wjG2B
+UOvUnNRn1oVm4Mt97VlANyc
+jpxtKXd78ISjWpqX6ULDnXy
+oBjxOS2eRpsDP8cg&s=RNze
+GslUGSkVmHSckPvCmtG2na-
+dz3x9EXHGJwB1iX8uND9olH
+XlhHzAMHnzd3ccBNUggm-ce
+vApAxt1mRxcfhiQ18J1kQX4
+czhit0SH1S0NhY9k2_NwTu5
+DN2p23uyRjfIDwevoy5dKbi
+1_w0FZ-ThgCwMnJ8IkPREZ3
+V98U-9nUGlofqOhKtMtyzuF
+o5u0opAVJTGqnKn5cr7eWwe
+SZE53uZ8mf3PnTuSvsniYpf
+WPAUONGZMV_da9INjJ4CABk
+k6cGDCOH-AI72aOr3KE7iaQ
+aOcqJ5EmJwz9TJ_MDPGV9pt
+OV0wHqUkpZ2cCOtNSciX8h8
+WxvjaXr5EnOpp8jw&h=VTja
+A6Df_5finiaKfH_u-K6pCxa
+QFQuY5nf0sAUKp-U'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request method: 'GET'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-client-request-id':
+ '552dbfda-2225-11f1-87
+91-bbcdfe580b81'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'CommandName': 'sql 
+server create'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'ParameterSetName': 
+'--name 
+--resource-group 
+--location 
+--admin-user 
+--admin-password 
+--debug'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'User-Agent': 
+'AZURECLI/2.84.0 (MSI) 
+azsdk-python-core/1.38.
+0 Python/3.13.11 (Windo
+ws-11-10.0.26200-SP0)'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Authorization': 
+'*****'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request body:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: This 
+request has no body
+DEBUG: urllib3.connecti
+onpool: https://managem
+ent.azure.com:443 "GET 
+/subscriptions/32cfe244
+-c541-4455-830a-3b97366
+7df4c/resourceGroups/rg
+-retail-hardened-prod/p
+roviders/Microsoft.Sql/
+locations/malaysiawest/
+serverAzureAsyncOperati
+on/b183abb3-3417-4165-b
+feb-339e7f9f0d64?api-ve
+rsion=2024-11-01-previe
+w&t=639093647213123332&
+c=MIIHlTCCBn2gAwIBAgIRA
+IksbexKLH3Q1KNWYXNraz0w
+DQYJKoZIhvcNAQELBQAwNjE
+0MDIGA1UEAxMrQ0NNRSBHMS
+BUTFMgUlNBIDIwNDggU0hBM
+jU2IDIwNDkgV1VTMiBDQSAw
+MTAeFw0yNjAzMDMxNDU5MjF
+aFw0yNjA4MjkyMDU5MjFaME
+AxPjA8BgNVBAMTNWFzeW5jb
+3BlcmF0aW9uc2lnbmluZ2Nl
+cnRpZmljYXRlLm1hbmFnZW1
+lbnQuYXp1cmUuY29tMIIBIj
+ANBgkqhkiG9w0BAQEFAAOCA
+Q8AMIIBCgKCAQEApqQwzTSm
+oHDbyxAx-Zw4A2mXw3jb-XQ
+3oNdAilsDsJGu04GhVJavgm
+Ka7mtAVEiUzERCPcx0ATNqg
+m9DEobX0NLBAkwTM1aqip92
+n-WqxpcmzVMXrcBAYtUGFPp
+7qO1NWWNSptWPlsBIpSAS6Q
+IkMC19X2cjGIpR1ZCAGz7Cs
+tqGli-iAmTdHED9kxJ1f__M
+0VLlklnxzAabNUEwy-9QQ1y
+TVkIAE6_52yV_yBHLlRoZIy
+RzQoWUZBNrmPBa2NpenB5Ot
+vO5vdZqgZxwcdh3ad5EoLEr
+uyXfSlc2tGVWlZWOWXmrBl8
+ILt4gM_PNC35JnJezYO3zFl
+WNm-1IpigdxQIDAQABo4IEk
+jCCBI4wgZ0GA1UdIASBlTCB
+kjAMBgorBgEEAYI3ewEBMGY
+GCisGAQQBgjd7AgIwWDBWBg
+grBgEFBQcCAjBKHkgAMwAzA
+GUAMAAxADkAMgAxAC0ANABk
+ADYANAAtADQAZgA4AGMALQB
+hADAANQA1AC0ANQBiAGQAYQ
+BmAGYAZAA1AGUAMwAzAGQwD
+AYKKwYBBAGCN3sDAjAMBgor
+BgEEAYI3ewQCMAwGA1UdEwE
+B_wQCMAAwHQYDVR0lBBYwFA
+YIKwYBBQUHAwEGCCsGAQUFB
+wMCMA4GA1UdDwEB_wQEAwIF
+oDAdBgNVHQ4EFgQUQv41vVZ
+dnpjDnq9p_Cn_gv8APxkwHw
+YDVR0jBBgwFoAUrONy-gOyc
+549lcjvh1uu3Ruh7WgwggGy
+BgNVHR8EggGpMIIBpTBpoGe
+gZYZjaHR0cDovL3ByaW1hcn
+ktY2RuLnBraS5jb3JlLndpb
+mRvd3MubmV0L3dlc3R1czIv
+Y3Jscy9jY21ld2VzdHVzMnB
+raS9jY21ld2VzdHVzMmljYT
+AxLzM5L2N1cnJlbnQuY3JsM
+GugaaBnhmVodHRwOi8vc2Vj
+b25kYXJ5LWNkbi5wa2kuY29
+yZS53aW5kb3dzLm5ldC93ZX
+N0dXMyL2NybHMvY2NtZXdlc
+3R1czJwa2kvY2NtZXdlc3R1
+czJpY2EwMS8zOS9jdXJyZW5
+0LmNybDBaoFigVoZUaHR0cD
+ovL2NybC5taWNyb3NvZnQuY
+29tL3dlc3R1czIvY3Jscy9j
+Y21ld2VzdHVzMnBraS9jY21
+ld2VzdHVzMmljYTAxLzM5L2
+N1cnJlbnQuY3JsMG-gbaBrh
+mlodHRwOi8vY2NtZXdlc3R1
+czJwa2kud2VzdHVzMi5wa2k
+uY29yZS53aW5kb3dzLm5ldC
+9jZXJ0aWZpY2F0ZUF1dGhvc
+ml0aWVzL2NjbWV3ZXN0dXMy
+aWNhMDEvMzkvY3VycmVudC5
+jcmwwggG3BggrBgEFBQcBAQ
+SCAakwggGlMGwGCCsGAQUFB
+zAChmBodHRwOi8vcHJpbWFy
+eS1jZG4ucGtpLmNvcmUud2l
+uZG93cy5uZXQvd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwbgY
+IKwYBBQUHMAKGYmh0dHA6Ly
+9zZWNvbmRhcnktY2RuLnBra
+S5jb3JlLndpbmRvd3MubmV0
+L3dlc3R1czIvY2FjZXJ0cy9
+jY21ld2VzdHVzMnBraS9jY2
+1ld2VzdHVzMmljYTAxL2Nlc
+nQuY2VyMF0GCCsGAQUFBzAC
+hlFodHRwOi8vY3JsLm1pY3J
+vc29mdC5jb20vd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwZgY
+IKwYBBQUHMAKGWmh0dHA6Ly
+9jY21ld2VzdHVzMnBraS53Z
+XN0dXMyLnBraS5jb3JlLndp
+bmRvd3MubmV0L2NlcnRpZml
+jYXRlQXV0aG9yaXRpZXMvY2
+NtZXdlc3R1czJpY2EwMTANB
+gkqhkiG9w0BAQsFAAOCAQEA
+OuzTJFpR3WYO5ykP8IRboIm
+MGOkMGaYYkF6bejhcrjx4ZA
+E6QNx5pB1S4EsxodLnGdvl5
+hkCsA-_EN5U8rwtr8OHyXDu
+5XGBdqLIfDHHWrYp9K8x_M3
+5dAE6g8zwfVAJzcn4U52nFX
+KFEsgFAwwGBZtL0y11vRXrS
+v5hRpAz6jXKuJE5W8YWOXOh
+2FjAi1dil640o3NY0enXg3P
+C9H3D8mg99xgSixb-xsSrMy
+y3PjLjEvRF9sx4rRrvzf4kC
+MmCgpkbBc5QAfPiseHxoE9w
+jG2BUOvUnNRn1oVm4Mt97Vl
+ANycjpxtKXd78ISjWpqX6UL
+DnXyoBjxOS2eRpsDP8cg&s=
+RNzeGslUGSkVmHSckPvCmtG
+2na-dz3x9EXHGJwB1iX8uND
+9olHXlhHzAMHnzd3ccBNUgg
+m-cevApAxt1mRxcfhiQ18J1
+kQX4czhit0SH1S0NhY9k2_N
+wTu5DN2p23uyRjfIDwevoy5
+dKbi1_w0FZ-ThgCwMnJ8IkP
+REZ3V98U-9nUGlofqOhKtMt
+yzuFo5u0opAVJTGqnKn5cr7
+eWweSZE53uZ8mf3PnTuSvsn
+iYpfWPAUONGZMV_da9INjJ4
+CABkk6cGDCOH-AI72aOr3KE
+7iaQaOcqJ5EmJwz9TJ_MDPG
+V9ptOV0wHqUkpZ2cCOtNSci
+X8h8WxvjaXr5EnOpp8jw&h=
+VTjaA6Df_5finiaKfH_u-K6
+pCxaQFQuY5nf0sAUKp-U 
+HTTP/1.1" 200 107
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response status: 200
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Cache-Control': 
+'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Pragma': 'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Length': '107'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Type': 
+'application/json; 
+charset=utf-8'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Expires': '-1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Retry-After': '20'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'x-ms-request-id': '866
+1c845-ff22-4d2b-9d89-45
+2e31deda0f'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-operation-identifie
+r': 'tenantId=14b36f42-
+5039-4f4e-ab6a-7aeba0a3
+3aae,objectId=32a1a722-
+274b-4644-a582-5d936858
+14b2/malaysiawest/01f94
+217-ec82-4ec0-8be5-a736
+5d292d56'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-reads': 
+'249'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-global-re
+ads': '3749'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-correlation-request
+-id': 'e254961d-6c99-45
+39-820f-f4cb5fb9b9c3'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-routing-request-id'
+: 'MALAYSIAWEST:2026031
+7T171906Z:e254961d-6c99
+-4539-820f-f4cb5fb9b9c3
+'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'S
+trict-Transport-Securit
+y': 'max-age=31536000; 
+includeSubDomains'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'X
+-Content-Type-Options':
+ 'nosniff'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-Cache': 
+'CONFIG_NOCACHE'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-MSEdge-Ref': 'Ref 
+A: ECEFDBE2F68B40CDA87F
+FFDF7BC031B6 Ref B: 
+MAA211070116036 Ref C: 
+2026-03-17T17:19:06Z'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Date': 'Tue, 17 Mar 
+2026 17:19:05 GMT'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response content:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: {"name
+":"b183abb3-3417-4165-b
+feb-339e7f9f0d64","stat
+us":"InProgress","start
+Time":"2026-03-17T17:18
+:40.83Z"}
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request URL: 'https://m
+anagement.azure.com/sub
+scriptions/32cfe244-c54
+1-4455-830a-3b973667df4
+c/resourceGroups/rg-ret
+ail-hardened-prod/provi
+ders/Microsoft.Sql/loca
+tions/malaysiawest/serv
+erAzureAsyncOperation/b
+183abb3-3417-4165-bfeb-
+339e7f9f0d64?api-versio
+n=2024-11-01-preview&t=
+639093647213123332&c=MI
+IHlTCCBn2gAwIBAgIRAIksb
+exKLH3Q1KNWYXNraz0wDQYJ
+KoZIhvcNAQELBQAwNjE0MDI
+GA1UEAxMrQ0NNRSBHMSBUTF
+MgUlNBIDIwNDggU0hBMjU2I
+DIwNDkgV1VTMiBDQSAwMTAe
+Fw0yNjAzMDMxNDU5MjFaFw0
+yNjA4MjkyMDU5MjFaMEAxPj
+A8BgNVBAMTNWFzeW5jb3Blc
+mF0aW9uc2lnbmluZ2NlcnRp
+ZmljYXRlLm1hbmFnZW1lbnQ
+uYXp1cmUuY29tMIIBIjANBg
+kqhkiG9w0BAQEFAAOCAQ8AM
+IIBCgKCAQEApqQwzTSmoHDb
+yxAx-Zw4A2mXw3jb-XQ3oNd
+AilsDsJGu04GhVJavgmKa7m
+tAVEiUzERCPcx0ATNqgm9DE
+obX0NLBAkwTM1aqip92n-Wq
+xpcmzVMXrcBAYtUGFPp7qO1
+NWWNSptWPlsBIpSAS6QIkMC
+19X2cjGIpR1ZCAGz7CstqGl
+i-iAmTdHED9kxJ1f__M0VLl
+klnxzAabNUEwy-9QQ1yTVkI
+AE6_52yV_yBHLlRoZIyRzQo
+WUZBNrmPBa2NpenB5OtvO5v
+dZqgZxwcdh3ad5EoLEruyXf
+Slc2tGVWlZWOWXmrBl8ILt4
+gM_PNC35JnJezYO3zFlWNm-
+1IpigdxQIDAQABo4IEkjCCB
+I4wgZ0GA1UdIASBlTCBkjAM
+BgorBgEEAYI3ewEBMGYGCis
+GAQQBgjd7AgIwWDBWBggrBg
+EFBQcCAjBKHkgAMwAzAGUAM
+AAxADkAMgAxAC0ANABkADYA
+NAAtADQAZgA4AGMALQBhADA
+ANQA1AC0ANQBiAGQAYQBmAG
+YAZAA1AGUAMwAzAGQwDAYKK
+wYBBAGCN3sDAjAMBgorBgEE
+AYI3ewQCMAwGA1UdEwEB_wQ
+CMAAwHQYDVR0lBBYwFAYIKw
+YBBQUHAwEGCCsGAQUFBwMCM
+A4GA1UdDwEB_wQEAwIFoDAd
+BgNVHQ4EFgQUQv41vVZdnpj
+Dnq9p_Cn_gv8APxkwHwYDVR
+0jBBgwFoAUrONy-gOyc549l
+cjvh1uu3Ruh7WgwggGyBgNV
+HR8EggGpMIIBpTBpoGegZYZ
+jaHR0cDovL3ByaW1hcnktY2
+RuLnBraS5jb3JlLndpbmRvd
+3MubmV0L3dlc3R1czIvY3Js
+cy9jY21ld2VzdHVzMnBraS9
+jY21ld2VzdHVzMmljYTAxLz
+M5L2N1cnJlbnQuY3JsMGuga
+aBnhmVodHRwOi8vc2Vjb25k
+YXJ5LWNkbi5wa2kuY29yZS5
+3aW5kb3dzLm5ldC93ZXN0dX
+MyL2NybHMvY2NtZXdlc3R1c
+zJwa2kvY2NtZXdlc3R1czJp
+Y2EwMS8zOS9jdXJyZW50LmN
+ybDBaoFigVoZUaHR0cDovL2
+NybC5taWNyb3NvZnQuY29tL
+3dlc3R1czIvY3Jscy9jY21l
+d2VzdHVzMnBraS9jY21ld2V
+zdHVzMmljYTAxLzM5L2N1cn
+JlbnQuY3JsMG-gbaBrhmlod
+HRwOi8vY2NtZXdlc3R1czJw
+a2kud2VzdHVzMi5wa2kuY29
+yZS53aW5kb3dzLm5ldC9jZX
+J0aWZpY2F0ZUF1dGhvcml0a
+WVzL2NjbWV3ZXN0dXMyaWNh
+MDEvMzkvY3VycmVudC5jcmw
+wggG3BggrBgEFBQcBAQSCAa
+kwggGlMGwGCCsGAQUFBzACh
+mBodHRwOi8vcHJpbWFyeS1j
+ZG4ucGtpLmNvcmUud2luZG9
+3cy5uZXQvd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwbgYIKwY
+BBQUHMAKGYmh0dHA6Ly9zZW
+NvbmRhcnktY2RuLnBraS5jb
+3JlLndpbmRvd3MubmV0L3dl
+c3R1czIvY2FjZXJ0cy9jY21
+ld2VzdHVzMnBraS9jY21ld2
+VzdHVzMmljYTAxL2NlcnQuY
+2VyMF0GCCsGAQUFBzAChlFo
+dHRwOi8vY3JsLm1pY3Jvc29
+mdC5jb20vd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwZgYIKwY
+BBQUHMAKGWmh0dHA6Ly9jY2
+1ld2VzdHVzMnBraS53ZXN0d
+XMyLnBraS5jb3JlLndpbmRv
+d3MubmV0L2NlcnRpZmljYXR
+lQXV0aG9yaXRpZXMvY2NtZX
+dlc3R1czJpY2EwMTANBgkqh
+kiG9w0BAQsFAAOCAQEAOuzT
+JFpR3WYO5ykP8IRboImMGOk
+MGaYYkF6bejhcrjx4ZAE6QN
+x5pB1S4EsxodLnGdvl5hkCs
+A-_EN5U8rwtr8OHyXDu5XGB
+dqLIfDHHWrYp9K8x_M35dAE
+6g8zwfVAJzcn4U52nFXKFEs
+gFAwwGBZtL0y11vRXrSv5hR
+pAz6jXKuJE5W8YWOXOh2FjA
+i1dil640o3NY0enXg3PC9H3
+D8mg99xgSixb-xsSrMyy3Pj
+LjEvRF9sx4rRrvzf4kCMmCg
+pkbBc5QAfPiseHxoE9wjG2B
+UOvUnNRn1oVm4Mt97VlANyc
+jpxtKXd78ISjWpqX6ULDnXy
+oBjxOS2eRpsDP8cg&s=RNze
+GslUGSkVmHSckPvCmtG2na-
+dz3x9EXHGJwB1iX8uND9olH
+XlhHzAMHnzd3ccBNUggm-ce
+vApAxt1mRxcfhiQ18J1kQX4
+czhit0SH1S0NhY9k2_NwTu5
+DN2p23uyRjfIDwevoy5dKbi
+1_w0FZ-ThgCwMnJ8IkPREZ3
+V98U-9nUGlofqOhKtMtyzuF
+o5u0opAVJTGqnKn5cr7eWwe
+SZE53uZ8mf3PnTuSvsniYpf
+WPAUONGZMV_da9INjJ4CABk
+k6cGDCOH-AI72aOr3KE7iaQ
+aOcqJ5EmJwz9TJ_MDPGV9pt
+OV0wHqUkpZ2cCOtNSciX8h8
+WxvjaXr5EnOpp8jw&h=VTja
+A6Df_5finiaKfH_u-K6pCxa
+QFQuY5nf0sAUKp-U'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request method: 'GET'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-client-request-id':
+ '552dbfda-2225-11f1-87
+91-bbcdfe580b81'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'CommandName': 'sql 
+server create'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'ParameterSetName': 
+'--name 
+--resource-group 
+--location 
+--admin-user 
+--admin-password 
+--debug'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'User-Agent': 
+'AZURECLI/2.84.0 (MSI) 
+azsdk-python-core/1.38.
+0 Python/3.13.11 (Windo
+ws-11-10.0.26200-SP0)'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Authorization': 
+'*****'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request body:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: This 
+request has no body
+DEBUG: urllib3.connecti
+onpool: https://managem
+ent.azure.com:443 "GET 
+/subscriptions/32cfe244
+-c541-4455-830a-3b97366
+7df4c/resourceGroups/rg
+-retail-hardened-prod/p
+roviders/Microsoft.Sql/
+locations/malaysiawest/
+serverAzureAsyncOperati
+on/b183abb3-3417-4165-b
+feb-339e7f9f0d64?api-ve
+rsion=2024-11-01-previe
+w&t=639093647213123332&
+c=MIIHlTCCBn2gAwIBAgIRA
+IksbexKLH3Q1KNWYXNraz0w
+DQYJKoZIhvcNAQELBQAwNjE
+0MDIGA1UEAxMrQ0NNRSBHMS
+BUTFMgUlNBIDIwNDggU0hBM
+jU2IDIwNDkgV1VTMiBDQSAw
+MTAeFw0yNjAzMDMxNDU5MjF
+aFw0yNjA4MjkyMDU5MjFaME
+AxPjA8BgNVBAMTNWFzeW5jb
+3BlcmF0aW9uc2lnbmluZ2Nl
+cnRpZmljYXRlLm1hbmFnZW1
+lbnQuYXp1cmUuY29tMIIBIj
+ANBgkqhkiG9w0BAQEFAAOCA
+Q8AMIIBCgKCAQEApqQwzTSm
+oHDbyxAx-Zw4A2mXw3jb-XQ
+3oNdAilsDsJGu04GhVJavgm
+Ka7mtAVEiUzERCPcx0ATNqg
+m9DEobX0NLBAkwTM1aqip92
+n-WqxpcmzVMXrcBAYtUGFPp
+7qO1NWWNSptWPlsBIpSAS6Q
+IkMC19X2cjGIpR1ZCAGz7Cs
+tqGli-iAmTdHED9kxJ1f__M
+0VLlklnxzAabNUEwy-9QQ1y
+TVkIAE6_52yV_yBHLlRoZIy
+RzQoWUZBNrmPBa2NpenB5Ot
+vO5vdZqgZxwcdh3ad5EoLEr
+uyXfSlc2tGVWlZWOWXmrBl8
+ILt4gM_PNC35JnJezYO3zFl
+WNm-1IpigdxQIDAQABo4IEk
+jCCBI4wgZ0GA1UdIASBlTCB
+kjAMBgorBgEEAYI3ewEBMGY
+GCisGAQQBgjd7AgIwWDBWBg
+grBgEFBQcCAjBKHkgAMwAzA
+GUAMAAxADkAMgAxAC0ANABk
+ADYANAAtADQAZgA4AGMALQB
+hADAANQA1AC0ANQBiAGQAYQ
+BmAGYAZAA1AGUAMwAzAGQwD
+AYKKwYBBAGCN3sDAjAMBgor
+BgEEAYI3ewQCMAwGA1UdEwE
+B_wQCMAAwHQYDVR0lBBYwFA
+YIKwYBBQUHAwEGCCsGAQUFB
+wMCMA4GA1UdDwEB_wQEAwIF
+oDAdBgNVHQ4EFgQUQv41vVZ
+dnpjDnq9p_Cn_gv8APxkwHw
+YDVR0jBBgwFoAUrONy-gOyc
+549lcjvh1uu3Ruh7WgwggGy
+BgNVHR8EggGpMIIBpTBpoGe
+gZYZjaHR0cDovL3ByaW1hcn
+ktY2RuLnBraS5jb3JlLndpb
+mRvd3MubmV0L3dlc3R1czIv
+Y3Jscy9jY21ld2VzdHVzMnB
+raS9jY21ld2VzdHVzMmljYT
+AxLzM5L2N1cnJlbnQuY3JsM
+GugaaBnhmVodHRwOi8vc2Vj
+b25kYXJ5LWNkbi5wa2kuY29
+yZS53aW5kb3dzLm5ldC93ZX
+N0dXMyL2NybHMvY2NtZXdlc
+3R1czJwa2kvY2NtZXdlc3R1
+czJpY2EwMS8zOS9jdXJyZW5
+0LmNybDBaoFigVoZUaHR0cD
+ovL2NybC5taWNyb3NvZnQuY
+29tL3dlc3R1czIvY3Jscy9j
+Y21ld2VzdHVzMnBraS9jY21
+ld2VzdHVzMmljYTAxLzM5L2
+N1cnJlbnQuY3JsMG-gbaBrh
+mlodHRwOi8vY2NtZXdlc3R1
+czJwa2kud2VzdHVzMi5wa2k
+uY29yZS53aW5kb3dzLm5ldC
+9jZXJ0aWZpY2F0ZUF1dGhvc
+ml0aWVzL2NjbWV3ZXN0dXMy
+aWNhMDEvMzkvY3VycmVudC5
+jcmwwggG3BggrBgEFBQcBAQ
+SCAakwggGlMGwGCCsGAQUFB
+zAChmBodHRwOi8vcHJpbWFy
+eS1jZG4ucGtpLmNvcmUud2l
+uZG93cy5uZXQvd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwbgY
+IKwYBBQUHMAKGYmh0dHA6Ly
+9zZWNvbmRhcnktY2RuLnBra
+S5jb3JlLndpbmRvd3MubmV0
+L3dlc3R1czIvY2FjZXJ0cy9
+jY21ld2VzdHVzMnBraS9jY2
+1ld2VzdHVzMmljYTAxL2Nlc
+nQuY2VyMF0GCCsGAQUFBzAC
+hlFodHRwOi8vY3JsLm1pY3J
+vc29mdC5jb20vd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwZgY
+IKwYBBQUHMAKGWmh0dHA6Ly
+9jY21ld2VzdHVzMnBraS53Z
+XN0dXMyLnBraS5jb3JlLndp
+bmRvd3MubmV0L2NlcnRpZml
+jYXRlQXV0aG9yaXRpZXMvY2
+NtZXdlc3R1czJpY2EwMTANB
+gkqhkiG9w0BAQsFAAOCAQEA
+OuzTJFpR3WYO5ykP8IRboIm
+MGOkMGaYYkF6bejhcrjx4ZA
+E6QNx5pB1S4EsxodLnGdvl5
+hkCsA-_EN5U8rwtr8OHyXDu
+5XGBdqLIfDHHWrYp9K8x_M3
+5dAE6g8zwfVAJzcn4U52nFX
+KFEsgFAwwGBZtL0y11vRXrS
+v5hRpAz6jXKuJE5W8YWOXOh
+2FjAi1dil640o3NY0enXg3P
+C9H3D8mg99xgSixb-xsSrMy
+y3PjLjEvRF9sx4rRrvzf4kC
+MmCgpkbBc5QAfPiseHxoE9w
+jG2BUOvUnNRn1oVm4Mt97Vl
+ANycjpxtKXd78ISjWpqX6UL
+DnXyoBjxOS2eRpsDP8cg&s=
+RNzeGslUGSkVmHSckPvCmtG
+2na-dz3x9EXHGJwB1iX8uND
+9olHXlhHzAMHnzd3ccBNUgg
+m-cevApAxt1mRxcfhiQ18J1
+kQX4czhit0SH1S0NhY9k2_N
+wTu5DN2p23uyRjfIDwevoy5
+dKbi1_w0FZ-ThgCwMnJ8IkP
+REZ3V98U-9nUGlofqOhKtMt
+yzuFo5u0opAVJTGqnKn5cr7
+eWweSZE53uZ8mf3PnTuSvsn
+iYpfWPAUONGZMV_da9INjJ4
+CABkk6cGDCOH-AI72aOr3KE
+7iaQaOcqJ5EmJwz9TJ_MDPG
+V9ptOV0wHqUkpZ2cCOtNSci
+X8h8WxvjaXr5EnOpp8jw&h=
+VTjaA6Df_5finiaKfH_u-K6
+pCxaQFQuY5nf0sAUKp-U 
+HTTP/1.1" 200 107
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response status: 200
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Cache-Control': 
+'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Pragma': 'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Length': '107'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Type': 
+'application/json; 
+charset=utf-8'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Expires': '-1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Retry-After': '20'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'x-ms-request-id': 'fa6
+12936-aa18-4475-959f-45
+9ab91fa2fb'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-operation-identifie
+r': 'tenantId=14b36f42-
+5039-4f4e-ab6a-7aeba0a3
+3aae,objectId=32a1a722-
+274b-4644-a582-5d936858
+14b2/malaysiawest/c59c4
+d5f-019d-42b0-8dad-9cf9
+c2e121ec'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-reads': 
+'249'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-global-re
+ads': '3749'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-correlation-request
+-id': 'a1eae87a-0086-40
+26-b4b7-3c80b795b9f3'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-routing-request-id'
+: 'MALAYSIAWEST:2026031
+7T171926Z:a1eae87a-0086
+-4026-b4b7-3c80b795b9f3
+'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'S
+trict-Transport-Securit
+y': 'max-age=31536000; 
+includeSubDomains'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'X
+-Content-Type-Options':
+ 'nosniff'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-Cache': 
+'CONFIG_NOCACHE'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-MSEdge-Ref': 'Ref 
+A: 28557F82B0D64B7A8ED9
+F17520120C78 Ref B: 
+MAA211070116036 Ref C: 
+2026-03-17T17:19:26Z'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Date': 'Tue, 17 Mar 
+2026 17:19:25 GMT'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response content:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: {"name
+":"b183abb3-3417-4165-b
+feb-339e7f9f0d64","stat
+us":"InProgress","start
+Time":"2026-03-17T17:18
+:40.83Z"}
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request URL: 'https://m
+anagement.azure.com/sub
+scriptions/32cfe244-c54
+1-4455-830a-3b973667df4
+c/resourceGroups/rg-ret
+ail-hardened-prod/provi
+ders/Microsoft.Sql/loca
+tions/malaysiawest/serv
+erAzureAsyncOperation/b
+183abb3-3417-4165-bfeb-
+339e7f9f0d64?api-versio
+n=2024-11-01-preview&t=
+639093647213123332&c=MI
+IHlTCCBn2gAwIBAgIRAIksb
+exKLH3Q1KNWYXNraz0wDQYJ
+KoZIhvcNAQELBQAwNjE0MDI
+GA1UEAxMrQ0NNRSBHMSBUTF
+MgUlNBIDIwNDggU0hBMjU2I
+DIwNDkgV1VTMiBDQSAwMTAe
+Fw0yNjAzMDMxNDU5MjFaFw0
+yNjA4MjkyMDU5MjFaMEAxPj
+A8BgNVBAMTNWFzeW5jb3Blc
+mF0aW9uc2lnbmluZ2NlcnRp
+ZmljYXRlLm1hbmFnZW1lbnQ
+uYXp1cmUuY29tMIIBIjANBg
+kqhkiG9w0BAQEFAAOCAQ8AM
+IIBCgKCAQEApqQwzTSmoHDb
+yxAx-Zw4A2mXw3jb-XQ3oNd
+AilsDsJGu04GhVJavgmKa7m
+tAVEiUzERCPcx0ATNqgm9DE
+obX0NLBAkwTM1aqip92n-Wq
+xpcmzVMXrcBAYtUGFPp7qO1
+NWWNSptWPlsBIpSAS6QIkMC
+19X2cjGIpR1ZCAGz7CstqGl
+i-iAmTdHED9kxJ1f__M0VLl
+klnxzAabNUEwy-9QQ1yTVkI
+AE6_52yV_yBHLlRoZIyRzQo
+WUZBNrmPBa2NpenB5OtvO5v
+dZqgZxwcdh3ad5EoLEruyXf
+Slc2tGVWlZWOWXmrBl8ILt4
+gM_PNC35JnJezYO3zFlWNm-
+1IpigdxQIDAQABo4IEkjCCB
+I4wgZ0GA1UdIASBlTCBkjAM
+BgorBgEEAYI3ewEBMGYGCis
+GAQQBgjd7AgIwWDBWBggrBg
+EFBQcCAjBKHkgAMwAzAGUAM
+AAxADkAMgAxAC0ANABkADYA
+NAAtADQAZgA4AGMALQBhADA
+ANQA1AC0ANQBiAGQAYQBmAG
+YAZAA1AGUAMwAzAGQwDAYKK
+wYBBAGCN3sDAjAMBgorBgEE
+AYI3ewQCMAwGA1UdEwEB_wQ
+CMAAwHQYDVR0lBBYwFAYIKw
+YBBQUHAwEGCCsGAQUFBwMCM
+A4GA1UdDwEB_wQEAwIFoDAd
+BgNVHQ4EFgQUQv41vVZdnpj
+Dnq9p_Cn_gv8APxkwHwYDVR
+0jBBgwFoAUrONy-gOyc549l
+cjvh1uu3Ruh7WgwggGyBgNV
+HR8EggGpMIIBpTBpoGegZYZ
+jaHR0cDovL3ByaW1hcnktY2
+RuLnBraS5jb3JlLndpbmRvd
+3MubmV0L3dlc3R1czIvY3Js
+cy9jY21ld2VzdHVzMnBraS9
+jY21ld2VzdHVzMmljYTAxLz
+M5L2N1cnJlbnQuY3JsMGuga
+aBnhmVodHRwOi8vc2Vjb25k
+YXJ5LWNkbi5wa2kuY29yZS5
+3aW5kb3dzLm5ldC93ZXN0dX
+MyL2NybHMvY2NtZXdlc3R1c
+zJwa2kvY2NtZXdlc3R1czJp
+Y2EwMS8zOS9jdXJyZW50LmN
+ybDBaoFigVoZUaHR0cDovL2
+NybC5taWNyb3NvZnQuY29tL
+3dlc3R1czIvY3Jscy9jY21l
+d2VzdHVzMnBraS9jY21ld2V
+zdHVzMmljYTAxLzM5L2N1cn
+JlbnQuY3JsMG-gbaBrhmlod
+HRwOi8vY2NtZXdlc3R1czJw
+a2kud2VzdHVzMi5wa2kuY29
+yZS53aW5kb3dzLm5ldC9jZX
+J0aWZpY2F0ZUF1dGhvcml0a
+WVzL2NjbWV3ZXN0dXMyaWNh
+MDEvMzkvY3VycmVudC5jcmw
+wggG3BggrBgEFBQcBAQSCAa
+kwggGlMGwGCCsGAQUFBzACh
+mBodHRwOi8vcHJpbWFyeS1j
+ZG4ucGtpLmNvcmUud2luZG9
+3cy5uZXQvd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwbgYIKwY
+BBQUHMAKGYmh0dHA6Ly9zZW
+NvbmRhcnktY2RuLnBraS5jb
+3JlLndpbmRvd3MubmV0L3dl
+c3R1czIvY2FjZXJ0cy9jY21
+ld2VzdHVzMnBraS9jY21ld2
+VzdHVzMmljYTAxL2NlcnQuY
+2VyMF0GCCsGAQUFBzAChlFo
+dHRwOi8vY3JsLm1pY3Jvc29
+mdC5jb20vd2VzdHVzMi9jYW
+NlcnRzL2NjbWV3ZXN0dXMyc
+GtpL2NjbWV3ZXN0dXMyaWNh
+MDEvY2VydC5jZXIwZgYIKwY
+BBQUHMAKGWmh0dHA6Ly9jY2
+1ld2VzdHVzMnBraS53ZXN0d
+XMyLnBraS5jb3JlLndpbmRv
+d3MubmV0L2NlcnRpZmljYXR
+lQXV0aG9yaXRpZXMvY2NtZX
+dlc3R1czJpY2EwMTANBgkqh
+kiG9w0BAQsFAAOCAQEAOuzT
+JFpR3WYO5ykP8IRboImMGOk
+MGaYYkF6bejhcrjx4ZAE6QN
+x5pB1S4EsxodLnGdvl5hkCs
+A-_EN5U8rwtr8OHyXDu5XGB
+dqLIfDHHWrYp9K8x_M35dAE
+6g8zwfVAJzcn4U52nFXKFEs
+gFAwwGBZtL0y11vRXrSv5hR
+pAz6jXKuJE5W8YWOXOh2FjA
+i1dil640o3NY0enXg3PC9H3
+D8mg99xgSixb-xsSrMyy3Pj
+LjEvRF9sx4rRrvzf4kCMmCg
+pkbBc5QAfPiseHxoE9wjG2B
+UOvUnNRn1oVm4Mt97VlANyc
+jpxtKXd78ISjWpqX6ULDnXy
+oBjxOS2eRpsDP8cg&s=RNze
+GslUGSkVmHSckPvCmtG2na-
+dz3x9EXHGJwB1iX8uND9olH
+XlhHzAMHnzd3ccBNUggm-ce
+vApAxt1mRxcfhiQ18J1kQX4
+czhit0SH1S0NhY9k2_NwTu5
+DN2p23uyRjfIDwevoy5dKbi
+1_w0FZ-ThgCwMnJ8IkPREZ3
+V98U-9nUGlofqOhKtMtyzuF
+o5u0opAVJTGqnKn5cr7eWwe
+SZE53uZ8mf3PnTuSvsniYpf
+WPAUONGZMV_da9INjJ4CABk
+k6cGDCOH-AI72aOr3KE7iaQ
+aOcqJ5EmJwz9TJ_MDPGV9pt
+OV0wHqUkpZ2cCOtNSciX8h8
+WxvjaXr5EnOpp8jw&h=VTja
+A6Df_5finiaKfH_u-K6pCxa
+QFQuY5nf0sAUKp-U'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request method: 'GET'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-client-request-id':
+ '552dbfda-2225-11f1-87
+91-bbcdfe580b81'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'CommandName': 'sql 
+server create'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'ParameterSetName': 
+'--name 
+--resource-group 
+--location 
+--admin-user 
+--admin-password 
+--debug'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'User-Agent': 
+'AZURECLI/2.84.0 (MSI) 
+azsdk-python-core/1.38.
+0 Python/3.13.11 (Windo
+ws-11-10.0.26200-SP0)'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Authorization': 
+'*****'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request body:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: This 
+request has no body
+DEBUG: urllib3.connecti
+onpool: https://managem
+ent.azure.com:443 "GET 
+/subscriptions/32cfe244
+-c541-4455-830a-3b97366
+7df4c/resourceGroups/rg
+-retail-hardened-prod/p
+roviders/Microsoft.Sql/
+locations/malaysiawest/
+serverAzureAsyncOperati
+on/b183abb3-3417-4165-b
+feb-339e7f9f0d64?api-ve
+rsion=2024-11-01-previe
+w&t=639093647213123332&
+c=MIIHlTCCBn2gAwIBAgIRA
+IksbexKLH3Q1KNWYXNraz0w
+DQYJKoZIhvcNAQELBQAwNjE
+0MDIGA1UEAxMrQ0NNRSBHMS
+BUTFMgUlNBIDIwNDggU0hBM
+jU2IDIwNDkgV1VTMiBDQSAw
+MTAeFw0yNjAzMDMxNDU5MjF
+aFw0yNjA4MjkyMDU5MjFaME
+AxPjA8BgNVBAMTNWFzeW5jb
+3BlcmF0aW9uc2lnbmluZ2Nl
+cnRpZmljYXRlLm1hbmFnZW1
+lbnQuYXp1cmUuY29tMIIBIj
+ANBgkqhkiG9w0BAQEFAAOCA
+Q8AMIIBCgKCAQEApqQwzTSm
+oHDbyxAx-Zw4A2mXw3jb-XQ
+3oNdAilsDsJGu04GhVJavgm
+Ka7mtAVEiUzERCPcx0ATNqg
+m9DEobX0NLBAkwTM1aqip92
+n-WqxpcmzVMXrcBAYtUGFPp
+7qO1NWWNSptWPlsBIpSAS6Q
+IkMC19X2cjGIpR1ZCAGz7Cs
+tqGli-iAmTdHED9kxJ1f__M
+0VLlklnxzAabNUEwy-9QQ1y
+TVkIAE6_52yV_yBHLlRoZIy
+RzQoWUZBNrmPBa2NpenB5Ot
+vO5vdZqgZxwcdh3ad5EoLEr
+uyXfSlc2tGVWlZWOWXmrBl8
+ILt4gM_PNC35JnJezYO3zFl
+WNm-1IpigdxQIDAQABo4IEk
+jCCBI4wgZ0GA1UdIASBlTCB
+kjAMBgorBgEEAYI3ewEBMGY
+GCisGAQQBgjd7AgIwWDBWBg
+grBgEFBQcCAjBKHkgAMwAzA
+GUAMAAxADkAMgAxAC0ANABk
+ADYANAAtADQAZgA4AGMALQB
+hADAANQA1AC0ANQBiAGQAYQ
+BmAGYAZAA1AGUAMwAzAGQwD
+AYKKwYBBAGCN3sDAjAMBgor
+BgEEAYI3ewQCMAwGA1UdEwE
+B_wQCMAAwHQYDVR0lBBYwFA
+YIKwYBBQUHAwEGCCsGAQUFB
+wMCMA4GA1UdDwEB_wQEAwIF
+oDAdBgNVHQ4EFgQUQv41vVZ
+dnpjDnq9p_Cn_gv8APxkwHw
+YDVR0jBBgwFoAUrONy-gOyc
+549lcjvh1uu3Ruh7WgwggGy
+BgNVHR8EggGpMIIBpTBpoGe
+gZYZjaHR0cDovL3ByaW1hcn
+ktY2RuLnBraS5jb3JlLndpb
+mRvd3MubmV0L3dlc3R1czIv
+Y3Jscy9jY21ld2VzdHVzMnB
+raS9jY21ld2VzdHVzMmljYT
+AxLzM5L2N1cnJlbnQuY3JsM
+GugaaBnhmVodHRwOi8vc2Vj
+b25kYXJ5LWNkbi5wa2kuY29
+yZS53aW5kb3dzLm5ldC93ZX
+N0dXMyL2NybHMvY2NtZXdlc
+3R1czJwa2kvY2NtZXdlc3R1
+czJpY2EwMS8zOS9jdXJyZW5
+0LmNybDBaoFigVoZUaHR0cD
+ovL2NybC5taWNyb3NvZnQuY
+29tL3dlc3R1czIvY3Jscy9j
+Y21ld2VzdHVzMnBraS9jY21
+ld2VzdHVzMmljYTAxLzM5L2
+N1cnJlbnQuY3JsMG-gbaBrh
+mlodHRwOi8vY2NtZXdlc3R1
+czJwa2kud2VzdHVzMi5wa2k
+uY29yZS53aW5kb3dzLm5ldC
+9jZXJ0aWZpY2F0ZUF1dGhvc
+ml0aWVzL2NjbWV3ZXN0dXMy
+aWNhMDEvMzkvY3VycmVudC5
+jcmwwggG3BggrBgEFBQcBAQ
+SCAakwggGlMGwGCCsGAQUFB
+zAChmBodHRwOi8vcHJpbWFy
+eS1jZG4ucGtpLmNvcmUud2l
+uZG93cy5uZXQvd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwbgY
+IKwYBBQUHMAKGYmh0dHA6Ly
+9zZWNvbmRhcnktY2RuLnBra
+S5jb3JlLndpbmRvd3MubmV0
+L3dlc3R1czIvY2FjZXJ0cy9
+jY21ld2VzdHVzMnBraS9jY2
+1ld2VzdHVzMmljYTAxL2Nlc
+nQuY2VyMF0GCCsGAQUFBzAC
+hlFodHRwOi8vY3JsLm1pY3J
+vc29mdC5jb20vd2VzdHVzMi
+9jYWNlcnRzL2NjbWV3ZXN0d
+XMycGtpL2NjbWV3ZXN0dXMy
+aWNhMDEvY2VydC5jZXIwZgY
+IKwYBBQUHMAKGWmh0dHA6Ly
+9jY21ld2VzdHVzMnBraS53Z
+XN0dXMyLnBraS5jb3JlLndp
+bmRvd3MubmV0L2NlcnRpZml
+jYXRlQXV0aG9yaXRpZXMvY2
+NtZXdlc3R1czJpY2EwMTANB
+gkqhkiG9w0BAQsFAAOCAQEA
+OuzTJFpR3WYO5ykP8IRboIm
+MGOkMGaYYkF6bejhcrjx4ZA
+E6QNx5pB1S4EsxodLnGdvl5
+hkCsA-_EN5U8rwtr8OHyXDu
+5XGBdqLIfDHHWrYp9K8x_M3
+5dAE6g8zwfVAJzcn4U52nFX
+KFEsgFAwwGBZtL0y11vRXrS
+v5hRpAz6jXKuJE5W8YWOXOh
+2FjAi1dil640o3NY0enXg3P
+C9H3D8mg99xgSixb-xsSrMy
+y3PjLjEvRF9sx4rRrvzf4kC
+MmCgpkbBc5QAfPiseHxoE9w
+jG2BUOvUnNRn1oVm4Mt97Vl
+ANycjpxtKXd78ISjWpqX6UL
+DnXyoBjxOS2eRpsDP8cg&s=
+RNzeGslUGSkVmHSckPvCmtG
+2na-dz3x9EXHGJwB1iX8uND
+9olHXlhHzAMHnzd3ccBNUgg
+m-cevApAxt1mRxcfhiQ18J1
+kQX4czhit0SH1S0NhY9k2_N
+wTu5DN2p23uyRjfIDwevoy5
+dKbi1_w0FZ-ThgCwMnJ8IkP
+REZ3V98U-9nUGlofqOhKtMt
+yzuFo5u0opAVJTGqnKn5cr7
+eWweSZE53uZ8mf3PnTuSvsn
+iYpfWPAUONGZMV_da9INjJ4
+CABkk6cGDCOH-AI72aOr3KE
+7iaQaOcqJ5EmJwz9TJ_MDPG
+V9ptOV0wHqUkpZ2cCOtNSci
+X8h8WxvjaXr5EnOpp8jw&h=
+VTjaA6Df_5finiaKfH_u-K6
+pCxaQFQuY5nf0sAUKp-U 
+HTTP/1.1" 200 106
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response status: 200
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Cache-Control': 
+'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Pragma': 'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Length': '106'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Type': 
+'application/json; 
+charset=utf-8'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Expires': '-1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Retry-After': '15'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'x-ms-request-id': '094
+903a5-4064-4554-ac3a-0a
+0990662662'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-operation-identifie
+r': 'tenantId=14b36f42-
+5039-4f4e-ab6a-7aeba0a3
+3aae,objectId=32a1a722-
+274b-4644-a582-5d936858
+14b2/malaysiawest/3c124
+c2f-a3d2-4a47-aca3-a027
+c6437ad5'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-reads': 
+'249'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-global-re
+ads': '3749'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-correlation-request
+-id': '08dcfca5-44a8-4b
+ab-bc39-e6bdba0abb45'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-routing-request-id'
+: 'MALAYSIAWEST:2026031
+7T171946Z:08dcfca5-44a8
+-4bab-bc39-e6bdba0abb45
+'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'S
+trict-Transport-Securit
+y': 'max-age=31536000; 
+includeSubDomains'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'X
+-Content-Type-Options':
+ 'nosniff'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-Cache': 
+'CONFIG_NOCACHE'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-MSEdge-Ref': 'Ref 
+A: 4E18B5157B414569801C
+5AF6A8A81B1E Ref B: 
+MAA211070116036 Ref C: 
+2026-03-17T17:19:46Z'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Date': 'Tue, 17 Mar 
+2026 17:19:46 GMT'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response content:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: {"name
+":"b183abb3-3417-4165-b
+feb-339e7f9f0d64","stat
+us":"Succeeded","startT
+ime":"2026-03-17T17:18:
+40.83Z"}
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request URL: 'https://m
+anagement.azure.com/sub
+scriptions/32cfe244-c54
+1-4455-830a-3b973667df4
+c/resourceGroups/rg-ret
+ail-hardened-prod/provi
+ders/Microsoft.Sql/serv
+ers/sql-retail-mal-test
+?api-version=2024-11-01
+-preview'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request method: 'GET'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-client-request-id':
+ '552dbfda-2225-11f1-87
+91-bbcdfe580b81'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'CommandName': 'sql 
+server create'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'ParameterSetName': 
+'--name 
+--resource-group 
+--location 
+--admin-user 
+--admin-password 
+--debug'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'User-Agent': 
+'AZURECLI/2.84.0 (MSI) 
+azsdk-python-core/1.38.
+0 Python/3.13.11 (Windo
+ws-11-10.0.26200-SP0)'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Authorization': 
+'*****'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request body:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: This 
+request has no body
+DEBUG: urllib3.connecti
+onpool: https://managem
+ent.azure.com:443 "GET 
+/subscriptions/32cfe244
+-c541-4455-830a-3b97366
+7df4c/resourceGroups/rg
+-retail-hardened-prod/p
+roviders/Microsoft.Sql/
+servers/sql-retail-mal-
+test?api-version=2024-1
+1-01-preview HTTP/1.1" 
+200 592
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response status: 200
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Cache-Control': 
+'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Pragma': 'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Length': '592'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Type': 
+'application/json; 
+charset=utf-8'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Expires': '-1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'x-ms-request-id': '20f
+495b0-84c1-4f25-b3b7-ac
+e4efc84c2f'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-reads': 
+'248'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-ratelimit-remaining
+-subscription-global-re
+ads': '3748'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-correlation-request
+-id': '27157d63-48ef-42
+ae-bdb3-54d762f7350b'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-routing-request-id'
+: 'MALAYSIAWEST:2026031
+7T171946Z:27157d63-48ef
+-42ae-bdb3-54d762f7350b
+'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'S
+trict-Transport-Securit
+y': 'max-age=31536000; 
+includeSubDomains'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'X
+-Content-Type-Options':
+ 'nosniff'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-Cache': 
+'CONFIG_NOCACHE'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-MSEdge-Ref': 'Ref 
+A: 1F6CA2A5E3244A8582B2
+531A1593F1D3 Ref B: 
+MAA211070116036 Ref C: 
+2026-03-17T17:19:46Z'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Date': 'Tue, 17 Mar 
+2026 17:19:46 GMT'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response content:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: {"kind
+":"v12.0","properties":
+{"administratorLogin":"
+sqladmin","version":"12
+.0","state":"Ready","fu
+llyQualifiedDomainName"
+:"sql-retail-mal-test.d
+atabase.windows.net","p
+rivateEndpointConnectio
+ns":[],"minimalTlsVersi
+on":"1.2","publicNetwor
+kAccess":"Enabled","res
+trictOutboundNetworkAcc
+ess":"Disabled","extern
+alGovernanceStatus":"Di
+sabled","retentionDays"
+:-1},"location":"malays
+iawest","id":"/subscrip
+tions/32cfe244-c541-445
+5-830a-3b973667df4c/res
+ourceGroups/rg-retail-h
+ardened-prod/providers/
+Microsoft.Sql/servers/s
+ql-retail-mal-test","na
+me":"sql-retail-mal-tes
+t","type":"Microsoft.Sq
+l/servers"}
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nTransformResult 
+[<function _resource_gr
+oup_transform at 
+0x03C85C08>, <function 
+_x509_from_base64_to_he
+x_transform at 
+0x03C85C58>]
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nFilterResult []
+DEBUG: cli.knack.cli: 
+Event: 
+Cli.SuccessfulExecute 
+[]
+DEBUG: cli.knack.cli: 
+Event: Cli.PostExecute 
+[<function AzCliLogging
+.deinit_cmd_metadata_lo
+gging at 0x03C4C348>]
+INFO: az_command_data_l
+ogger: exit code: 0
+INFO: cli.__main__: 
+Command ran in 70.733 
+seconds (init: 0.256, 
+invoke: 70.477)
+INFO: telemetry.main: 
+Begin splitting cli 
+events and extra 
+events, total events: 1
+INFO: 
+telemetry.client: 
+Accumulated 0 events. 
+Flush the clients.
+INFO: telemetry.main: 
+Finish splitting cli 
+events and extra 
+events, cli events: 1
+INFO: telemetry.save: 
+Save telemetry record 
+of length 4018 in 
+cache file under C:\Use
+rs\girid\.azure\telemet
+ry\20260317224946858
+INFO: telemetry.main: 
+Begin creating 
+telemetry upload 
+process.
+INFO: 
+telemetry.process: 
+Creating upload 
+process: "C:\Program 
+Files (x86)\Microsoft S
+DKs\Azure\CLI2\python.e
+xe C:\Program Files 
+(x86)\Microsoft SDKs\Az
+ure\CLI2\Lib\site-packa
+ges\azure\cli\telemetry
+\__init__.pyc 
+C:\Users\girid\.azure C
+:\Users\girid\.azure\te
+lemetry\202603172249468
+58"
+INFO: 
+telemetry.process: 
+Return from creating 
+process 32108
+INFO: telemetry.main: 
+Finish creating 
+telemetry upload 
+process.
+{
+  "administratorLogin": "sqladmin",
+  "administratorLoginPassword": null,
+  "administrators": null,
+  "createMode": null,
+  "externalGovernanceStatus": "Disabled",
+  "federatedClientId": null,
+  "fullyQualifiedDomainName": "sql-retail-mal-test.database.windows.net",
+  "id": "/subscriptions/32cfe244-c541-4455-830a-3b973667df4c/resourceGroups/rg-retail-hardened-prod/providers/Microsoft.Sql/servers/sql-retail-mal-test",
+  "identity": null,
+  "isIPv6Enabled": null,
+  "keyId": null,
+  "kind": "v12.0",
+  "location": "malaysiawest",
+  "minimalTlsVersion": "1.2",
+  "name": "sql-retail-mal-test",
+  "primaryUserAssignedIdentityId": null,
+  "privateEndpointConnections": [],
+  "publicNetworkAccess": "Enabled",
+  "resourceGroup": "rg-retail-hardened-prod",
+  "restrictOutboundNetworkAccess": "Disabled",
+  "retentionDays": -1,
+  "state": "Ready",
+  "tags": null,
+  "type": "Microsoft.Sql/servers",
+  "version": "12.0",
+  "workspaceFeature": null
+}

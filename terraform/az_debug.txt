@@ -1,0 +1,746 @@
+﻿az : DEBUG: 
+cli.knack.cli: Command 
+arguments: 
+['identity', 'create', 
+'--name', 'test-identit
+y-debug-2', 
+'--resource-group', 'rg
+-retail-hardened-prod',
+ '--location', 
+'eastus', '--debug']
+At line:1 char:72
++ ... CLI2\wbin"; az 
+identity create --name 
+"test-identity-debug-2"
+ --resou ...
++                 ~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: (DEBUG: cli.kn   
+ ac...us', '--debug    
+']:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+DEBUG: cli.knack.cli: 
+__init__ debug log:
+Cannot enable color.
+DEBUG: cli.knack.cli: 
+Event: Cli.PreExecute 
+[]
+DEBUG: cli.knack.cli: 
+Event: CommandParser.On
+GlobalArgumentsCreate 
+[<function CLILogging.o
+n_global_arguments at 
+0x01647BB8>, <function 
+OutputProducer.on_globa
+l_arguments at 
+0x019A5848>, <function 
+CLIQuery.on_global_argu
+ments at 0x019CAA28>]
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nPreCommandTableCreate 
+[]
+DEBUG: 
+cli.azure.cli.core: 
+Modules found from 
+index for 'identity': [
+'azure.cli.command_modu
+les.identity']
+DEBUG: 
+cli.azure.cli.core: 
+Loading command 
+modules...
+DEBUG: 
+cli.azure.cli.core: 
+Loaded command modules 
+in parallel:
+DEBUG: 
+cli.azure.cli.core: 
+Name                  
+Load Time    Groups  
+Commands
+DEBUG: 
+cli.azure.cli.core: 
+identity               
+   0.347         2     
+    8
+DEBUG: 
+cli.azure.cli.core: 
+Total (1)              
+   0.348         2     
+    8
+DEBUG: 
+cli.azure.cli.core: 
+Loaded 2 groups, 8 
+commands.
+DEBUG: 
+cli.azure.cli.core: 
+Found a match in the 
+command table.
+DEBUG: 
+cli.azure.cli.core: 
+Raw command  : 
+identity create
+DEBUG: 
+cli.azure.cli.core: 
+Command table: 
+identity create
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nPreCommandTableTruncat
+e [<function AzCliLoggi
+ng.init_command_file_lo
+gging at 0x0378B208>]
+DEBUG: cli.azure.cli.co
+re.azlogging: metadata 
+file logging enabled - 
+writing logs to 'C:\Use
+rs\girid\.azure\command
+s\2026-03-17.20-43-08.i
+dentity_create.26460.lo
+g'.
+INFO: az_command_data_l
+ogger: command args: 
+identity create --name 
+{} --resource-group {} 
+--location {} --debug
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nPreArgumentLoad 
+[<function register_glo
+bal_subscription_argume
+nt.<locals>.add_subscri
+ption_parameter at 
+0x037C5E88>]
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nPostArgumentLoad []
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nPostCommandTableCreate
+ [<function register_id
+s_argument.<locals>.add
+_ids_arguments at 
+0x037D4028>, <function 
+register_cache_argument
+s.<locals>.add_cache_ar
+guments at 
+0x037E2348>, <function 
+register_upcoming_break
+ing_change_info.<locals
+>.update_breaking_chang
+e_info at 0x037E2398>]
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nCommandTableLoaded []
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nPreParseArgs []
+DEBUG: cli.knack.cli: 
+Event: CommandInvoker.O
+nPostParseArgs 
+[<function OutputProduc
+er.handle_output_argume
+nt at 0x019A5898>, 
+<function CLIQuery.hand
+le_query_parameter at 
+0x019CAA78>, <function 
+register_ids_argument.<
+locals>.parse_ids_argum
+ents at 0x037E22A8>]
+DEBUG: cli.azure.cli.co
+re.commands.client_fact
+ory: Getting 
+management service 
+client client_type=Mana
+gedServiceIdentityClien
+t
+DEBUG: cli.azure.cli.co
+re.auth.persistence: 
+build_persistence: loca
+tion='C:\\Users\\girid\
+\.azure\\msal_token_cac
+he.bin', encrypt=True
+DEBUG: cli.azure.cli.co
+re.auth.binary_cache: 
+load: C:\Users\girid\.a
+zure\msal_http_cache.bi
+n
+DEBUG: 
+urllib3.util.retry: 
+Converted retries 
+value: 1 -> 
+Retry(total=1, 
+connect=None, 
+read=None, 
+redirect=None, 
+status=None)
+DEBUG: msal.authority: 
+Initializing with 
+Entra authority: https:
+//login.microsoftonline
+.com/14b36f42-5039-4f4e
+-ab6a-7aeba0a33aae
+DEBUG: msal.authority: 
+openid_config("https://
+login.microsoftonline.c
+om/14b36f42-5039-4f4e-a
+b6a-7aeba0a33aae/v2.0/.
+well-known/openid-confi
+guration") = 
+{'token_endpoint': 'htt
+ps://login.microsoftonl
+ine.com/14b36f42-5039-4
+f4e-ab6a-7aeba0a33aae/o
+auth2/v2.0/token', 'tok
+en_endpoint_auth_method
+s_supported': 
+['client_secret_post', 
+'private_key_jwt', 
+'client_secret_basic', 
+'self_signed_tls_client
+_auth'], 'jwks_uri': 'h
+ttps://login.microsofto
+nline.com/14b36f42-5039
+-4f4e-ab6a-7aeba0a33aae
+/discovery/v2.0/keys', 
+'response_modes_support
+ed': ['query', 
+'fragment', 
+'form_post'], 'subject_
+types_supported': 
+['pairwise'], 'id_token
+_signing_alg_values_sup
+ported': ['RS256'], 're
+sponse_types_supported'
+: ['code', 'id_token', 
+'code id_token', 
+'id_token token'], 
+'scopes_supported': 
+['openid', 'profile', 
+'email', 
+'offline_access'], 'req
+uest_uri_parameter_supp
+orted': False, 
+'userinfo_endpoint': 'h
+ttps://graph.microsoft.
+com/oidc/userinfo', 'au
+thorization_endpoint': 
+'https://login.microsof
+tonline.com/14b36f42-50
+39-4f4e-ab6a-7aeba0a33a
+ae/oauth2/v2.0/authoriz
+e', 'device_authorizati
+on_endpoint': 'https://
+login.microsoftonline.c
+om/14b36f42-5039-4f4e-a
+b6a-7aeba0a33aae/oauth2
+/v2.0/devicecode', 'htt
+p_logout_supported': 
+True, 'frontchannel_log
+out_supported': True, '
+end_session_endpoint': 
+'https://login.microsof
+tonline.com/14b36f42-50
+39-4f4e-ab6a-7aeba0a33a
+ae/oauth2/v2.0/logout',
+ 'claims_supported': 
+['sub', 'iss', 
+'cloud_instance_name', 
+'cloud_instance_host_na
+me', 'cloud_graph_host_
+name', 'msgraph_host', 
+'aud', 'exp', 'iat', 
+'auth_time', 'acr', 
+'nonce', 
+'preferred_username', 
+'name', 'tid', 'ver', 
+'at_hash', 'c_hash', 
+'email'], 
+'kerberos_endpoint': 'h
+ttps://login.microsofto
+nline.com/14b36f42-5039
+-4f4e-ab6a-7aeba0a33aae
+/kerberos', 'mtls_endpo
+int_aliases': 
+{'token_endpoint': 'htt
+ps://mtlsauth.microsoft
+.com/14b36f42-5039-4f4e
+-ab6a-7aeba0a33aae/oaut
+h2/v2.0/token'}, 'tls_c
+lient_certificate_bound
+_access_tokens': True, 
+'tenant_region_scope': 
+'AS', 
+'cloud_instance_name': 
+'microsoftonline.com', 
+'cloud_graph_host_name'
+: 'graph.windows.net', 
+'msgraph_host': 
+'graph.microsoft.com', 
+'rbac_url': 'https://pa
+s.windows.net'}
+DEBUG: 
+msal.application: 
+Broker enabled? True
+DEBUG: cli.azure.cli.co
+re.auth.credential_adap
+tor: CredentialAdaptor.
+get_token_info: scopes=
+('https://management.co
+re.windows.net//.defaul
+t',), options={}
+DEBUG: cli.azure.cli.co
+re.auth.msal_credential
+s: UserCredential.acqui
+re_token: scopes=['http
+s://management.core.win
+dows.net//.default'], 
+claims_challenge=None, 
+kwargs={}
+DEBUG: 
+msal.application: 
+Cache hit an AT
+DEBUG: msal.telemetry: 
+Generate or reuse 
+correlation_id: 3ab30cb
+5-5020-42af-a854-1ce2fc
+df3c94
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request URL: 'https://m
+anagement.azure.com/sub
+scriptions/32cfe244-c54
+1-4455-830a-3b973667df4
+c/resourceGroups/rg-ret
+ail-hardened-prod/provi
+ders/Microsoft.ManagedI
+dentity/userAssignedIde
+ntities/test-identity-d
+ebug-2?api-version=2024
+-11-30'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request method: 'PUT'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Type': 
+'application/json'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Length': '22'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Accept': 
+'application/json'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-client-request-id':
+ 'ce38042f-2213-11f1-be
+02-bbcdfe580b81'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'CommandName': 
+'identity create'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'ParameterSetName': 
+'--name 
+--resource-group 
+--location --debug'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'User-Agent': 
+'AZURECLI/2.84.0 (MSI) 
+azsdk-python-core/1.38.
+0 Python/3.13.11 (Windo
+ws-11-10.0.26200-SP0)'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Authorization': 
+'*****'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Request body:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+{"location": "eastus"}
+DEBUG: urllib3.connecti
+onpool: Starting new 
+HTTPS connection (1): m
+anagement.azure.com:443
+DEBUG: urllib3.connecti
+onpool: https://managem
+ent.azure.com:443 "PUT 
+/subscriptions/32cfe244
+-c541-4455-830a-3b97366
+7df4c/resourceGroups/rg
+-retail-hardened-prod/p
+roviders/Microsoft.Mana
+gedIdentity/userAssigne
+dIdentities/test-identi
+ty-debug-2?api-version=
+2024-11-30 HTTP/1.1" 
+403 440
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response status: 403
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response headers:
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Cache-Control': 
+'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Pragma': 'no-cache'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Length': '440'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Content-Type': 
+'application/json; 
+charset=utf-8'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Expires': '-1'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'x-ms-failure-cause': 
+'gateway'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'x-ms-request-id': '18f
+3e331-e485-437d-b581-77
+4df09b0b5f'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-correlation-request
+-id': '18f3e331-e485-43
+7d-b581-774df09b0b5f'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'x
+-ms-routing-request-id'
+: 'CENTRALINDIA:2026031
+7T151309Z:18f3e331-e485
+-437d-b581-774df09b0b5f
+'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'S
+trict-Transport-Securit
+y': 'max-age=31536000; 
+includeSubDomains'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     'X
+-Content-Type-Options':
+ 'nosniff'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-Cache': 
+'CONFIG_NOCACHE'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'X-MSEdge-Ref': 'Ref 
+A: 6F76DADF673147979EFE
+AC13587B07C5 Ref B: 
+MAA211070115036 Ref C: 
+2026-03-17T15:13:09Z'
+DEBUG: cli.azure.cli.co
+re.sdk.policies:     
+'Date': 'Tue, 17 Mar 
+2026 15:13:09 GMT'
+DEBUG: cli.azure.cli.co
+re.sdk.policies: 
+Response content:
+DEBUG: cli.azure.cli.co
+re.sdk.policies: {"erro
+r":{"code":"RequestDisa
+llowedByAzure","target"
+:"test-identity-debug-2
+","message":"Resource '
+test-identity-debug-2' 
+was disallowed by 
+Azure: This policy 
+maintains a set of 
+best available regions 
+where your 
+subscription can 
+deploy resources. The 
+objective of this 
+policy is to ensure 
+that your subscription 
+has full access to 
+Azure services with 
+optimal performance. 
+Should you need 
+additional or 
+different regions, 
+contact support.."}}
+DEBUG: cli.azure.cli.co
+re.azclierror: 
+Traceback (most recent 
+call last):
+  File "D:\a\_work\1\s\
+build_scripts\windows\a
+rtifacts\cli\Lib\site-p
+ackages\knack/cli.py", 
+line 233, in invoke
+  File "D:\a\_work\1\s\
+build_scripts\windows\a
+rtifacts\cli\Lib\site-p
+ackages\azure/cli/core/
+commands/__init__.py", 
+line 682, in execute
+  File "D:\a\_work\1\s\
+build_scripts\windows\a
+rtifacts\cli\Lib\site-p
+ackages\azure/cli/core/
+commands/__init__.py", 
+line 812, in 
+_run_jobs_serially
+  File "D:\a\_work\1\s\
+build_scripts\windows\a
+rtifacts\cli\Lib\site-p
+ackages\azure/cli/core/
+commands/__init__.py", 
+line 781, in _run_job
+  File "D:\a\_work\1\s\
+build_scripts\windows\a
+rtifacts\cli\Lib\site-p
+ackages\azure/cli/core/
+commands/__init__.py", 
+line 336, in __call__
+  File "D:\a\_work\1\s\
+build_scripts\windows\a
+rtifacts\cli\Lib\site-p
+ackages\azure/cli/core/
+commands/command_operat
+ion.py", line 120, in 
+handler
+  File "D:\a\_work\1\s\
+build_scripts\windows\a
+rtifacts\cli\Lib\site-p
+ackages\azure/cli/comma
+nd_modules/identity/cus
+tom.py", line 22, in 
+create_identity
+  File "D:\a\_work\1\s\
+build_scripts\windows\a
+rtifacts\cli\Lib\site-p
+ackages\azure/core/trac
+ing/decorator.py", 
+line 119, in 
+wrapper_use_tracer
+  File "D:\a\_work\1\s\
+build_scripts\windows\a
+rtifacts\cli\Lib\site-p
+ackages\azure/mgmt/msi/
+v2024_11_30/operations/
+_user_assigned_identiti
+es_operations.py", 
+line 518, in 
+create_or_update
+azure.core.exceptions.H
+ttpResponseError: (Requ
+estDisallowedByAzure) 
+Resource 'test-identity
+-debug-2' was 
+disallowed by Azure: 
+This policy maintains 
+a set of best 
+available regions 
+where your 
+subscription can 
+deploy resources. The 
+objective of this 
+policy is to ensure 
+that your subscription 
+has full access to 
+Azure services with 
+optimal performance. 
+Should you need 
+additional or 
+different regions, 
+contact support..
+Code: RequestDisallowed
+ByAzure
+Message: Resource 'test
+-identity-debug-2' was 
+disallowed by Azure: 
+This policy maintains 
+a set of best 
+available regions 
+where your 
+subscription can 
+deploy resources. The 
+objective of this 
+policy is to ensure 
+that your subscription 
+has full access to 
+Azure services with 
+optimal performance. 
+Should you need 
+additional or 
+different regions, 
+contact support..
+Target: 
+test-identity-debug-2
+
+ERROR: cli.azure.cli.co
+re.azclierror: (Request
+DisallowedByAzure) 
+Resource 'test-identity
+-debug-2' was 
+disallowed by Azure: 
+This policy maintains 
+a set of best 
+available regions 
+where your 
+subscription can 
+deploy resources. The 
+objective of this 
+policy is to ensure 
+that your subscription 
+has full access to 
+Azure services with 
+optimal performance. 
+Should you need 
+additional or 
+different regions, 
+contact support..
+Code: RequestDisallowed
+ByAzure
+Message: Resource 'test
+-identity-debug-2' was 
+disallowed by Azure: 
+This policy maintains 
+a set of best 
+available regions 
+where your 
+subscription can 
+deploy resources. The 
+objective of this 
+policy is to ensure 
+that your subscription 
+has full access to 
+Azure services with 
+optimal performance. 
+Should you need 
+additional or 
+different regions, 
+contact support..
+Target: 
+test-identity-debug-2
+ERROR: az_command_data_
+logger: (RequestDisallo
+wedByAzure) Resource 't
+est-identity-debug-2' 
+was disallowed by 
+Azure: This policy 
+maintains a set of 
+best available regions 
+where your 
+subscription can 
+deploy resources. The 
+objective of this 
+policy is to ensure 
+that your subscription 
+has full access to 
+Azure services with 
+optimal performance. 
+Should you need 
+additional or 
+different regions, 
+contact support..
+Code: RequestDisallowed
+ByAzure
+Message: Resource 'test
+-identity-debug-2' was 
+disallowed by Azure: 
+This policy maintains 
+a set of best 
+available regions 
+where your 
+subscription can 
+deploy resources. The 
+objective of this 
+policy is to ensure 
+that your subscription 
+has full access to 
+Azure services with 
+optimal performance. 
+Should you need 
+additional or 
+different regions, 
+contact support..
+Target: 
+test-identity-debug-2
+DEBUG: cli.knack.cli: 
+Event: Cli.PostExecute 
+[<function AzCliLogging
+.deinit_cmd_metadata_lo
+gging at 0x0378B348>]
+INFO: az_command_data_l
+ogger: exit code: 1
+INFO: cli.__main__: 
+Command ran in 1.213 
+seconds (init: 0.247, 
+invoke: 0.965)
+INFO: telemetry.main: 
+Begin splitting cli 
+events and extra 
+events, total events: 1
+INFO: 
+telemetry.client: 
+Accumulated 0 events. 
+Flush the clients.
+INFO: telemetry.main: 
+Finish splitting cli 
+events and extra 
+events, cli events: 1
+INFO: telemetry.save: 
+Save telemetry record 
+of length 4792 in 
+cache file under C:\Use
+rs\girid\.azure\telemet
+ry\20260317204309472
+INFO: telemetry.main: 
+Begin creating 
+telemetry upload 
+process.
+INFO: 
+telemetry.process: 
+Creating upload 
+process: "C:\Program 
+Files (x86)\Microsoft S
+DKs\Azure\CLI2\python.e
+xe C:\Program Files 
+(x86)\Microsoft SDKs\Az
+ure\CLI2\Lib\site-packa
+ges\azure\cli\telemetry
+\__init__.pyc 
+C:\Users\girid\.azure C
+:\Users\girid\.azure\te
+lemetry\202603172043094
+72"
+INFO: 
+telemetry.process: 
+Return from creating 
+process 34612
+INFO: telemetry.main: 
+Finish creating 
+telemetry upload 
+process.

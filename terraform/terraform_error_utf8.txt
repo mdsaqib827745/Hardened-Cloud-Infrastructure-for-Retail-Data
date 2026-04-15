@@ -1,0 +1,146 @@
+﻿terraform : 
+[31mΓò╖[0m[0m
+At line:1 char:106
++ ... ows_amd64"; 
+terraform apply 
+-auto-approve 2> terraf
+orm_error_full.txt ...
++                 ~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: ([31mΓò╖[0m   
+ [0m:String) [], Re    
+moteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+[31mΓöé[0m 
+[0m[1m[31mError: 
+[0m[0m[1mcreating 
+Application Gateway 
+(Subscription: "32cfe24
+4-c541-4455-830a-3b9736
+67df4c"
+[31mΓöé[0m 
+[0mResource Group 
+Name: "rg-retail-harden
+ed-prod"
+[31mΓöé[0m 
+[0mApplication 
+Gateway Name: 
+"agw-retail-waf"): 
+performing 
+CreateOrUpdate: 
+unexpected status 400 
+(400 Bad Request) with 
+error: ApplicationGatew
+ayRequestRoutingRulePri
+orityCannotBeEmpty: 
+Priority for the 
+request routing rule /s
+ubscriptions/32cfe244-c
+541-4455-830a-3b973667d
+f4c/resourceGroups/rg-r
+etail-hardened-prod/pro
+viders/Microsoft.Networ
+k/applicationGateways/a
+gw-retail-waf/requestRo
+utingRules/routing-rule
+ cannot be empty. All 
+request routing rules 
+should have a priority 
+defined starting from 
+api-version 
+2021-08-01[0m
+[31mΓöé[0m [0m
+[31mΓöé[0m [0m[0m  
+with azurerm_applicatio
+n_gateway.appgw,
+[31mΓöé[0m [0m  on 
+main.tf line 87, in 
+resource "azurerm_appli
+cation_gateway" 
+"appgw":
+[31mΓöé[0m [0m  87: 
+resource "azurerm_appli
+cation_gateway" 
+"appgw" [4m{[0m[0m
+[31mΓöé[0m [0m
+[31mΓò╡[0m[0m
+[31mΓò╖[0m[0m
+[31mΓöé[0m 
+[0m[1m[31mError: 
+[0m[0m[1mcreating 
+Linux Virtual Machine 
+(Subscription: "32cfe24
+4-c541-4455-830a-3b9736
+67df4c"
+[31mΓöé[0m 
+[0mResource Group 
+Name: "rg-retail-harden
+ed-prod"
+[31mΓöé[0m 
+[0mVirtual Machine 
+Name: 
+"vm-retail-web"): 
+performing 
+CreateOrUpdate: 
+unexpected status 409 
+(409 Conflict) with 
+error: 
+SkuNotAvailable: The 
+requested VM size for 
+resource 'Following 
+SKUs have failed for 
+Capacity Restrictions: 
+Standard_B1s' is 
+currently not 
+available in location 
+'CentralIndia'. Please 
+try another size or 
+deploy to a different 
+location or different 
+zone. See https://aka.m
+s/azureskunotavailable 
+for details.[0m
+[31mΓöé[0m [0m
+[31mΓöé[0m [0m[0m  
+with azurerm_linux_virt
+ual_machine.web_server,
+[31mΓöé[0m [0m  on 
+main.tf line 191, in 
+resource "azurerm_linux
+_virtual_machine" 
+"web_server":
+[31mΓöé[0m [0m 191: 
+resource "azurerm_linux
+_virtual_machine" 
+"web_server" 
+[4m{[0m[0m
+[31mΓöé[0m [0m
+[31mΓò╡[0m[0m
+[31mΓò╖[0m[0m
+[31mΓöé[0m 
+[0m[1m[31mError: 
+[0m[0m[1mserverless 
+databases do not 
+support license 
+type[0m
+[31mΓöé[0m [0m
+[31mΓöé[0m [0m[0m  
+with azurerm_mssql_data
+base.sql_db,
+[31mΓöé[0m [0m  on 
+main.tf line 235, in 
+resource "azurerm_mssql
+_database" "sql_db":
+[31mΓöé[0m [0m 235: 
+resource "azurerm_mssql
+_database" "sql_db" 
+[4m{[0m[0m
+[31mΓöé[0m [0m
+[31mΓò╡[0m[0m

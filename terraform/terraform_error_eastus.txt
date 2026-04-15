@@ -1,0 +1,777 @@
+﻿[0m[1mrandom_string.suffix: Refreshing state... [id=fnt1nm][0m
+[0m[1mazurerm_resource_group.rg: Refreshing state... [id=/subscriptions/32cfe244-c541-4455-830a-3b973667df4c/resourceGroups/rg-retail-hardened-prod][0m
+[0m[1mazurerm_subnet.backend: Refreshing state... [id=/subscriptions/32cfe244-c541-4455-830a-3b973667df4c/resourceGroups/rg-retail-hardened-prod/providers/Microsoft.Network/virtualNetworks/vnet-retail-prod/subnets/backend-subnet][0m
+[0m[1mazurerm_subnet.frontend: Refreshing state... [id=/subscriptions/32cfe244-c541-4455-830a-3b973667df4c/resourceGroups/rg-retail-hardened-prod/providers/Microsoft.Network/virtualNetworks/vnet-retail-prod/subnets/frontend-subnet][0m
+
+[1m[36mNote:[0m[1m Objects have changed outside of Terraform
+[0m
+Terraform detected the following changes made outside of Terraform since the
+last "terraform apply" which may have affected this plan:
+
+[1m  # azurerm_subnet.backend[0m has been deleted
+[0m  [31m-[0m[0m resource "azurerm_subnet" "backend" {
+      [31m-[0m[0m id                                            = "/subscriptions/32cfe244-c541-4455-830a-3b973667df4c/resourceGroups/rg-retail-hardened-prod/providers/Microsoft.Network/virtualNetworks/vnet-retail-prod/subnets/backend-subnet" [90m-> null[0m[0m
+        name                                          = "backend-subnet"
+        [90m# (9 unchanged attributes hidden)[0m[0m
+    }
+
+[1m  # azurerm_subnet.frontend[0m has been deleted
+[0m  [31m-[0m[0m resource "azurerm_subnet" "frontend" {
+      [31m-[0m[0m id                                            = "/subscriptions/32cfe244-c541-4455-830a-3b973667df4c/resourceGroups/rg-retail-hardened-prod/providers/Microsoft.Network/virtualNetworks/vnet-retail-prod/subnets/frontend-subnet" [90m-> null[0m[0m
+        name                                          = "frontend-subnet"
+        [90m# (9 unchanged attributes hidden)[0m[0m
+    }
+
+
+Unless you have made equivalent changes to your configuration, or ignored the
+relevant attributes using ignore_changes, the following plan may include
+actions to undo or respond to these changes.
+[90m
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # azurerm_application_gateway.appgw[0m will be created
+[0m  [32m+[0m[0m resource "azurerm_application_gateway" "appgw" {
+      [32m+[0m[0m enable_http2                = (known after apply)
+      [32m+[0m[0m firewall_policy_id          = (known after apply)
+      [32m+[0m[0m http2_enabled               = (known after apply)
+      [32m+[0m[0m id                          = (known after apply)
+      [32m+[0m[0m location                    = "eastus"
+      [32m+[0m[0m name                        = "agw-retail-waf"
+      [32m+[0m[0m private_endpoint_connection = (known after apply)
+      [32m+[0m[0m resource_group_name         = "rg-retail-hardened-prod"
+
+      [32m+[0m[0m backend_address_pool {
+          [32m+[0m[0m fqdns        = []
+          [32m+[0m[0m id           = (known after apply)
+          [32m+[0m[0m ip_addresses = []
+          [32m+[0m[0m name         = "backend-pool"
+        }
+
+      [32m+[0m[0m backend_http_settings {
+          [32m+[0m[0m cookie_based_affinity                = "Disabled"
+          [32m+[0m[0m dedicated_backend_connection_enabled = false
+          [32m+[0m[0m id                                   = (known after apply)
+          [32m+[0m[0m name                                 = "http-settings"
+          [32m+[0m[0m path                                 = "/"
+          [32m+[0m[0m pick_host_name_from_backend_address  = false
+          [32m+[0m[0m port                                 = 80
+          [32m+[0m[0m probe_id                             = (known after apply)
+          [32m+[0m[0m protocol                             = "Http"
+          [32m+[0m[0m request_timeout                      = 60
+          [32m+[0m[0m trusted_root_certificate_names       = []
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+
+      [32m+[0m[0m frontend_ip_configuration {
+          [32m+[0m[0m id                            = (known after apply)
+          [32m+[0m[0m name                          = "my-frontend-ip-configuration"
+          [32m+[0m[0m private_ip_address            = (known after apply)
+          [32m+[0m[0m private_ip_address_allocation = "Dynamic"
+          [32m+[0m[0m private_link_configuration_id = (known after apply)
+          [32m+[0m[0m public_ip_address_id          = (known after apply)
+        }
+
+      [32m+[0m[0m frontend_port {
+          [32m+[0m[0m id   = (known after apply)
+          [32m+[0m[0m name = "http-port"
+          [32m+[0m[0m port = 80
+        }
+
+      [32m+[0m[0m gateway_ip_configuration {
+          [32m+[0m[0m id        = (known after apply)
+          [32m+[0m[0m name      = "my-gateway-ip-configuration"
+          [32m+[0m[0m subnet_id = (known after apply)
+        }
+
+      [32m+[0m[0m http_listener {
+          [32m+[0m[0m frontend_ip_configuration_id   = (known after apply)
+          [32m+[0m[0m frontend_ip_configuration_name = "my-frontend-ip-configuration"
+          [32m+[0m[0m frontend_port_id               = (known after apply)
+          [32m+[0m[0m frontend_port_name             = "http-port"
+          [32m+[0m[0m host_names                     = []
+          [32m+[0m[0m id                             = (known after apply)
+          [32m+[0m[0m name                           = "listener"
+          [32m+[0m[0m protocol                       = "Http"
+          [32m+[0m[0m ssl_certificate_id             = (known after apply)
+          [32m+[0m[0m ssl_profile_id                 = (known after apply)
+            [90m# (4 unchanged attributes hidden)[0m[0m
+        }
+
+      [32m+[0m[0m request_routing_rule {
+          [32m+[0m[0m backend_address_pool_id     = (known after apply)
+          [32m+[0m[0m backend_address_pool_name   = "backend-pool"
+          [32m+[0m[0m backend_http_settings_id    = (known after apply)
+          [32m+[0m[0m backend_http_settings_name  = "http-settings"
+          [32m+[0m[0m http_listener_id            = (known after apply)
+          [32m+[0m[0m http_listener_name          = "listener"
+          [32m+[0m[0m id                          = (known after apply)
+          [32m+[0m[0m name                        = "routing-rule"
+          [32m+[0m[0m redirect_configuration_id   = (known after apply)
+          [32m+[0m[0m rewrite_rule_set_id         = (known after apply)
+          [32m+[0m[0m rule_type                   = "Basic"
+          [32m+[0m[0m url_path_map_id             = (known after apply)
+            [90m# (3 unchanged attributes hidden)[0m[0m
+        }
+
+      [32m+[0m[0m sku {
+          [32m+[0m[0m capacity = 1
+          [32m+[0m[0m name     = "WAF_v2"
+          [32m+[0m[0m tier     = "WAF_v2"
+        }
+
+      [32m+[0m[0m ssl_policy (known after apply)
+    }
+
+[1m  # azurerm_linux_virtual_machine.web_server[0m will be created
+[0m  [32m+[0m[0m resource "azurerm_linux_virtual_machine" "web_server" {
+      [32m+[0m[0m admin_username                                         = "azureuser"
+      [32m+[0m[0m allow_extension_operations                             = (known after apply)
+      [32m+[0m[0m bypass_platform_safety_checks_on_user_schedule_enabled = false
+      [32m+[0m[0m computer_name                                          = (known after apply)
+      [32m+[0m[0m disable_password_authentication                        = (known after apply)
+      [32m+[0m[0m disk_controller_type                                   = (known after apply)
+      [32m+[0m[0m extensions_time_budget                                 = "PT1H30M"
+      [32m+[0m[0m id                                                     = (known after apply)
+      [32m+[0m[0m location                                               = "eastus"
+      [32m+[0m[0m max_bid_price                                          = -1
+      [32m+[0m[0m name                                                   = "vm-retail-web"
+      [32m+[0m[0m network_interface_ids                                  = (known after apply)
+      [32m+[0m[0m os_managed_disk_id                                     = (known after apply)
+      [32m+[0m[0m patch_assessment_mode                                  = (known after apply)
+      [32m+[0m[0m patch_mode                                             = (known after apply)
+      [32m+[0m[0m platform_fault_domain                                  = -1
+      [32m+[0m[0m priority                                               = "Regular"
+      [32m+[0m[0m private_ip_address                                     = (known after apply)
+      [32m+[0m[0m private_ip_addresses                                   = (known after apply)
+      [32m+[0m[0m provision_vm_agent                                     = (known after apply)
+      [32m+[0m[0m public_ip_address                                      = (known after apply)
+      [32m+[0m[0m public_ip_addresses                                    = (known after apply)
+      [32m+[0m[0m resource_group_name                                    = "rg-retail-hardened-prod"
+      [32m+[0m[0m size                                                   = "Standard_B1s"
+      [32m+[0m[0m virtual_machine_id                                     = (known after apply)
+      [32m+[0m[0m vm_agent_platform_updates_enabled                      = (known after apply)
+
+      [32m+[0m[0m admin_ssh_key {
+          [32m+[0m[0m public_key = <<-EOT
+                ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDIw7VCc4A0UPxpD/H14QQ1FVw4Xa2wnVahINjYl2z6rI9UfuB/3zDyMeh5mHx6dzBWrZn1/5IVLbQ5DVkui8RnZIY3acqCIclAXW4YfVaSsd5UcNlbIMmrkfPaSurfQkvjrmuXOv7lbgpwr6KpyKp2KqpLqueSTKjF1kVhfO9xnYGkrdaMKFYPihtIOrDDHNh+pUC0E9g8TQGKR0RPwZBxK2ao4Khp5lvbIgGfvAu4PKa1LPfr+bcJsBXNc7AyD6TT1OrxgVffxPpaRAyHPW90GTqcnkFK8X43bW4ptb+GFpllZlM8WOLt0N4MKa4dtT8stVkdBbBXHGhTViCFv5q98pWlgM2ENPqpVmUEUpgBvP6mraA9+LGALQNmKCav02BUGFhVRthyv5sZRkzs02PiKtxBBmZ+p/fZQTZPX+2Z/QyLnFVxw5mSMsZ+qn83jgByJFjP387Sss46nuoAqpvpZnmI8FIOzXjn1hbbwRlKKg1GHkYMGbmiq2dFFYdLZcsvt6+RTWSGIxCt1CqkQCy0+7rPBx99c8BlTTk96974G22X8z3Lnfxj/1xwVrajFxo95J9Sw4qnI/Ky14edFtR54bkYzxtB/7WUhOKKZxYgWgJevKi8YTK97AwT3EO/Ny+fPoR8X5E0Z0fDG7QisAQKkaiH4CzSZMmI/HHvCin6zQ== girid@WHITEHATWOLF
+            EOT
+          [32m+[0m[0m username   = "azureuser"
+        }
+
+      [32m+[0m[0m identity {
+          [32m+[0m[0m identity_ids = (known after apply)
+          [32m+[0m[0m principal_id = (known after apply)
+          [32m+[0m[0m tenant_id    = (known after apply)
+          [32m+[0m[0m type         = "UserAssigned"
+        }
+
+      [32m+[0m[0m os_disk {
+          [32m+[0m[0m caching                   = "ReadWrite"
+          [32m+[0m[0m disk_size_gb              = (known after apply)
+          [32m+[0m[0m id                        = (known after apply)
+          [32m+[0m[0m name                      = (known after apply)
+          [32m+[0m[0m storage_account_type      = "Standard_LRS"
+          [32m+[0m[0m write_accelerator_enabled = false
+        }
+
+      [32m+[0m[0m source_image_reference {
+          [32m+[0m[0m offer     = "0001-com-ubuntu-server-jammy"
+          [32m+[0m[0m publisher = "Canonical"
+          [32m+[0m[0m sku       = "22_04-lts"
+          [32m+[0m[0m version   = "latest"
+        }
+
+      [32m+[0m[0m termination_notification (known after apply)
+    }
+
+[1m  # azurerm_mssql_database.sql_db[0m will be created
+[0m  [32m+[0m[0m resource "azurerm_mssql_database" "sql_db" {
+      [32m+[0m[0m auto_pause_delay_in_minutes                                = 60
+      [32m+[0m[0m collation                                                  = "SQL_Latin1_General_CP1_CI_AS"
+      [32m+[0m[0m create_mode                                                = "Default"
+      [32m+[0m[0m creation_source_database_id                                = (known after apply)
+      [32m+[0m[0m enclave_type                                               = (known after apply)
+      [32m+[0m[0m geo_backup_enabled                                         = true
+      [32m+[0m[0m id                                                         = (known after apply)
+      [32m+[0m[0m ledger_enabled                                             = (known after apply)
+      [32m+[0m[0m license_type                                               = "BasePrice"
+      [32m+[0m[0m maintenance_configuration_name                             = (known after apply)
+      [32m+[0m[0m max_size_gb                                                = (known after apply)
+      [32m+[0m[0m min_capacity                                               = 0.5
+      [32m+[0m[0m name                                                       = "db-retail-data"
+      [32m+[0m[0m read_replica_count                                         = (known after apply)
+      [32m+[0m[0m read_scale                                                 = (known after apply)
+      [32m+[0m[0m restore_point_in_time                                      = (known after apply)
+      [32m+[0m[0m sample_name                                                = (known after apply)
+      [32m+[0m[0m secondary_type                                             = (known after apply)
+      [32m+[0m[0m server_id                                                  = (known after apply)
+      [32m+[0m[0m sku_name                                                   = "GP_S_Gen5_1"
+      [32m+[0m[0m storage_account_type                                       = "Geo"
+      [32m+[0m[0m transparent_data_encryption_enabled                        = true
+      [32m+[0m[0m transparent_data_encryption_key_automatic_rotation_enabled = false
+      [32m+[0m[0m zone_redundant                                             = (known after apply)
+
+      [32m+[0m[0m long_term_retention_policy (known after apply)
+
+      [32m+[0m[0m short_term_retention_policy (known after apply)
+
+      [32m+[0m[0m threat_detection_policy (known after apply)
+    }
+
+[1m  # azurerm_mssql_server.sql_server[0m will be created
+[0m  [32m+[0m[0m resource "azurerm_mssql_server" "sql_server" {
+      [32m+[0m[0m administrator_login                      = "sqladmin"
+      [32m+[0m[0m administrator_login_password             = (sensitive value)
+      [32m+[0m[0m administrator_login_password_wo          = (write-only attribute)
+      [32m+[0m[0m connection_policy                        = "Default"
+      [32m+[0m[0m express_vulnerability_assessment_enabled = false
+      [32m+[0m[0m fully_qualified_domain_name              = (known after apply)
+      [32m+[0m[0m id                                       = (known after apply)
+      [32m+[0m[0m location                                 = "eastus"
+      [32m+[0m[0m minimum_tls_version                      = "1.2"
+      [32m+[0m[0m name                                     = "sql-retail-data-srv-fnt1nm"
+      [32m+[0m[0m outbound_network_restriction_enabled     = false
+      [32m+[0m[0m primary_user_assigned_identity_id        = (known after apply)
+      [32m+[0m[0m public_network_access_enabled            = true
+      [32m+[0m[0m resource_group_name                      = "rg-retail-hardened-prod"
+      [32m+[0m[0m restorable_dropped_database_ids          = (known after apply)
+      [32m+[0m[0m version                                  = "12.0"
+    }
+
+[1m  # azurerm_network_interface.vm_nic[0m will be created
+[0m  [32m+[0m[0m resource "azurerm_network_interface" "vm_nic" {
+      [32m+[0m[0m accelerated_networking_enabled = false
+      [32m+[0m[0m applied_dns_servers            = (known after apply)
+      [32m+[0m[0m id                             = (known after apply)
+      [32m+[0m[0m internal_domain_name_suffix    = (known after apply)
+      [32m+[0m[0m ip_forwarding_enabled          = false
+      [32m+[0m[0m location                       = "eastus"
+      [32m+[0m[0m mac_address                    = (known after apply)
+      [32m+[0m[0m name                           = "nic-retail-web"
+      [32m+[0m[0m private_ip_address             = (known after apply)
+      [32m+[0m[0m private_ip_addresses           = (known after apply)
+      [32m+[0m[0m resource_group_name            = "rg-retail-hardened-prod"
+      [32m+[0m[0m virtual_machine_id             = (known after apply)
+
+      [32m+[0m[0m ip_configuration {
+          [32m+[0m[0m gateway_load_balancer_frontend_ip_configuration_id = (known after apply)
+          [32m+[0m[0m name                                               = "internal"
+          [32m+[0m[0m primary                                            = (known after apply)
+          [32m+[0m[0m private_ip_address                                 = (known after apply)
+          [32m+[0m[0m private_ip_address_allocation                      = "Dynamic"
+          [32m+[0m[0m private_ip_address_version                         = "IPv4"
+          [32m+[0m[0m subnet_id                                          = (known after apply)
+        }
+    }
+
+[1m  # azurerm_network_security_group.backend_nsg[0m will be created
+[0m  [32m+[0m[0m resource "azurerm_network_security_group" "backend_nsg" {
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m location            = "eastus"
+      [32m+[0m[0m name                = "nsg-backend-prod"
+      [32m+[0m[0m resource_group_name = "rg-retail-hardened-prod"
+      [32m+[0m[0m security_rule       = [
+          [32m+[0m[0m {
+              [32m+[0m[0m access                                     = "Allow"
+              [32m+[0m[0m destination_address_prefix                 = "*"
+              [32m+[0m[0m destination_address_prefixes               = []
+              [32m+[0m[0m destination_application_security_group_ids = []
+              [32m+[0m[0m destination_port_ranges                    = [
+                  [32m+[0m[0m "443",
+                  [32m+[0m[0m "80",
+                ]
+              [32m+[0m[0m direction                                  = "Inbound"
+              [32m+[0m[0m name                                       = "AllowHTTPFromAppGateway"
+              [32m+[0m[0m priority                                   = 100
+              [32m+[0m[0m protocol                                   = "Tcp"
+              [32m+[0m[0m source_address_prefix                      = "10.0.1.0/24"
+              [32m+[0m[0m source_address_prefixes                    = []
+              [32m+[0m[0m source_application_security_group_ids      = []
+              [32m+[0m[0m source_port_range                          = "*"
+              [32m+[0m[0m source_port_ranges                         = []
+                [90m# (2 unchanged attributes hidden)[0m[0m
+            },
+          [32m+[0m[0m {
+              [32m+[0m[0m access                                     = "Deny"
+              [32m+[0m[0m destination_address_prefix                 = "*"
+              [32m+[0m[0m destination_address_prefixes               = []
+              [32m+[0m[0m destination_application_security_group_ids = []
+              [32m+[0m[0m destination_port_range                     = "*"
+              [32m+[0m[0m destination_port_ranges                    = []
+              [32m+[0m[0m direction                                  = "Inbound"
+              [32m+[0m[0m name                                       = "DenyAllInbound"
+              [32m+[0m[0m priority                                   = 4096
+              [32m+[0m[0m protocol                                   = "*"
+              [32m+[0m[0m source_address_prefix                      = "*"
+              [32m+[0m[0m source_address_prefixes                    = []
+              [32m+[0m[0m source_application_security_group_ids      = []
+              [32m+[0m[0m source_port_range                          = "*"
+              [32m+[0m[0m source_port_ranges                         = []
+                [90m# (1 unchanged attribute hidden)[0m[0m
+            },
+        ]
+    }
+
+[1m  # azurerm_public_ip.appgw_ip[0m will be created
+[0m  [32m+[0m[0m resource "azurerm_public_ip" "appgw_ip" {
+      [32m+[0m[0m allocation_method       = "Static"
+      [32m+[0m[0m ddos_protection_mode    = "VirtualNetworkInherited"
+      [32m+[0m[0m fqdn                    = (known after apply)
+      [32m+[0m[0m id                      = (known after apply)
+      [32m+[0m[0m idle_timeout_in_minutes = 4
+      [32m+[0m[0m ip_address              = (known after apply)
+      [32m+[0m[0m ip_version              = "IPv4"
+      [32m+[0m[0m location                = "eastus"
+      [32m+[0m[0m name                    = "pip-retail-appgw"
+      [32m+[0m[0m resource_group_name     = "rg-retail-hardened-prod"
+      [32m+[0m[0m sku                     = "Standard"
+      [32m+[0m[0m sku_tier                = "Regional"
+    }
+
+[1m  # azurerm_subnet.backend[0m will be created
+[0m  [32m+[0m[0m resource "azurerm_subnet" "backend" {
+      [32m+[0m[0m address_prefixes                              = [
+          [32m+[0m[0m "10.0.2.0/24",
+        ]
+      [32m+[0m[0m default_outbound_access_enabled               = true
+      [32m+[0m[0m id                                            = (known after apply)
+      [32m+[0m[0m name                                          = "backend-subnet"
+      [32m+[0m[0m private_endpoint_network_policies             = "Disabled"
+      [32m+[0m[0m private_link_service_network_policies_enabled = true
+      [32m+[0m[0m resource_group_name                           = "rg-retail-hardened-prod"
+      [32m+[0m[0m virtual_network_name                          = "vnet-retail-prod"
+    }
+
+[1m  # azurerm_subnet.frontend[0m will be created
+[0m  [32m+[0m[0m resource "azurerm_subnet" "frontend" {
+      [32m+[0m[0m address_prefixes                              = [
+          [32m+[0m[0m "10.0.1.0/24",
+        ]
+      [32m+[0m[0m default_outbound_access_enabled               = true
+      [32m+[0m[0m id                                            = (known after apply)
+      [32m+[0m[0m name                                          = "frontend-subnet"
+      [32m+[0m[0m private_endpoint_network_policies             = "Disabled"
+      [32m+[0m[0m private_link_service_network_policies_enabled = true
+      [32m+[0m[0m resource_group_name                           = "rg-retail-hardened-prod"
+      [32m+[0m[0m virtual_network_name                          = "vnet-retail-prod"
+    }
+
+[1m  # azurerm_subnet_network_security_group_association.backend_assoc[0m will be created
+[0m  [32m+[0m[0m resource "azurerm_subnet_network_security_group_association" "backend_assoc" {
+      [32m+[0m[0m id                        = (known after apply)
+      [32m+[0m[0m network_security_group_id = (known after apply)
+      [32m+[0m[0m subnet_id                 = (known after apply)
+    }
+
+[1m  # azurerm_user_assigned_identity.vm_identity[0m will be created
+[0m  [32m+[0m[0m resource "azurerm_user_assigned_identity" "vm_identity" {
+      [32m+[0m[0m client_id           = (known after apply)
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m location            = "eastus"
+      [32m+[0m[0m name                = "id-retail-web"
+      [32m+[0m[0m principal_id        = (known after apply)
+      [32m+[0m[0m resource_group_name = "rg-retail-hardened-prod"
+      [32m+[0m[0m tenant_id           = (known after apply)
+    }
+
+[1m  # azurerm_virtual_network.vnet[0m will be created
+[0m  [32m+[0m[0m resource "azurerm_virtual_network" "vnet" {
+      [32m+[0m[0m address_space                  = [
+          [32m+[0m[0m "10.0.0.0/16",
+        ]
+      [32m+[0m[0m dns_servers                    = (known after apply)
+      [32m+[0m[0m guid                           = (known after apply)
+      [32m+[0m[0m id                             = (known after apply)
+      [32m+[0m[0m location                       = "eastus"
+      [32m+[0m[0m name                           = "vnet-retail-prod"
+      [32m+[0m[0m private_endpoint_vnet_policies = "Disabled"
+      [32m+[0m[0m resource_group_name            = "rg-retail-hardened-prod"
+      [32m+[0m[0m subnet                         = (known after apply)
+    }
+
+[1m  # azurerm_web_application_firewall_policy.waf_policy[0m will be created
+[0m  [32m+[0m[0m resource "azurerm_web_application_firewall_policy" "waf_policy" {
+      [32m+[0m[0m http_listener_ids   = (known after apply)
+      [32m+[0m[0m id                  = (known after apply)
+      [32m+[0m[0m location            = "eastus"
+      [32m+[0m[0m name                = "waf-retail-policy"
+      [32m+[0m[0m path_based_rule_ids = (known after apply)
+      [32m+[0m[0m resource_group_name = "rg-retail-hardened-prod"
+
+      [32m+[0m[0m managed_rules {
+          [32m+[0m[0m managed_rule_set {
+              [32m+[0m[0m type    = "OWASP"
+              [32m+[0m[0m version = "3.2"
+            }
+        }
+
+      [32m+[0m[0m policy_settings {
+          [32m+[0m[0m enabled                                   = true
+          [32m+[0m[0m file_upload_enforcement                   = (known after apply)
+          [32m+[0m[0m file_upload_limit_in_mb                   = 100
+          [32m+[0m[0m js_challenge_cookie_expiration_in_minutes = 30
+          [32m+[0m[0m max_request_body_size_in_kb               = 128
+          [32m+[0m[0m mode                                      = "Prevention"
+          [32m+[0m[0m request_body_check                        = true
+          [32m+[0m[0m request_body_enforcement                  = true
+          [32m+[0m[0m request_body_inspect_limit_in_kb          = 128
+        }
+    }
+
+[1mPlan:[0m [0m13 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  [33m~[0m[0m application_gateway_public_ip = "20.204.114.82" -> (known after apply)
+  [33m~[0m[0m sql_server_fqdn               = "sql-retail-data-srv-fnt1nm.database.windows.net" -> (known after apply)
+  [33m~[0m[0m vm_private_ip                 = "10.0.2.4" -> (known after apply)
+[0m[1mazurerm_user_assigned_identity.vm_identity: Creating...[0m[0m
+[0m[1mazurerm_virtual_network.vnet: Creating...[0m[0m
+[0m[1mazurerm_web_application_firewall_policy.waf_policy: Creating...[0m[0m
+[0m[1mazurerm_mssql_server.sql_server: Creating...[0m[0m
+[0m[1mazurerm_public_ip.appgw_ip: Creating...[0m[0m
+[0m[1mazurerm_network_security_group.backend_nsg: Creating...[0m[0m
+terraform : 
+[31mΓò╖[0m[0m
+At line:1 char:106
++ ... 
+orm_1.14.7_windows_amd64"; 
+terraform apply 
+-auto-approve 2>&1 | Out-F 
+...
++                          
+      ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecifi    ed: 
+([31mΓò╖[0m    
+[0m:String) [], Re    
+moteException
+    + FullyQualifiedEr    
+rorId : NativeComm    
+andError
+ 
+[31mΓöé[0m 
+[0m[1m[31mError: 
+[0m[0m[1mcreating 
+Network Security Group 
+(Subscription: "32cfe244-c5
+41-4455-830a-3b973667df4c"
+[31mΓöé[0m [0mResource 
+Group Name: 
+"rg-retail-hardened-prod"
+[31mΓöé[0m [0mNetwork 
+Security Group Name: 
+"nsg-backend-prod"): 
+performing CreateOrUpdate: 
+unexpected status 403 (403 
+Forbidden) with error: 
+RequestDisallowedByAzure: 
+Resource 
+'nsg-backend-prod' was 
+disallowed by Azure: This 
+policy maintains a set of 
+best available regions 
+where your subscription 
+can deploy resources. The 
+objective of this policy 
+is to ensure that your 
+subscription has full 
+access to Azure services 
+with optimal performance. 
+Should you need additional 
+or different regions, 
+contact support..[0m
+[31mΓöé[0m [0m
+[31mΓöé[0m [0m[0m  
+with azurerm_network_securi
+ty_group.backend_nsg,
+[31mΓöé[0m [0m  on 
+main.tf line 18, in 
+resource "azurerm_network_s
+ecurity_group" 
+"backend_nsg":
+[31mΓöé[0m [0m  18: 
+resource "azurerm_network_s
+ecurity_group" 
+"backend_nsg" [4m{[0m[0m
+[31mΓöé[0m [0m
+[31mΓò╡[0m[0m
+[31mΓò╖[0m[0m
+[31mΓöé[0m 
+[0m[1m[31mError: 
+[0m[0m[1mcreating 
+Virtual Network 
+(Subscription: "32cfe244-c5
+41-4455-830a-3b973667df4c"
+[31mΓöé[0m [0mResource 
+Group Name: 
+"rg-retail-hardened-prod"
+[31mΓöé[0m [0mVirtual 
+Network Name: 
+"vnet-retail-prod"): 
+performing CreateOrUpdate: 
+unexpected status 403 (403 
+Forbidden) with error: 
+RequestDisallowedByAzure: 
+Resource 
+'vnet-retail-prod' was 
+disallowed by Azure: This 
+policy maintains a set of 
+best available regions 
+where your subscription 
+can deploy resources. The 
+objective of this policy 
+is to ensure that your 
+subscription has full 
+access to Azure services 
+with optimal performance. 
+Should you need additional 
+or different regions, 
+contact support..[0m
+[31mΓöé[0m [0m
+[31mΓöé[0m [0m[0m  
+with azurerm_virtual_networ
+k.vnet,
+[31mΓöé[0m [0m  on 
+main.tf line 49, in 
+resource 
+"azurerm_virtual_network" 
+"vnet":
+[31mΓöé[0m [0m  49: 
+resource 
+"azurerm_virtual_network" 
+"vnet" [4m{[0m[0m
+[31mΓöé[0m [0m
+[31mΓò╡[0m[0m
+[31mΓò╖[0m[0m
+[31mΓöé[0m 
+[0m[1m[31mError: 
+[0m[0m[1mupdating 
+Public I P Address 
+(Subscription: "32cfe244-c5
+41-4455-830a-3b973667df4c"
+[31mΓöé[0m [0mResource 
+Group Name: 
+"rg-retail-hardened-prod"
+[31mΓöé[0m [0mPublic I 
+P Addresses Name: 
+"pip-retail-appgw"): 
+performing CreateOrUpdate: 
+unexpected status 403 (403 
+Forbidden) with error: 
+RequestDisallowedByAzure: 
+Resource 
+'pip-retail-appgw' was 
+disallowed by Azure: This 
+policy maintains a set of 
+best available regions 
+where your subscription 
+can deploy resources. The 
+objective of this policy 
+is to ensure that your 
+subscription has full 
+access to Azure services 
+with optimal performance. 
+Should you need additional 
+or different regions, 
+contact support..[0m
+[31mΓöé[0m [0m
+[31mΓöé[0m [0m[0m  
+with 
+azurerm_public_ip.appgw_ip,
+[31mΓöé[0m [0m  on 
+main.tf line 78, in 
+resource 
+"azurerm_public_ip" 
+"appgw_ip":
+[31mΓöé[0m [0m  78: 
+resource 
+"azurerm_public_ip" 
+"appgw_ip" [4m{[0m[0m
+[31mΓöé[0m [0m
+[31mΓò╡[0m[0m
+[31mΓò╖[0m[0m
+[31mΓöé[0m 
+[0m[1m[31mError: 
+[0m[0m[1mcreating 
+Application Gateway Web 
+Application Firewall 
+Policy (Subscription: "32cf
+e244-c541-4455-830a-3b97366
+7df4c"
+[31mΓöé[0m [0mResource 
+Group Name: 
+"rg-retail-hardened-prod"
+[31mΓöé[0m 
+[0mApplication Gateway 
+Web Application Firewall 
+Policy Name: 
+"waf-retail-policy"): 
+unexpected status 403 (403 
+Forbidden) with error: 
+RequestDisallowedByAzure: 
+Resource 
+'waf-retail-policy' was 
+disallowed by Azure: This 
+policy maintains a set of 
+best available regions 
+where your subscription 
+can deploy resources. The 
+objective of this policy 
+is to ensure that your 
+subscription has full 
+access to Azure services 
+with optimal performance. 
+Should you need additional 
+or different regions, 
+contact support..[0m
+[31mΓöé[0m [0m
+[31mΓöé[0m [0m[0m  
+with azurerm_web_applicatio
+n_firewall_policy.waf_polic
+y,
+[31mΓöé[0m [0m  on 
+main.tf line 145, in 
+resource "azurerm_web_appli
+cation_firewall_policy" 
+"waf_policy":
+[31mΓöé[0m [0m 145: 
+resource "azurerm_web_appli
+cation_firewall_policy" 
+"waf_policy" [4m{[0m[0m
+[31mΓöé[0m [0m
+[31mΓò╡[0m[0m
+[31mΓò╖[0m[0m
+[31mΓöé[0m 
+[0m[1m[31mError: 
+[0m[0m[1mcreating User 
+Assigned Identity 
+(Subscription: "32cfe244-c5
+41-4455-830a-3b973667df4c"
+[31mΓöé[0m [0mResource 
+Group Name: 
+"rg-retail-hardened-prod"
+[31mΓöé[0m [0mName: 
+"id-retail-web"): 
+unexpected status 403 (403 
+Forbidden) with error: 
+RequestDisallowedByAzure: 
+Resource 'id-retail-web' 
+was disallowed by Azure: 
+This policy maintains a 
+set of best available 
+regions where your 
+subscription can deploy 
+resources. The objective 
+of this policy is to 
+ensure that your 
+subscription has full 
+access to Azure services 
+with optimal performance. 
+Should you need additional 
+or different regions, 
+contact support..[0m
+[31mΓöé[0m [0m
+[31mΓöé[0m [0m[0m  
+with azurerm_user_assigned_
+identity.vm_identity,
+[31mΓöé[0m [0m  on 
+main.tf line 179, in 
+resource "azurerm_user_assi
+gned_identity" 
+"vm_identity":
+[31mΓöé[0m [0m 179: 
+resource "azurerm_user_assi
+gned_identity" 
+"vm_identity" [4m{[0m[0m
+[31mΓöé[0m [0m
+[31mΓöé[0m [0mcreating 
+User Assigned Identity 
+(Subscription:
+[31mΓöé[0m [0m"32cfe244-
+c541-4455-830a-3b973667df4c
+"
+[31mΓöé[0m [0mResource 
+Group Name: 
+"rg-retail-hardened-prod"
+[31mΓöé[0m [0mName: 
+"id-retail-web"): 
+unexpected status 403 (403 
+Forbidden) with error:
+[31mΓöé[0m [0mRequestDis
+allowedByAzure: Resource 
+'id-retail-web' was 
+disallowed by Azure:
+[31mΓöé[0m [0mThis 
+policy maintains a set of 
+best available regions 
+where your
+[31mΓöé[0m 
+[0msubscription can 
+deploy resources. The 
+objective of this policy 
+is to
+[31mΓöé[0m [0mensure 
+that your subscription has 
+full access to Azure 
+services with
+[31mΓöé[0m [0moptimal 
+performance. Should you 
+need additional or 
+different regions,
+[31mΓöé[0m [0mcontact 
+support..
+[31mΓò╡[0m[0m
+[31mΓò╖[0m[0m
+[31mΓöé[0m 
+[0m[1m[31mError: 
+[0m[0m[1mcreating 
+Server (Subscription: "32cf
+e244-c541-4455-830a-3b97366
+7df4c"
+[31mΓöé[0m [0mResource 
+Group Name: 
+"rg-retail-hardened-prod"
+[31mΓöé[0m [0mServer 
+Name: "sql-retail-data-srv-
+fnt1nm"): performing 
+CreateOrUpdate: unexpected 
+status 403 (403 Forbidden) 
+with error: 
+RequestDisallowedByAzure: 
+Resource 'sql-retail-data-s
+rv-fnt1nm' was disallowed 
+by Azure: This policy 
+maintains a set of best 
+available regions where 
+your subscription can 
+deploy resources. The 
+objective of this policy 
+is to ensure that your 
+subscription has full 
+access to Azure services 
+with optimal performance. 
+Should you need additional 
+or different regions, 
+contact support..[0m
+[31mΓöé[0m [0m
+[31mΓöé[0m [0m[0m  
+with azurerm_mssql_server.s
+ql_server,
+[31mΓöé[0m [0m  on 
+main.tf line 220, in 
+resource 
+"azurerm_mssql_server" 
+"sql_server":
+[31mΓöé[0m [0m 220: 
+resource 
+"azurerm_mssql_server" 
+"sql_server" [4m{[0m[0m
+[31mΓöé[0m [0m
+[31mΓò╡[0m[0m
